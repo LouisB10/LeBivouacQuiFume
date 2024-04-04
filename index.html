@@ -27,7 +27,52 @@
     </head>
 <body>
     <header>
-        
+        <img src="" alt="Logo LeBivouacQuiFume">
+        <nav>
+            <li><a href="#events">ÉVÉNEMENTS</a></li>
+            <li><a href="#menu">MENU</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <li><a href=""></a></li>
+        </nav>
+        <nav class="mobile-nav">
+            <li><a href="#events">ÉVÉNEMENTS</a></li>
+            <li><a href="#menu">MENU</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <li><a href=""></a></li>
+        </nav>
     </header>
+    <section>
+        <div class="landing-section">
+
+        </div>
+        <div class="newsletter-section">
+
+        </div>
+        <div class="events-section">
+            <h2>NOS ÉVÉNEMENTS</h2>
+            <p>Retrouvez tous nos événements à venir ou revivez ceux qui ont déja eu lieu</p>
+        </div>
+        <div class="musique-section">
+            <h2>POINT MUSIQUE</h2>
+            <p>Retrouvez juste ici les liens de toutes les playlists du Bivouac.</p>
+        </div>
+        <div class="menu-section">
+            <h2>NOTRE CARTE</h2>
+            <p>Découvrez le menu du Bivouac qui comporte un assortiment de tartinades et de tapas. Des plats faits maison tels que le chili con carne ou le poulet au curry, des salades de saison et pour finir nos desserts parfaits pour l’été</p>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+    <button id="backToTopBtn" onclick="scrollToTop()" aria-label="button back to top"><img src="assets/img/arrow-backtotop.webp" alt=""></button>
+    <script>
+        grecaptcha.ready(function() {
+          grecaptcha.execute('<?php echo RECAPTCHA_SITE_KEY ?>', {
+            action: 'homepage'
+          }).then(function(token) {
+            document.getElementById("recaptchaResponse").value = token;
+          });
+        });
+      </script>
 </body>
 </html>
