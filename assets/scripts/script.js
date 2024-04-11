@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
   });
-  
   //SMOOTH SCROLL 
   function scrollToTop() {
     // Fait défiler vers le haut de la page en douceur
@@ -20,3 +19,12 @@ document.addEventListener("DOMContentLoaded", function() {
         behavior: "smooth"
     });
   }
+  // FONCTION DISPLAY MENU MOBILE 
+
+function displayMenu() {
+    const hamburger = document.querySelector(".hamburger-btn");
+    const menu = document.querySelector(".nav-mobile");
+  
+    hamburger.classList.toggle("open");
+    menu.classList.toggle("open-menu");
+    }

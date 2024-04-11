@@ -24,21 +24,22 @@
         <meta property="og:type" content="LeBivouacQuiFume" />
         <meta property="og:url" content="https://www.lebivouacquifume.fr" />
         <script src="https://www.google.com/recaptcha/api.js?render=<?php echo htmlspecialchars(RECAPTCHA_SITE_KEY); ?>"></script>
+        <script src="assets/scripts/script.js"></script>
     </head>
 <body>
     <header>
-        <img src="" alt="Logo LeBivouacQuiFume">
-        <nav>
-            <li><a href="#events">ÉVÉNEMENTS</a></li>
-            <li><a href="#menu">MENU</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-            <li><a href=""></a></li>
-        </nav>
         <nav class="mobile-nav">
-            <li><a href="#events">ÉVÉNEMENTS</a></li>
-            <li><a href="#menu">MENU</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-            <li><a href=""></a></li>
+            <select id="language-select">
+                <option value="fr">FR</option>
+                <option value="en">EN</option>
+              </select>
+            <button type="button" class="hamburger-btn" onclick="displayMenu()" aria-expanded="false" aria-haspopup="true" aria-controls=".nav-mobile" aria-label="Ouvrir le menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="desktop-links"> <li><a href="#events">ÉVÉNEMENTS</a></li>
+                <li><a href="#menu">MENU</a></li>
+                <li><a href="#contact">CONTACT</a></li></ul>
+              <img src="assets/img/logo/logo-1.png" alt="Logo LeBivouacQuiFume">
         </nav>
     </header>
     <section>
@@ -46,10 +47,14 @@
 
         </div>
         <div class="newsletter-section">
-            <h2>Newsletter</h2>
-            <p>Tenez-vous informés des dernières news du Bivouac qui fume</p>
-            <div>
-                
+            <div class="newsletter-title">
+                <h2>Newsletter</h2>
+                <p>Tenez-vous informés des dernières news du Bivouac qui fume</p>
+            </div>
+            <div class="newsletter-form">
+                <form action="">
+
+                </form>
             </div>
         </div>
         <div class="events-section">
@@ -59,6 +64,7 @@
         <div class="musique-section">
             <h2>POINT MUSIQUE</h2>
             <p>Retrouvez juste ici les liens de toutes les playlists du Bivouac.</p>
+            <img id="vinyl" src="assets/img/icones/icon-vinyl.png" alt="">
         </div>
         <div class="menu-section">
             <h2>NOTRE CARTE</h2>
@@ -66,7 +72,7 @@
         </div>
     </section>
     <footer>
-
+        
     </footer>
     <button id="backToTopBtn" onclick="scrollToTop()" aria-label="button back to top"><img src="assets/img/arrow-backtotop.webp" alt=""></button>
     <script>
