@@ -89,6 +89,23 @@ button {
     transform: rotate(360deg);
   }
 }
+/*****************ANIMATION**********/
+::-webkit-input-placeholder {
+  /* Pour les navigateurs basés sur WebKit (Chrome, Safari, etc.) */
+  opacity: 1;
+}
+:-moz-placeholder {
+  /* Pour les anciennes versions de Firefox */
+  opacity: 1;
+}
+::-moz-placeholder {
+  /* Pour les nouvelles versions de Firefox */
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  /* Pour Internet Explorer */
+  opacity: 1;
+}
 /***************************MAIN*************************/
 /*******************HEADER*/
 header {
@@ -194,20 +211,25 @@ section {
 /*******************NEWSLETTER-SECTION*/
 .newsletter-section {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--black);
-  width: 90vw;
-  height: 250px;
-  padding: 10% 5%;
-}
-
-.newsletter-title {
-  order: 1;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: var(--black);
+  width: 90vw;
+  height: 250px;
+  padding: 0 5%;
+  gap: 2rem;
+}
+.newsletter-title, .newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+.newsletter-title {
+  order: 1;
+  gap: 1rem;
 }
 .newsletter-title h2 {
   font-size: 3rem;
@@ -218,11 +240,33 @@ section {
 }
 .newsletter-form {
   order: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
+.newsletter-form form{
+  width: 100%;
+}
+input:focus {
+  outline: none;
+}
+.newsletter-form input, .newsletter-form button{
+  border: solid 2px var(--rose);
+  border-radius: 5px;
+  padding: 5px 5%;
+  color: white;
+  opacity: 1;
+}
+.newsletter-form input{
+  background-color: var(--black);
+  padding-left: 5px;
+  padding-right: 20%;
+}
+.newsletter-form button{
+  background-color: var(--rose);
+  
+}
+.newsletter-form input::placeholder{
+  color: var(--white);
+}
+
 /*******************EVENTS-SECTION*/
 .events-section {
   display: flex;
@@ -260,7 +304,6 @@ section {
   z-index: 2;
   color: var(--black);
 }
-
 .musique-title img {
   width: 75px;
 }
@@ -314,12 +357,9 @@ section {
 #circle-2 a:nth-child(2){
   margin-top: 2rem;
 }
-
-
 #vinyl {
   width: 100%;
 }
-
 /*******************MENU-SECTION*/
 .menu-section {
   display: flex;

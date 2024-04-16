@@ -44,7 +44,6 @@
     </header>
     <section>
         <div class="landing-section">
-
         </div>
         <div class="newsletter-section">
             <div class="newsletter-title">
@@ -53,7 +52,9 @@
             </div>
             <div class="newsletter-form">
                 <form action="">
-
+                    <label for="email"></label>
+                    <input type="text" name="email" id="" placeholder="votre email *">
+                    <button id="submitBtn" data-sitekey="<?php echo htmlspecialchars(RECAPTCHA_SITE_KEY); ?>" data-callback='onSubmit' data-action='submit' >JE M'ABONNE</button>
                 </form>
             </div>
         </div>
