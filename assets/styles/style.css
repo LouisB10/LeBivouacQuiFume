@@ -84,7 +84,7 @@ header {
   position: fixed;
   height: auto;
   width: 100vw;
-  z-index: 2;
+  z-index: 3;
 }
 /****MOBILE**/
 .mobile-nav {
@@ -236,15 +236,62 @@ section {
   height: 1000px;
   padding: 10% 5% ;
 }
-.musique-section h2{
-  text-align: left;
+.musique-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
 }
-.musique-section p{
+.musique-title h2{
+  z-index: 2; 
+  display: flex;
+  align-items: center;
+
+}
+.musique-title h3{
+
+  z-index: 2; 
   color: var(--black);
 }
+
+.musique-title img{
+  width: 75px;
+}
+#circle-1{
+    position:absolute;
+    left: 50%;
+    border-radius: 50%;
+    background: var(--rose);
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    z-index: -1;
+    background-image: url(/assets/img/icones/icon-vinyl2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 55%;
+}
+#circle-2{
+  position:absolute;
+  left: 40%;
+  border-radius: 50%;
+  background: var(--orange);
+  width: 185px;
+  height: 185px;
+  flex-shrink: 0;
+  z-index: 0;
+}
+
 #vinyl{
   width: 100%;
 }
+
+
+
+
+
+
 /*******************MENU-SECTION*/
 .menu-section {
   display: flex;
