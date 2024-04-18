@@ -36,7 +36,7 @@ h1 {
 h2 {
   color: var(--black);
   font-size: 4rem;
-  font-weight: 500;
+  font-weight: 600;
   text-align: left;
   line-height: 1.3em;
 }
@@ -156,6 +156,38 @@ section {
   width: 90vw;
   height: 1000px;
   padding: 10% 5%;
+}
+/*******************FOLLOW-US-SECTION*/
+.followus-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--yellow);
+  width: 90vw;
+  padding: 1rem 5%;
+  z-index: 6;
+}
+.followus-section h2{
+  font-size: 3rem;
+}
+.followus-media{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -10%;
+}
+#arrow{
+  width: 65%;
+  z-index: -1;
+}
+.followus-media div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.followus-media div img{
+  width: 45px;
 }
 /*******************MUSIQUE-SECTION*/
 .musique-section {
