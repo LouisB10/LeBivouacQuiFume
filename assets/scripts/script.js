@@ -22,9 +22,11 @@ document.addEventListener("DOMContentLoaded", function() {
   // FONCTION DISPLAY MENU MOBILE 
 
 function displayMenu() {
+    const body = document.querySelector("body");
     const hamburger = document.querySelector(".hamburger-btn");
-    const menu = document.querySelector(".nav-mobile");
+    const menu = document.querySelector(".mobile-nav");
   
     hamburger.classList.toggle("open");
-    menu.classList.toggle("open-menu");
+    menu.classList.toggle("open");
+    body.classList.toggle("overflow-hidden");
     }

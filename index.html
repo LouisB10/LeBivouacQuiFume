@@ -27,9 +27,9 @@
         <script src="https://www.google.com/recaptcha/api.js?render=<?php echo htmlspecialchars(RECAPTCHA_SITE_KEY); ?>"></script>
         <script src="assets/scripts/script.js"></script>
     </head>
-<body>
+<body class="flex-col">
     <header>
-        <nav class="mobile-nav">
+        <nav class="nav">
             <select id="language-select">
                 <option value="fr">FR</option>
                 <option value="en">EN</option>
@@ -37,34 +37,48 @@
             <button type="button" class="hamburger-btn" onclick="displayMenu()" aria-expanded="false" aria-haspopup="true" aria-controls=".nav-mobile" aria-label="Ouvrir le menu">
                 <span></span><span></span><span></span>
             </button>
-            <ul class="desktop-links"> <li><a href="#events">ÉVÉNEMENTS</a></li>
+            <ul class="desktop-links">
+                <li><a href="#events">ÉVÉNEMENTS</a></li>
                 <li><a href="#menu">MENU</a></li>
-                <li><a href="#contact">CONTACT</a></li></ul>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
               <img src="assets/img/logo/logo-1.png" alt="Logo LeBivouacQuiFume">
+        </nav>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="#events" onclick="displayMenu()"><img src="assets/img/nav/show.png" alt="icone events"><span>ÉVÉNEMENTS</span></a></li>
+                <li><a href="#menu" onclick="displayMenu()"><img src="assets/img/nav/menu.png" alt="icone menu"><span>NOTRE MENU</span></a></li>
+                <li><a href="#contact" onclick="displayMenu()"><img src="assets/img/nav/contact-us.png" alt="icone contact"><span>CONTACTEZ-NOUS</span></a></li>
+            </ul>
         </nav>
     </header>
     <section>
-        <div class="landing-section">
+        <div class="landing-section flex">
         </div>
-        <div class="events-section">
+        <div class="events-section flex-col" id="events">
             <h2>NOS ÉVÉNEMENTS</h2>
-            <p>Le prochain</p>
-            <div class="events-actual">
-                <img src="" alt="">
+            <div class="events-actual flex-col">
+                <p>Le prochain</p>
+                <img src="assets/img/affiches/affiche.png" alt="affiche evenements">
             </div>
-            <div class="events-slider"></div>
+            <div class="events-slider flex-col">
+                <p>À venir</p>
+                <div class="slider-container">
+                    
+                </div>
+            </div>
         </div>
-        <div class="followus-section">
+        <div class="followus-section flex-col">
             <h2>SUIVEZ-NOUS</h2>
             <div class="followus-media">
                 <img id="arrow" src="assets/img/follow-us.png" alt="fleche suivez-nous">
-                <div>
-                    <img src="assets/img/social-media/fb.png" alt="facebook logo">
-                    <img src="assets/img/social-media/insta.png" alt="instagram logo">
+                <div class="flex">
+                    <a href="https://www.facebook.com/lebivouacquifume/" target="_blank"><img src="assets/img/social-media/fb.png" alt="facebook logo"></a>
+                    <a href="https://www.instagram.com/lebivouacquifume/" target="_blank"><img src="assets/img/social-media/insta.png" alt="instagram logo"></a>
               </div>
             </div>
         </div>
-        <div class="menu-section">
+        <div class="menu-section flex-col" id="menu">
             <div id="circle-3"></div>
             <div class="menu-title">        
                 <h2>NOTRE CARTE</h2>
@@ -72,15 +86,9 @@
             <div class="menu-desc">
                 <h3>Découvrez le menu du Bivouac qui comporte un assortiment de tartinades, tapas, plats et desserts fait maison. </h3>
             </div>
-            <img id="menu" src="assets/img/menu.png" alt="img menu">
-            <!-- <div class="producteur-title">
-                <h2>NOS PRODUCTEURS</h2>
-                <h3>Rencontrez nos partenaires locaux qui cultivent avec passion et respect de la nature.
-                    Chaque produit est sélectionné avec soin pour garantir fraîcheur et qualité dans nos plats.</h3>
-            </div>
-            <div class="producteur-liste"></div> -->
+            <img id="menu-img" src="assets/img/affiches/menu.png" alt="img menu">
         </div>
-        <div class="musique-section">
+        <div class="musique-section flex-col">
             <div class="musique-title">
                 <div id="circle-1"></div>
                 <h2>POINT<br>MUSIQUE</h2>
@@ -95,7 +103,7 @@
             <img id="vinyl" src="assets/img/icones/icon-vinyl.png" alt="vinyl decoration">
         </div>
     </section>
-    <footer>
+    <footer id="contact">
         <!-- <img id="traits-footer" src="assets/img/traits-noirs.png" alt=""> -->
         <div class="footer-logo">
             <img src="assets/img/logo/logo-1.png" alt="logo du bivouac">
