@@ -52,7 +52,7 @@
             </ul>
         </nav>
     </header>
-    <section>
+    <section class="flex-col">
         <div class="landing-section flex">
         </div>
         <div class="events-section flex-col" id="events">
@@ -68,9 +68,9 @@
                 </div>
             </div>
         </div>
-        <div class="followus-section flex-col">
+        <div class="follow-section flex-col">
             <h2>SUIVEZ-NOUS</h2>
-            <div class="followus-media">
+            <div class="follow-media">
                 <img id="arrow" src="assets/img/follow-us.png" alt="fleche suivez-nous">
                 <div class="flex">
                     <a href="https://www.facebook.com/lebivouacquifume/" target="_blank"><img src="assets/img/social-media/fb.png" alt="facebook logo"></a>
@@ -80,9 +80,7 @@
         </div>
         <div class="menu-section flex-col" id="menu">
             <div id="circle-3"></div>
-            <div class="menu-title">        
-                <h2>NOTRE CARTE</h2>
-            </div>
+            <h2>NOTRE CARTE</h2>
             <div class="menu-desc">
                 <h3>Découvrez le menu du Bivouac qui comporte un assortiment de tartinades, tapas, plats et desserts fait maison. </h3>
             </div>
@@ -103,29 +101,26 @@
             <img id="vinyl" src="assets/img/icones/icon-vinyl.png" alt="vinyl decoration">
         </div>
     </section>
-    <footer id="contact">
-        <!-- <img id="traits-footer" src="assets/img/traits-noirs.png" alt=""> -->
-        <div class="footer-logo">
-            <img src="assets/img/logo/logo-1.png" alt="logo du bivouac">
-        </div>
-        <div class="footer-rose">
-            <div class="footer-contact">
+    <footer id="contact" class="flex-col">
+        <img id="footer-logo" src="assets/img/logo/logo-1.png" alt="logo du bivouac">
+        <div class="footer-info flex">
+            <div class="flex-col">
                 <h3>NOUS CONTACTER</h3>
                <a href="tel:+33764464434">07 644 644 34</a>
                <a href="https://maps.app.goo.gl/NW747xAmQ2omTCGVA">646 ROUTE DE CAUX, PEZENAS</a>
                <a href="mailto:info@lebivouacquifume.fr">INFO@LEBIVOUACQUIFUME.FR</a>
             </div>
-            <div class="footer-reseau">
+            <div class="flex-col">
                 <a href="https://www.facebook.com/lebivouacquifume/" target="_blank"><img src="assets/img/social-media/fb.png" alt="logo facebook"></a>
-                <a href="https://www.instagram.com/lebivouacquifume/" target="_blank"><img src="assets/img/social-media/insta.png" alt="logo instagram"></a> 
+                <a href="https://www.instagram.com/lebivouacquifume/" target="_blank"><img src="assets/img/social-media/insta.png" alt="logo instagram" ></a> 
             </div>
         </div>
-        <div class="footer-jaune">
+        <div class="footer-jaune flex">
             <img src="assets/img/icones/icon-location.png" alt="">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1169.887111363188!2d3.407595021957297!3d43.46926179357552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b16a88f841b377%3A0x4d61f721ab2f2e47!2s646%20Rte%20de%20Caux%2C%2034120%20P%C3%A9zenas!5e1!3m2!1sfr!2sfr!4v1713362331516!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="footer-bottom">
-            <div class="footer-sitemap">
+            <div class="footer-sitemap flex-col">
                 <h3>SITEMAP</h3>
                 <a href="#events">ÉVÉNEMENTS</a>
                 <a href="#menu">MENU</a>
@@ -135,7 +130,7 @@
         </div>
     </footer>
     <button id="backToTopBtn" onclick="scrollToTop()" aria-label="button back to top"><img src="assets/img/arrow-backtotop.webp" alt=""></button>
-    <script>
+    <!-- <script>
         grecaptcha.ready(function() {
           grecaptcha.execute('<?php echo RECAPTCHA_SITE_KEY ?>', {
             action: 'homepage'
@@ -143,6 +138,6 @@
             document.getElementById("recaptchaResponse").value = token;
           });
         });
-      </script>
+      </script> -->
 </body>
 </html>

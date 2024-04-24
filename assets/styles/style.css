@@ -73,7 +73,7 @@ button {
   box-shadow: 0px 0px 4px 0px var(--black);
   transition: all 0.1s ease-in-out;
   margin-right: 15px;
-  z-index: 10;
+  z-index: 9;
 }
 #backToTopBtn:hover {
   background-color: var(--yellow);
@@ -112,8 +112,26 @@ button {
 		transform: translatey(0px);
 	}
 }
+@keyframes float-media {
+	0% {
+		transform: translatey(0px);
+    transform: rotate(0deg);
+	}
+	50% {
+		transform: translatey(-2.5px);
+    transform: rotate(5deg);
+	}
+	75% {
+		transform: translatey(-5px);
+    transform: rotate(-5deg);
+	}
+  100% {
+		transform: translatey(0);
+    transform: rotate(0deg);
+	}
+}
 
-/*****************ANIMATION**********/
+/*****************OPACITY**********/
 ::-webkit-input-placeholder {
   /* Pour les navigateurs basés sur WebKit (Chrome, Safari, etc.) */
   opacity: 1;
@@ -132,11 +150,6 @@ button {
 }
 /***************************MAIN*************************/
 section {
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   width: 100vw;
 }
 /**************************************LANDING-SECTION*/
@@ -156,7 +169,6 @@ section {
 /*******************EVENTS-SECTION*/
 .events-section {
   width: 90vw;
-  height: 1000px;
   padding: 10% 5%;
   background-color: var(--rose);
   gap: 4rem;
@@ -179,18 +191,18 @@ section {
   width: 100%;
 }
 /*******************FOLLOW-US-SECTION*/
-.followus-section {
+.follow-section {
   width: 90vw;
   padding: 2rem 5%;
   background-color: var(--yellow);
   z-index: 1;
 }
-.followus-section h2{
+.follow-section h2{
   font-size: 3rem;
   width: 100%;
   text-align: start;
 }
-.followus-media{
+.follow-media{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -200,11 +212,14 @@ section {
   width: 65%;
   z-index: -1;
 }
-.followus-media div{
+.follow-media div{
   gap: 1rem;
 }
-.followus-media div img{
+.follow-media div img{
   width: 40px;
+}
+.follow-media div img:hover{
+	animation: float-media 0.8s ease-in-out infinite;
 }
 /*******************MENU-SECTION*/
 .menu-section {
@@ -212,18 +227,10 @@ section {
   padding: 5rem 5%;
   background-color: var(--orange);
 }
-.menu-title{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 1rem;
-  z-index: 3;
-}
-.menu-title h2{
+.menu-section h2{
   width: 100%;
   color: var(--white);
+  z-index: 3;
 }
  .menu-title h3{
   color: var(--white);

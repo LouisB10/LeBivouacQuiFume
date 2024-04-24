@@ -42,7 +42,7 @@ header {
     align-items: flex-start;
     justify-content: center;
     gap: 2rem;
-    padding-bottom: 10rem;
+    padding-bottom: 4rem;
   }
   .mobile-nav a{
     display: flex;
@@ -120,50 +120,12 @@ header {
   footer{
     bottom: 0;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     background-color: var(--blue);
     gap: 3rem;
     background-image: url(/assets/img/traits-noirs.png);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: top -6% right -6rem;
-  }
-  #traits-footer{
-    position: absolute;
-    left: auto;
-    height: 300px;
-    transform: rotate(116deg);
-  }
-  .footer-logo{
-    padding: 5%;
-    height: 85px;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  .footer-logo img{
-    height: 100%;
-  }
-  .footer-rose{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 140px;
-    width: 75%;
-    border-top-right-radius: 150px;
-    border-bottom-right-radius: 150px;
-    background-color: var(--rose);
-    gap: 1.5rem;
-  }
-  .footer-contact{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
   }
   footer h3{
     color: var(--white);
@@ -174,24 +136,30 @@ header {
     color: var(--black);
     letter-spacing: 2px;
   }
-  .footer-reseau{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+  #footer-logo{
+    padding: 5%;
+    height: 85px;
+    align-self: flex-start;
   }
-  .footer-reseau img{
-    width: 20px;
+ 
+  .footer-info{
+    width: 80%;
+    align-self: flex-start;
+    border-radius: 0% 150px 150px 0%;
+    background-color: var(--rose);
+    gap: 2.5rem;
+    padding: 1rem;
   }
-  .footer-reseau img:nth-child(2){
-    padding-left: 5px;
+  .footer-info div{
+    gap: 1rem;
   }
+  .footer-info div:last-of-type img{
+    width: 1.5rem;
+  }
+ 
+
   .footer-jaune{
     align-self: flex-end;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 165px;
     width: 85%;
     border-top-left-radius: 150px;
@@ -218,10 +186,6 @@ header {
   .footer-sitemap{
     height: 100%;
     width: 110px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 10px;
     background-color: var(--orange);
     border-top-left-radius: 150px;
