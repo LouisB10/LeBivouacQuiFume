@@ -1,6 +1,6 @@
-navbar comme frenchkiss
+navbar comme frenchkiss V
 
-menu qui s'affiche en grand quand on clique
+menu qui s'affiche en grand quand on clique 
 
 evenements, slider pour ceux a venir + qui s'affiche en grand quand on click
 

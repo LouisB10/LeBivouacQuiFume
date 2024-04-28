@@ -177,6 +177,7 @@ section {
   width: 100%;
   text-align: start;
   font-size: 1.5rem;
+  color: var(--black);
 }
 .events-actual{
   width: 100%;
@@ -187,9 +188,45 @@ section {
   border: solid 2px var(--black);
   border-radius: 10px;
 }
+
+
+
+
+
+
 .events-slider{
+  position: relative;
   width: 100%;
+  gap: 1rem;
 }
+.slider-container{
+  width: 100%;
+  overflow: hidden;
+}
+.photo{
+  width: 170PX;
+  height: 227PX;
+  background-repeat: no-repeat;
+}
+.btn-slider{
+  position: absolute;
+  width: 50px;
+  cursor: pointer;
+  top: 50%;
+  opacity: 0.95;
+  transition: all 0.3s ease;
+}
+.btn-slider:hover{
+  opacity: 1;
+}
+.l-btn{
+  right: 90%;
+}
+.r-btn{
+  left: 90%;
+}
+
+
 /*******************FOLLOW-US-SECTION*/
 .follow-section {
   width: 90vw;
