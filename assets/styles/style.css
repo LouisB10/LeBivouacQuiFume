@@ -173,6 +173,10 @@ section {
   background-color: var(--rose);
   gap: 4rem;
 }
+.events-section h2{
+  width: 100%;
+  text-align: start;
+}
 .events-section p{
   width: 100%;
   text-align: start;
@@ -230,7 +234,7 @@ section {
 /*******************FOLLOW-US-SECTION*/
 .follow-section {
   width: 90vw;
-  padding: 2rem 5%;
+  padding: 10% 5%;
   background-color: var(--yellow);
   z-index: 1;
 }
@@ -253,7 +257,7 @@ section {
   gap: 1rem;
 }
 .follow-media div img{
-  width: 40px;
+  width: 2rem;
 }
 .follow-media div img:hover{
 	animation: float-media 0.8s ease-in-out infinite;
@@ -261,7 +265,7 @@ section {
 /*******************MENU-SECTION*/
 .menu-section {
   width: 90vw;
-  padding: 5rem 5%;
+  padding: 10% 5%;
   background-color: var(--orange);
 }
 .menu-section h2{
@@ -278,7 +282,7 @@ section {
   width: 400px;
   height: 400px;
   left: 50%;
-  margin-top: -40REM;
+  margin-top: -150%;
   flex-shrink: 0;
   border-radius: 50%;
   background: var(--rose);
@@ -311,7 +315,7 @@ section {
 /*******************MUSIQUE-SECTION*/
 .musique-section {
   width: 90vw;
-  padding: 5rem 5%;
+  padding: 10% 5%;
   background-color: var(--yellow);
   gap: 5rem;
 }
@@ -331,7 +335,6 @@ section {
   width: 90%;
 }
 .musique-title img {
-
 	transform: translatey(0px);
 	animation: float 6s ease-in-out infinite;
   width: 75px;
@@ -388,4 +391,99 @@ section {
 }
 #vinyl {
   width: 100%;
+}
+
+/***********************************************RESPONSIVE****/
+/**********************************RESPONSIVE****************************/
+@media (min-width: 375px) {
+
+}
+/************AFFICHAGE Tablette****************/
+@media (min-width: 767px) {
+  h2 {
+    font-size: 5rem;
+  }
+  .events-section, .follow-section, .menu-section,.musique-section{
+    width: 85vw;
+    padding: 15% 7.5%;
+  }
+  /*EVENTS-SECTION*/
+  .events-section p{
+    font-size: 2rem;
+  }
+  /*FOLLOW-SECTION*/
+  .follow-section{
+    padding: 10% 7.5%;
+  }
+  .follow-section h2{
+    font-size: 4rem;
+  }
+  .follow-media{
+    justify-content: flex-start;
+    gap: 3rem;
+  }
+  .follow-media div img{
+    width: 3.5rem;
+  }
+  .follow-media div{
+    gap: 2rem;
+  }
+  /*MENU-SECTION*/
+  #menu-img{
+    margin-top: -15%;
+    width: 90%;
+  }
+  #circle-3{
+    width: 450px;
+    height: 450px;
+    left: 60%;
+  }
+  .menu-desc{
+    width: 400px;
+    height: 400px; 
+  }
+  .menu-desc h3{
+    font-size: 1.5rem;
+  }
+  /*MUSIQUE-SECTION*/
+  #circle-1{
+    width: 250px;
+    height: 250px;
+    left: 45%;
+    margin-bottom: 25%;
+  }
+  #circle-2{
+    width: 275px;
+    height: 275px;
+    margin-top: 30%;
+  }
+  #circle-2 a{
+    width: 60px;
+    height: 60px;
+  }
+  #vinyl{
+    width: 80%;
+  }
+  .musique-title{
+    gap: 2rem;
+  }
+
+}
+/*********AFFICHAGE Tablette/ PC Portable*******/
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
+  #backToTopBtn {
+    display: none !important;
+  }
+}
+/************AFFICHAGE PC Portable/PC petit***********/
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
 }
