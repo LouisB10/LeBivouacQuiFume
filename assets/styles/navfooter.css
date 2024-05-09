@@ -109,28 +109,6 @@ header {
   .desktop-links {
     display: none;
   }
-
-  @media (min-width: 767px) {
-    .nav{
-      height: 80px;
-      padding: 1rem 3rem;
-    }
-    .mobile-nav a span{
-      font-size: 4rem;
-    }
-    .mobile-nav a img{
-      width: 4rem;
-    }
-  }
-
-
-
-
-
-
-
-
-
   /*******************FOOTER*/
   footer{
     bottom: 0;
@@ -173,7 +151,7 @@ header {
   }
  
 
-  .footer-jaune{
+  .footer-jaune{  
     align-self: flex-end;
     height: 165px;
     width: 85%;
@@ -207,7 +185,7 @@ header {
     border-top-right-radius: 150px;
   }
   #copyright{
-    font-size: 15px;
+    font-size: 1rem;
     letter-spacing: 0;
     padding-bottom: 10px;
     color: var(--white);
@@ -216,6 +194,85 @@ header {
     color: var(--yellow);
   }
 
+  @media (min-width: 767px) {
+ 
+  }
+/**********************************RESPONSIVE****************************/
+/************AFFICHAGE Tablette****************/
+@media (min-width: 767px) {
+  /**HEADER**/
+  .nav{
+    height: 80px;
+    padding: 1rem 3rem;
+  }
+  .mobile-nav a span{
+    font-size: 4rem;
+  }
+  .mobile-nav a img{
+    width: 4rem;
+  }
+  /**FOOTER**/
+  footer{
+    background-size: 70%;
+  }
+  #footer-logo{
+    height: 125px;
+  }
+  footer a,footer h3{
+    font-size: 1.5rem;
+  }
+  .footer-info{
+    width: 65%;
+    padding: 2rem;
+  }
+  .footer-info div:last-of-type img{
+    width: 2rem;
+  }
+  .footer-jaune{
+    width: 70%;
+    height: 250px;
+  }
+  .footer-jaune img{
+    height: 3rem;
+  }
+  .footer-sitemap{
+    padding: 1rem;
+    width: 125px;
+  }
+  #copyright{
+    font-size: 1.5rem;
+  }
+  .footer-bottom{
+    gap: 5rem;
+  }
+}
+/*********AFFICHAGE Tablette/ PC Portable*******/
+@media (min-width: 1024px) {
+  /**HEADER**/
+  .nav{
+    height: 100px;
+    padding: 1rem 7.5%;
+  }
+  .hamburger-btn{
+    display: none;
+  }
+  .nav img{
+    order: 1;
+    height: 100%;
+  }
+  .desktop-links{
+    order: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+  }
+  .desktop-links li a{
+    font-size: 1.5rem;
+    color: var(--yellow);
+  }
+   /**FOOTER**/
+}
 
 
 

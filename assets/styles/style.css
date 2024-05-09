@@ -393,7 +393,6 @@ section {
   width: 100%;
 }
 
-/***********************************************RESPONSIVE****/
 /**********************************RESPONSIVE****************************/
 @media (min-width: 375px) {
 
@@ -471,8 +470,43 @@ section {
 }
 /*********AFFICHAGE Tablette/ PC Portable*******/
 @media (min-width: 1024px) {
-  h1 {
-    font-size: 3rem;
+  h2{
+    font-size: 6rem;
+  }
+  .events-section, .follow-section, .menu-section,.musique-section{
+    width: 80vw;
+    padding: 7.5% 10%;
+  }
+  /*FOLLOW-SECTION*/
+  .follow-section h2{
+    font-size: 6rem;
+  }
+  .follow-media div img{
+    width: 4rem;
+  }
+  /*MUSIQUE-SECTION*/
+  .musique-section{
+    flex-direction: row;
+  }
+  #circle-1{
+    height: 275px;
+    width: 275px;
+    left: 41%;
+    margin-bottom: 15%;
+  }
+  #circle-2{
+    margin-top: 20%;
+    left: 26%;
+  }
+  #circle-2 a{
+    margin-top: 3rem;
+  }
+  #circle-2 a:nth-child(2){
+    margin-top: 5rem;
+  }
+  #vinyl{
+    width: 35%;
+    align-self: flex-end;
   }
   #backToTopBtn {
     display: none !important;
