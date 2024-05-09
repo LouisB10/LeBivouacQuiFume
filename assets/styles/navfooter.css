@@ -184,19 +184,25 @@ header {
     border-top-left-radius: 150px;
     border-top-right-radius: 150px;
   }
-  #copyright{
-    font-size: 1rem;
+  #copyright,#copyright-desktop{
+    font-size: 0.8rem;
     letter-spacing: 0;
     padding-bottom: 10px;
     color: var(--white);
+    gap: 10px;
   }
-  #copyright span{
+  
+  #copyright span, #copyright-desktop span{
     color: var(--yellow);
   }
-
-  @media (min-width: 767px) {
- 
+  .footer-sitemap-desktop,#copyright-desktop{
+    display: none;
   }
+  
+  .footer-desktop-container{
+    width: 100%;
+  }
+
 /**********************************RESPONSIVE****************************/
 /************AFFICHAGE Tablette****************/
 @media (min-width: 767px) {
@@ -236,8 +242,9 @@ header {
     height: 3rem;
   }
   .footer-sitemap{
-    padding: 1rem;
+    padding: 1.5rem;
     width: 125px;
+    gap: 1rem;
   }
   #copyright{
     font-size: 1.5rem;
@@ -272,11 +279,124 @@ header {
     color: var(--yellow);
   }
    /**FOOTER**/
+  footer{
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    background-size: 40%;
+    background-position: top -40% right -6rem;
+  }
+  footer a,footer h3{
+    font-size: 1.2rem;
+  }
+  .footer-sitemap-desktop,#copyright-desktop{
+    display: flex;
+  }
+  .footer-sitemap, .footer-bottom{
+    display: none;
+  }
+  .footer-desktop-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
+  }
+  #footer-logo{
+    height: 100px;
+  }
+  .footer-info{
+    width: 80%;
+  }
+  #copyright-desktop{
+    font-size: 1.2rem;
+    align-self: flex-start;
+    padding-left:1rem;
+  }
+  .footer-jaune{
+    margin-top: 5em;
+    margin-right: 15%;
+    width: 40%;
+    flex-direction: column;
+    height: 450px ;
+    border-top-right-radius: 200px;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 0;
+  }
+  .footer-jaune iframe{
+    height: 60%;
+    width: 85%;
+  }
+
+}
+/*********AFFICHAGE Tablette/ PC Portable*******/
+@media (min-width: 1200px) {
+  /**HEADER**/
+  .nav{
+    height: 115px;
+    padding: 1rem 10%;
+  }
+  .desktop-links li a {
+    font-size: 2rem;
+  }
+  #language-select{
+    width: 60px;
+    height: 50px;
+  }
+
+
+
+  footer{
+    background-size: 35%;
+    background-position: top -15% right -5rem;
+  }
+  footer a,footer h3{
+    font-size: 1.4rem;
+  }
+  .footer-jaune{
+
+    width: 35%;
+  
+  }
+  #footer-logo{
+    height: 150px;
+  }
+  .footer-info{
+    width: 75%;
+  }
+  .footer-desktop-container{
+    width: 80%;
+    gap: 5rem;
+  }
 }
 
 
 
+@media (min-width: 1600px) {
 
+  footer{
+    background-size: 28%;
+    background-position: top -10% right -5rem;
+  }
+  .footer-info{
+    width: 60%;
+    gap: 4rem;
+    padding: 3rem;
+  }
+  .footer-jaune{
+    height: 600px;
+    width: 28%;
+    border-top-right-radius: 300px;
+        border-top-left-radius: 300px;
+  }
+  footer a,footer h3{
+    font-size: 1.75rem;
+  }
+  .footer-desktop-container{
+    gap: 5rem;
+  }
+}
 
 
 

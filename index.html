@@ -57,21 +57,24 @@
         </div>
         <div class="events-section flex-col" id="events">
             <h2>NOS ÉVÉNEMENTS</h2>
-            <div class="events-actual flex-col">
-                <p>Le prochain</p>
-                <img src="assets/img/affiches/affiche.png" alt="affiche evenements">
-            </div>
-            <div class="events-slider flex-col">
-                <p>À venir</p>
-                <div class="slider-container">
-                    <div id="container" class="flex">
-                        <!-- <img src="assets/img/affiches/affiche.png" alt="">
-                        <img src="assets/img/affiches/affiche.png" alt=""> -->
+            <div class="events-container">
+                <div class="events-actual flex-col">
+                    <p>Le prochain</p>
+                    <img src="assets/img/affiches/affiche.png" alt="affiche evenements">
+                </div>
+                <div class="events-slider flex-col">
+                    <p>À venir</p>
+                    <div class="slider-container">
+                        <div id="container" class="flex">
+                            <!-- <img src="assets/img/affiches/affiche.png" alt="">
+                            <img src="assets/img/affiches/affiche.png" alt=""> -->
+                        </div>
+                        <img class="btn-slider r-btn" id="r" src="assets/img/slider/right-button.png" alt="">
+                        <img  class="btn-slider l-btn" id="l" src="assets/img/slider/left-button.png" alt="">
                     </div>
-                    <img class="btn-slider r-btn" id="r" src="assets/img/slider/right-button.png" alt="">
-                    <img  class="btn-slider l-btn" id="l" src="assets/img/slider/left-button.png" alt="">
                 </div>
             </div>
+            
         </div>
         <div class="follow-section flex-col">
             <h2>SUIVEZ-NOUS</h2>
@@ -85,8 +88,14 @@
         </div>
         <div class="menu-section flex-col" id="menu">
             <div id="circle-3"></div>
-            <h2>NOTRE CARTE</h2>
-            <div class="menu-desc">
+            <div class="menu-desktop">
+                <h2>NOTRE CARTE</h2>
+                <div class="menu-desc">
+                    <h3>Découvrez le menu du Bivouac qui comporte un assortiment de tartinades, tapas, plats et desserts fait maison. </h3>
+                </div>
+            </div>
+            <h2 class="menu-mobile">NOTRE CARTE</h2>
+            <div class="menu-desc menu-mobile">
                 <h3>Découvrez le menu du Bivouac qui comporte un assortiment de tartinades, tapas, plats et desserts fait maison. </h3>
             </div>
             <img id="menu-img" src="assets/img/affiches/menu.png" alt="img menu">
@@ -107,18 +116,27 @@
         </div>
     </section>
     <footer id="contact" class="flex-col">
-        <img id="footer-logo" src="assets/img/logo/logo-1.png" alt="logo du bivouac">
-        <div class="footer-info flex">
-            <div class="flex-col">
-                <h3>NOUS CONTACTER</h3>
-               <a href="tel:+33764464434">07 644 644 34</a>
-               <a href="https://maps.app.goo.gl/NW747xAmQ2omTCGVA">646 ROUTE DE CAUX, PEZENAS</a>
-               <a href="mailto:info@lebivouacquifume.fr">INFO@LEBIVOUACQUIFUME.FR</a>
+        <div class="footer-desktop-container">
+            <img id="footer-logo" src="assets/img/logo/logo-1.png" alt="logo du bivouac">
+            <div class="footer-info flex">
+                <div class="flex-col">
+                    <h3>NOUS CONTACTER</h3>
+                   <a href="tel:+33764464434">07 644 644 34</a>
+                   <a href="https://maps.app.goo.gl/NW747xAmQ2omTCGVA">646 ROUTE DE CAUX, PEZENAS</a>
+                   <a href="mailto:info@lebivouacquifume.fr">INFO@LEBIVOUACQUIFUME.FR</a>
+                </div>
+                <div class="footer-sitemap-desktop flex-col">
+                    <h3>SITEMAP</h3>
+                    <a href="#events">ÉVÉNEMENTS</a>
+                    <a href="#menu">MENU</a>
+                    <a href="#contact">CONTACT</a>
+                </div>
+                <div class="flex-col">
+                    <a href="https://www.facebook.com/lebivouacquifume/" target="_blank"><img src="assets/img/social-media/fb.png" alt="logo facebook"></a>
+                    <a href="https://www.instagram.com/lebivouacquifume/" target="_blank"><img src="assets/img/social-media/insta.png" alt="logo instagram" ></a> 
+                </div>
             </div>
-            <div class="flex-col">
-                <a href="https://www.facebook.com/lebivouacquifume/" target="_blank"><img src="assets/img/social-media/fb.png" alt="logo facebook"></a>
-                <a href="https://www.instagram.com/lebivouacquifume/" target="_blank"><img src="assets/img/social-media/insta.png" alt="logo instagram" ></a> 
-            </div>
+            <a href="" id="copyright-desktop">Tous droits réservés par <span>LEBIVOUACQUIFUME</span></a>
         </div>
         <div class="footer-jaune flex">
             <img src="assets/img/footer/icon-location.png" alt="">
@@ -144,46 +162,68 @@
           });
         });
       </script> -->
-      <script>
-        document.body.onload=function(){
-        nbr=4;
-        p=0;
-        container=document.getElementById("container");
-        r=document.getElementById("r");
-        l=document.getElementById("l");
-        container.style.width=(170*nbr) + "px";
-        for(i=1; i<=nbr;i++){
-            div=document.createElement("div");
-            div.className="photo";
-            div.style.backgroundImage="url('assets/img/affiches/affiche-"+i+".png')";
-            container.appendChild(div);
+      <style>
+        @media screen and (max-width: 768px) { /* Pour les écrans de taille inférieure ou égale à 768px (tablettes et téléphones) */
+            .photo {
+                width: 50%; /* Deux images côte à côte */
+            }
         }
-        afficherMasquer();
-    }
-    l.onclick=function(){
-        if(p<0)
-        p++;
-    container.style.transform="translate("+p*170+"px)";
-    container.style.transition="all 0.5s ease";
-    afficherMasquer();
-    }
-    r.onclick=function(){
-        if(p>-nbr+1)
-        p--;
-    container.style.transform="translate("+p*170+"px)";
-    container.style.transition="all 0.5s ease";
-    afficherMasquer();
-    }
-    function afficherMasquer(){
-        if(p==-nbr+1)
-            r.style.visibility="hidden";
-        else
-            r.style.visibility="visible";
-        if(p==0)
-            l.style.visibility="hidden";
-        else
-            l.style.visibility="visible";
-    }
-      </script>
+    
+        @media screen and (min-width: 769px) { /* Pour les écrans de taille supérieure à 768px (PC portable et bureau) */
+            .photo {
+                width: 100%; /* Une seule image par ligne */
+            }
+        }
+    </style>
+      <script>
+        document.body.onload = function() {
+            var nbr = 4;
+            var p = 0;
+            var container = document.getElementById("container");
+            var r = document.getElementById("r");
+            var l = document.getElementById("l");
+    
+            // Calcul de la largeur de chaque diapositive en pourcentage
+            var slideWidth = 100 / nbr;
+    
+            container.style.width = (slideWidth * nbr) + "%";
+    
+            for (var i = 1; i <= nbr; i++) {
+                var div = document.createElement("div");
+                div.className = "photo";
+                div.style.width = slideWidth + "%"; // Définition de la largeur en pourcentage
+                div.style.backgroundImage = "url('assets/img/affiches/affiche-" + i + ".png')";
+                container.appendChild(div);
+            }
+            afficherMasquer();
+        };
+    
+        l.onclick = function() {
+            if (p < 0)
+                p++;
+            container.style.transform = "translate(" + (p * -100) + "%)"; // Utilisation de pourcentage pour le déplacement
+            container.style.transition = "all 0.5s ease";
+            afficherMasquer();
+        };
+    
+        r.onclick = function() {
+            if (p > -nbr + 1)
+                p--;
+            container.style.transform = "translate(" + (p * -100) + "%)"; // Utilisation de pourcentage pour le déplacement
+            container.style.transition = "all 0.5s ease";
+            afficherMasquer();
+        };
+    
+        function afficherMasquer() {
+            if (p == -nbr + 1)
+                r.style.visibility = "hidden";
+            else
+                r.style.visibility = "visible";
+            if (p == 0)
+                l.style.visibility = "hidden";
+            else
+                l.style.visibility = "visible";
+        }
+    </script>
 </body>
 </html>

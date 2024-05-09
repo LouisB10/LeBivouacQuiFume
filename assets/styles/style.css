@@ -20,16 +20,16 @@ body {
   justify-content: space-between !important;
   overflow-x: hidden;
 }
-.overflow-hidden{
+.overflow-hidden {
   overflow: hidden;
 }
-.flex-col{
+.flex-col {
   flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.flex{
+.flex {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,33 +102,33 @@ button {
   }
 }
 @keyframes float {
-	0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(-10px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
 @keyframes float-media {
-	0% {
-		transform: translatey(0px);
+  0% {
+    transform: translatey(0px);
     transform: rotate(0deg);
-	}
-	50% {
-		transform: translatey(-2.5px);
+  }
+  50% {
+    transform: translatey(-2.5px);
     transform: rotate(5deg);
-	}
-	75% {
-		transform: translatey(-5px);
+  }
+  75% {
+    transform: translatey(-5px);
     transform: rotate(-5deg);
-	}
+  }
   100% {
-		transform: translatey(0);
+    transform: translatey(0);
     transform: rotate(0deg);
-	}
+  }
 }
 
 /*****************OPACITY**********/
@@ -173,46 +173,42 @@ section {
   background-color: var(--rose);
   gap: 4rem;
 }
-.events-section h2{
+.events-section h2 {
   width: 100%;
   text-align: start;
 }
-.events-section p{
+.events-section p {
   width: 100%;
   text-align: start;
   font-size: 1.5rem;
   color: var(--black);
 }
-.events-actual{
+.events-actual {
   width: 100%;
   gap: 1rem;
+  margin-bottom: 2rem;
 }
-.events-actual img{
+.events-actual img {
   width: 100%;
   border: solid 2px var(--black);
   border-radius: 10px;
 }
 
-
-
-
-
-
-.events-slider{
+.events-slider {
   position: relative;
   width: 100%;
   gap: 1rem;
 }
-.slider-container{
+.slider-container {
   width: 100%;
   overflow: hidden;
 }
-.photo{
-  width: 170PX;
-  height: 227PX;
+.photo {
+  width: 50%;
+  height: 227px;
   background-repeat: no-repeat;
 }
-.btn-slider{
+.btn-slider {
   position: absolute;
   width: 50px;
   cursor: pointer;
@@ -220,16 +216,15 @@ section {
   opacity: 0.95;
   transition: all 0.3s ease;
 }
-.btn-slider:hover{
+.btn-slider:hover {
   opacity: 1;
 }
-.l-btn{
+.l-btn {
   right: 90%;
 }
-.r-btn{
+.r-btn {
   left: 90%;
 }
-
 
 /*******************FOLLOW-US-SECTION*/
 .follow-section {
@@ -238,29 +233,29 @@ section {
   background-color: var(--yellow);
   z-index: 1;
 }
-.follow-section h2{
+.follow-section h2 {
   font-size: 3rem;
   width: 100%;
   text-align: start;
 }
-.follow-media{
+.follow-media {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: -10%;
 }
-#arrow{
+#arrow {
   width: 65%;
   z-index: -1;
 }
-.follow-media div{
+.follow-media div {
   gap: 1rem;
 }
-.follow-media div img{
+.follow-media div img {
   width: 2rem;
 }
-.follow-media div img:hover{
-	animation: float-media 0.8s ease-in-out infinite;
+.follow-media div img:hover {
+  animation: float-media 0.8s ease-in-out infinite;
 }
 /*******************MENU-SECTION*/
 .menu-section {
@@ -268,12 +263,12 @@ section {
   padding: 10% 5%;
   background-color: var(--orange);
 }
-.menu-section h2{
+.menu-section h2 {
   width: 100%;
   color: var(--white);
   z-index: 3;
 }
- .menu-title h3{
+.menu-title h3 {
   color: var(--white);
   width: 70%;
 }
@@ -299,18 +294,21 @@ section {
   background: var(--black);
   z-index: 2;
 }
-.menu-desc h3{
+.menu-desc h3 {
   width: 90%;
   color: var(--white);
   z-index: 2;
   text-align: center;
   padding-bottom: 3rem;
 }
-#menu-img{
+#menu-img {
   width: 95%;
   border-radius: 10px;
   margin-top: -20%;
   z-index: 3;
+}
+.menu-desktop {
+  display: none;
 }
 /*******************MUSIQUE-SECTION*/
 .musique-section {
@@ -335,8 +333,8 @@ section {
   width: 90%;
 }
 .musique-title img {
-	transform: translatey(0px);
-	animation: float 6s ease-in-out infinite;
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
   width: 75px;
 }
 /**2 CIRCLES**/
@@ -347,7 +345,7 @@ section {
   left: 50%;
   margin-bottom: 40%;
   flex-shrink: 0;
-  z-index: 1; 
+  z-index: 1;
   border-radius: 50%;
   background: var(--rose);
   background-image: url(/assets/img/icones/icon-vinyl2.png);
@@ -363,7 +361,7 @@ section {
   left: 30%;
   margin-top: 50%;
   flex-shrink: 0;
-  z-index: 0;  
+  z-index: 0;
   border-radius: 50%;
   background: var(--orange);
   display: flex;
@@ -371,7 +369,7 @@ section {
   align-items: center;
   gap: 1rem;
 }
-#circle-2 a{
+#circle-2 a {
   margin-top: 1rem;
   width: 50px;
   height: 50px;
@@ -382,129 +380,187 @@ section {
   background-position: center;
   background-size: 80%;
 }
-#circle-2 a:hover{
+#circle-2 a:hover {
   animation: rotate-animation 10s infinite linear;
   transform: scale(1.1);
 }
-#circle-2 a:nth-child(2){
+#circle-2 a:nth-child(2) {
   margin-top: 2rem;
 }
 #vinyl {
-  width: 100%;
+  width: 85%;
 }
 
 /**********************************RESPONSIVE****************************/
 @media (min-width: 375px) {
-
 }
 /************AFFICHAGE Tablette****************/
 @media (min-width: 767px) {
   h2 {
     font-size: 5rem;
   }
-  .events-section, .follow-section, .menu-section,.musique-section{
+  .events-section,
+  .follow-section,
+  .menu-section,
+  .musique-section {
     width: 85vw;
     padding: 15% 7.5%;
   }
   /*EVENTS-SECTION*/
-  .events-section p{
+  .events-section p {
     font-size: 2rem;
   }
   /*FOLLOW-SECTION*/
-  .follow-section{
+  .follow-section {
     padding: 10% 7.5%;
   }
-  .follow-section h2{
+  .follow-section h2 {
     font-size: 4rem;
   }
-  .follow-media{
+  .follow-media {
     justify-content: flex-start;
     gap: 3rem;
   }
-  .follow-media div img{
+  .follow-media div img {
     width: 3.5rem;
   }
-  .follow-media div{
+  .follow-media div {
     gap: 2rem;
   }
   /*MENU-SECTION*/
-  #menu-img{
+  #menu-img {
     margin-top: -15%;
     width: 90%;
   }
-  #circle-3{
+  #circle-3 {
     width: 450px;
     height: 450px;
     left: 60%;
   }
-  .menu-desc{
+  .menu-desc {
     width: 400px;
-    height: 400px; 
+    height: 400px;
   }
-  .menu-desc h3{
+  .menu-desc h3 {
     font-size: 1.5rem;
   }
   /*MUSIQUE-SECTION*/
-  #circle-1{
+  #circle-1 {
     width: 250px;
     height: 250px;
     left: 45%;
     margin-bottom: 25%;
   }
-  #circle-2{
+  #circle-2 {
     width: 275px;
     height: 275px;
     margin-top: 30%;
   }
-  #circle-2 a{
+  #circle-2 a {
     width: 60px;
     height: 60px;
   }
-  #vinyl{
+  #vinyl {
     width: 80%;
   }
-  .musique-title{
+  .musique-title {
     gap: 2rem;
   }
-
 }
 /*********AFFICHAGE Tablette/ PC Portable*******/
 @media (min-width: 1024px) {
-  h2{
-    font-size: 6rem;
+  .landing-section {
+    height: 75vh;
   }
-  .events-section, .follow-section, .menu-section,.musique-section{
-    width: 80vw;
-    padding: 7.5% 10%;
+  .events-section,
+  .follow-section,
+  .menu-section,
+  .musique-section {
+    padding: 7.5%;
+  }
+  /*EVENTS-SECTION*/
+  .events-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .events-actual {
+    width: 50%;
+  }
+
+  .events-slider {
+    width: 45%;
+  }
+  .photo {
+    width: 450px;
+    height: 350px;
+    background-size: 100%;
+  }
+  /*MENU-SECTION*/
+  .menu-section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+  }
+  .menu-desc {
+    align-self: flex-end;
+    width: 360px;
+    height: 360px;
+  }
+  #menu-img {
+    margin-top: 0;
+    width: 50%;
+  }
+  .menu-desktop {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5rem;
+  }
+  .menu-mobile {
+    display: none;
+  }
+  #circle-3 {
+    margin-top: -30%;
+    left: 37%;
   }
   /*FOLLOW-SECTION*/
-  .follow-section h2{
-    font-size: 6rem;
+  .follow-section h2 {
+    font-size: 5rem;
   }
-  .follow-media div img{
+  #arrow {
+    width: 55%;
+  }
+  .follow-media {
+    gap: 5rem;
+  }
+  .follow-media div img {
     width: 4rem;
   }
   /*MUSIQUE-SECTION*/
-  .musique-section{
+  .musique-section {
     flex-direction: row;
   }
-  #circle-1{
+  #circle-1 {
     height: 275px;
     width: 275px;
-    left: 41%;
-    margin-bottom: 15%;
+    left: 33%;
+    margin-bottom: 20%;
   }
-  #circle-2{
+  #circle-2 {
     margin-top: 20%;
     left: 26%;
   }
-  #circle-2 a{
+  #circle-2 a {
     margin-top: 3rem;
   }
-  #circle-2 a:nth-child(2){
+  #circle-2 a:nth-child(2) {
     margin-top: 5rem;
   }
-  #vinyl{
+  #vinyl {
     width: 35%;
     align-self: flex-end;
   }
@@ -514,10 +570,92 @@ section {
 }
 /************AFFICHAGE PC Portable/PC petit***********/
 @media (min-width: 1200px) {
-  h1 {
-    font-size: 3.6rem;
-  }
   h2 {
-    font-size: 3rem;
+    font-size: 6.5rem;
+  }
+  /*MENU-SECTION*/
+  .menu-desc {
+    align-self: flex-end;
+    width: 400px;
+    height: 400px;
+  }
+  #menu-img {
+    margin-top: 0;
+    width: 45%;
+  }
+
+  /*FOLLOW-SECTION*/
+  .follow-section h2 {
+    font-size: 6rem;
+  }
+  #arrow {
+    width: 50%;
+  }
+  .follow-media {
+    gap: 7rem;
+  }
+  .follow-media div img {
+    width: 5rem;
+  }
+  /*MUSIQUE-SECTION*/
+  #circle-2 {
+    margin-top: 25%;
+  }
+  #vinyl {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1600px) {
+  h2 {
+    font-size: 8rem;
+  }
+  /*MENU-SECTION*/
+  .menu-section{
+    justify-content: flex-start;
+    gap: 5rem;
+  }
+  #menu-img {
+    margin-top: 0;
+    width: 40%;
+  }
+  #circle-3 {
+    width: 500px;
+    height: 500px;
+    margin-top: -30%;
+    left: 32%;
+  }
+  /*FOLLOW-SECTION*/
+  .follow-section h2 {
+    font-size: 7rem;
+  }
+  #arrow {
+    width: 40%;
+  }
+  .follow-media {
+    align-self: center;
+    width: 100%;
+    gap: 20rem;
+  }
+  .follow-media div img {
+    width: 5rem;
+  }
+  /*MUSIQUE-SECTION*/
+  #circle-1 {
+    height: 300px;
+    width: 300px;
+    left: 30%;
+  }
+  #circle-2 {
+    margin-top: 20%;
+    width: 315px;
+    height: 315px;
+  }
+  #circle-2 a {
+    width: 75px;
+    height: 75px;
+  }
+  #vinyl {
+    width: 40%;
   }
 }
