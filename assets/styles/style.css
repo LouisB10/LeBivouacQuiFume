@@ -1,7 +1,7 @@
 /***************************REGLES GENERALES*************************/
 :root {
   --white: #fffef9;
-  --black: #333232;
+  --black: rgb(51, 50, 50);
   --blue: #4580b2;
   --rose: #ffa4bb;
   --yellow: #fde82e;
@@ -58,7 +58,7 @@ button {
   padding: 0;
   background: none;
 }
-/**#backToTopBtn**/
+/************backToTopBtn**/
 #backToTopBtn {
   height: 45px;
   width: 45px;
@@ -152,6 +152,16 @@ button {
 section {
   width: 100vw;
 }
+.events-section,
+.follow-section,
+.menu-section,
+.musique-section {
+  width: 90vw;
+  padding: 10% 5%;
+  z-index: 1;
+}
+
+
 /**************************************LANDING-SECTION*/
 .landing-section {
   width: 85%;
@@ -168,8 +178,6 @@ section {
 }
 /*******************EVENTS-SECTION*/
 .events-section {
-  width: 90vw;
-  padding: 10% 5%;
   background-color: var(--rose);
   gap: 4rem;
 }
@@ -184,15 +192,20 @@ section {
   color: var(--black);
 }
 .events-actual {
+  align-items: flex-start;
   width: 100%;
   gap: 1rem;
   margin-bottom: 2rem;
 }
-.events-actual img {
+#modal-events {
   width: 100%;
   border: solid 2px var(--black);
   border-radius: 10px;
 }
+.events-container{
+  width: 100% !important;
+}
+
 
 .events-slider {
   position: relative;
@@ -203,10 +216,8 @@ section {
   width: 100%;
   overflow: hidden;
 }
-.photo {
-  width: 50%;
-  height: 227px;
-  background-repeat: no-repeat;
+#container{
+  gap: 1rem;
 }
 .btn-slider {
   position: absolute;
@@ -228,10 +239,8 @@ section {
 
 /*******************FOLLOW-US-SECTION*/
 .follow-section {
-  width: 90vw;
-  padding: 10% 5%;
   background-color: var(--yellow);
-  z-index: 1;
+  z-index: 2;
 }
 .follow-section h2 {
   font-size: 3rem;
@@ -239,6 +248,7 @@ section {
   text-align: start;
 }
 .follow-media {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -259,8 +269,6 @@ section {
 }
 /*******************MENU-SECTION*/
 .menu-section {
-  width: 90vw;
-  padding: 10% 5%;
   background-color: var(--orange);
 }
 .menu-section h2 {
@@ -272,10 +280,10 @@ section {
   color: var(--white);
   width: 70%;
 }
-#circle-3 {
+.menu-deco {
   position: absolute;
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   left: 50%;
   margin-top: -150%;
   flex-shrink: 0;
@@ -302,33 +310,29 @@ section {
   padding-bottom: 3rem;
 }
 #menu-img {
-  width: 95%;
+  width: 100%;
   border-radius: 10px;
-  margin-top: -20%;
-  z-index: 3;
 }
 .menu-desktop {
   display: none;
 }
+.menu-content{
+  margin-top: -20%;
+}
 /*******************MUSIQUE-SECTION*/
 .musique-section {
-  width: 90vw;
-  padding: 10% 5%;
   background-color: var(--yellow);
   gap: 5rem;
 }
 .musique-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: flex-start;
   width: 100%;
   gap: 1rem;
 }
-.musique-title h2 {
+.musique-title h2, .musique-title h3 {
   z-index: 2;
 }
 .musique-title h3 {
-  z-index: 2;
   color: var(--black);
   width: 90%;
 }
@@ -338,12 +342,12 @@ section {
   width: 75px;
 }
 /**2 CIRCLES**/
-#circle-1 {
+.musique-deco {
   position: absolute;
   width: 200px;
   height: 200px;
   left: 50%;
-  margin-bottom: 40%;
+  margin-bottom: 50%;
   flex-shrink: 0;
   z-index: 1;
   border-radius: 50%;
@@ -354,7 +358,7 @@ section {
   background-size: 45%;
   animation: rotate-animation 10s infinite linear;
 }
-#circle-2 {
+.musique-playlist {
   position: absolute;
   width: 225px;
   height: 225px;
@@ -369,7 +373,7 @@ section {
   align-items: center;
   gap: 1rem;
 }
-#circle-2 a {
+.musique-playlist a {
   margin-top: 1rem;
   width: 50px;
   height: 50px;
@@ -380,19 +384,103 @@ section {
   background-position: center;
   background-size: 80%;
 }
-#circle-2 a:hover {
+.musique-playlist a:hover {
   animation: rotate-animation 10s infinite linear;
   transform: scale(1.1);
 }
-#circle-2 a:nth-child(2) {
+.musique-playlist a:nth-child(2) {
   margin-top: 2rem;
 }
 #vinyl {
   width: 85%;
 }
 
+/*******************************MODAL IMAGES*/
+.modal-content-wrapper {
+  width: 90%;
+  z-index: 3; 
+}
+.modal-content-wrapper .image-modal-content {
+  cursor: pointer;
+  transition: 300ms ease-out;
+}
+/* modal popup styles */
+.image-modal-popup {
+  width: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background: rgba(51, 50, 50, 1);
+  animation: 500ms fadeIn;
+  z-index: 10;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.image-modal-popup .wrapper {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  padding: 5% 2.5%;
+  padding-top: 0;
+}
+
+.image-modal-popup img {
+  width: 100%;
+  cursor: pointer;
+}
+.image-modal-popup span {
+  align-self: flex-end;
+  font-size: 6rem;
+  color: var(--yellow);
+  cursor: pointer;
+}
+
 /**********************************RESPONSIVE****************************/
-@media (min-width: 375px) {
+@media (max-width: 375px) {
+  h2{
+    font-size: 3.5rem;
+  }
+
+  .menu-desc,.menu-deco{
+    width: 250px;
+    height: 250px;
+  }
+  .menu-desc h3{
+    width: 80%;
+    font-size: 1rem;
+  }
+
+
+  /*MUSIQUE-SECTION*/
+  .musique-section{
+    gap: 3rem;
+  }
+  .musique-title img{
+    width: 50px;
+  }
+  .musique-deco{
+    width: 170px;
+    height: 170px;
+    margin-bottom: 45%;
+  }
+  .musique-playlist{
+    width: 195px;
+    height: 195px;
+    margin-top: 60%;
+  }
+  .musique-playlist a{
+    width: 35px;
+    height: 35px;
+  }
 }
 /************AFFICHAGE Tablette****************/
 @media (min-width: 767px) {
@@ -417,46 +505,37 @@ section {
   .follow-section h2 {
     font-size: 4rem;
   }
-  .follow-media {
-    justify-content: flex-start;
-    gap: 3rem;
-  }
   .follow-media div img {
     width: 3.5rem;
   }
-  .follow-media div {
-    gap: 2rem;
-  }
   /*MENU-SECTION*/
-  #menu-img {
-    margin-top: -15%;
-    width: 90%;
+  #menu-deco,.menu-desc{
+    width: 350px;
+    height: 350px;
   }
-  #circle-3 {
-    width: 450px;
-    height: 450px;
+  #menu-deco {
     left: 60%;
   }
-  .menu-desc {
-    width: 400px;
-    height: 400px;
-  }
+
   .menu-desc h3 {
     font-size: 1.5rem;
   }
+  .menu-content{
+    margin-top: -15%;
+  }
   /*MUSIQUE-SECTION*/
-  #circle-1 {
+  .musique-deco {
     width: 250px;
     height: 250px;
     left: 45%;
     margin-bottom: 25%;
   }
-  #circle-2 {
+  .musique-playlist {
     width: 275px;
     height: 275px;
     margin-top: 30%;
   }
-  #circle-2 a {
+  .musique-playlist a {
     width: 60px;
     height: 60px;
   }
@@ -523,19 +602,24 @@ section {
   .menu-mobile {
     display: none;
   }
-  #circle-3 {
+  #menu-deco {
     margin-top: -30%;
     left: 37%;
   }
   /*FOLLOW-SECTION*/
+
+  .follow-media {
+    align-self: flex-start;
+    width: 85%;
+  }
+  .follow-media div {
+    gap: 4rem;
+  }
   .follow-section h2 {
     font-size: 5rem;
   }
   #arrow {
     width: 55%;
-  }
-  .follow-media {
-    gap: 5rem;
   }
   .follow-media div img {
     width: 4rem;
@@ -544,20 +628,20 @@ section {
   .musique-section {
     flex-direction: row;
   }
-  #circle-1 {
+  .musique-deco {
     height: 275px;
     width: 275px;
     left: 33%;
-    margin-bottom: 20%;
+    margin-bottom: 15%;
   }
-  #circle-2 {
+  .musique-playlist {
     margin-top: 20%;
     left: 26%;
   }
-  #circle-2 a {
+  .musique-playlist a {
     margin-top: 3rem;
   }
-  #circle-2 a:nth-child(2) {
+  .musique-playlist a:nth-child(2) {
     margin-top: 5rem;
   }
   #vinyl {
@@ -598,7 +682,7 @@ section {
     width: 5rem;
   }
   /*MUSIQUE-SECTION*/
-  #circle-2 {
+  .musique-playlist {
     margin-top: 25%;
   }
   #vinyl {
@@ -610,8 +694,18 @@ section {
   h2 {
     font-size: 8rem;
   }
+  .events-section,
+  .follow-section,
+  .menu-section,
+  .musique-section {
+    padding: 5%;
+  }
+
+
+
+
   /*MENU-SECTION*/
-  .menu-section{
+  .menu-section {
     justify-content: flex-start;
     gap: 5rem;
   }
@@ -619,7 +713,7 @@ section {
     margin-top: 0;
     width: 40%;
   }
-  #circle-3 {
+  #menu-deco {
     width: 500px;
     height: 500px;
     margin-top: -30%;
@@ -632,26 +726,22 @@ section {
   #arrow {
     width: 40%;
   }
-  .follow-media {
-    align-self: center;
-    width: 100%;
-    gap: 20rem;
-  }
   .follow-media div img {
     width: 5rem;
   }
   /*MUSIQUE-SECTION*/
-  #circle-1 {
+  .musique-deco {
     height: 300px;
     width: 300px;
     left: 30%;
+    margin-bottom: 5%;
   }
-  #circle-2 {
+  .musique-playlist {
     margin-top: 20%;
     width: 315px;
     height: 315px;
   }
-  #circle-2 a {
+  .musique-playlist a {
     width: 75px;
     height: 75px;
   }

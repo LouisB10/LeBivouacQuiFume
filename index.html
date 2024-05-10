@@ -25,7 +25,6 @@
         <meta property="og:type" content="LeBivouacQuiFume" />
         <meta property="og:url" content="https://www.lebivouacquifume.fr" />
         <script src="https://www.google.com/recaptcha/api.js?render=<?php echo htmlspecialchars(RECAPTCHA_SITE_KEY); ?>"></script>
-        <script src="assets/scripts/script.js"></script>
     </head>
 <body class="flex-col">
     <header>
@@ -60,7 +59,11 @@
             <div class="events-container">
                 <div class="events-actual flex-col">
                     <p>Le prochain</p>
-                    <img src="assets/img/affiches/affiche.png" alt="affiche evenements">
+                    <div class="modal-content-wrapper events-container">
+                        <div class="image-modal-content">
+                            <img id="modal-events" src="assets/img/affiches/affiche.png" alt="affiche evenements">
+                        </div>
+                    </div>
                 </div>
                 <div class="events-slider flex-col">
                     <p>À venir</p>
@@ -87,7 +90,7 @@
             </div>
         </div>
         <div class="menu-section flex-col" id="menu">
-            <div id="circle-3"></div>
+            <div class="menu-deco"></div>
             <div class="menu-desktop">
                 <h2>NOTRE CARTE</h2>
                 <div class="menu-desc">
@@ -98,14 +101,18 @@
             <div class="menu-desc menu-mobile">
                 <h3>Découvrez le menu du Bivouac qui comporte un assortiment de tartinades, tapas, plats et desserts fait maison. </h3>
             </div>
-            <img id="menu-img" src="assets/img/affiches/menu.png" alt="img menu">
+            <div class="modal-content-wrapper menu-content">
+                <div class="image-modal-content">
+                    <img id="menu-img" src="assets/img/affiches/menu.png" alt="img menu">
+                </div>
+            </div>
         </div>
         <div class="musique-section flex-col">
-            <div class="musique-title">
-                <div id="circle-1"></div>
+            <div class="musique-title flex-col">
+                <div class="musique-deco"></div>
                 <h2>POINT<br>MUSIQUE</h2>
                 <h3>Cliquez sur les vinyles pour accéder aux playlists du Bivouac.</h3>
-                <div id="circle-2">
+                <div class="musique-playlist">
                     <a href="https://deezer.page.link/ZeXebqQ9s6Vujvnu9" target="_blank"></a>
                     <a href="https://deezer.page.link/ZeXebqQ9s6Vujvnu9" target="_blank"></a>
                     <a href="https://deezer.page.link/ZeXebqQ9s6Vujvnu9" target="_blank"></a>
@@ -113,7 +120,7 @@
                 <img src="assets/img/icones/icon-music2.png" alt="note de musique decoration">
             </div>
             <img id="vinyl" src="assets/img/icones/icon-vinyl.png" alt="vinyl decoration">
-        </div>
+        </div>  
     </section>
     <footer id="contact" class="flex-col">
         <div class="footer-desktop-container">
@@ -152,6 +159,13 @@
             <a href="" id="copyright">Tous droits réservés par <span>LEBIVOUACQUIFUME</span></a>
         </div>
     </footer>
+     <!-- modal popup (displayed none by default) -->
+     <div class="image-modal-popup">
+        <div class="wrapper">
+        <span>&times;</span>
+        <img src="" alt="">
+        </div>
+    </div>
     <button id="backToTopBtn" onclick="scrollToTop()" aria-label="button back to top"><img src="assets/img/arrow-backtotop.webp" alt=""></button>
     <!-- <script>
         grecaptcha.ready(function() {
@@ -161,69 +175,77 @@
             document.getElementById("recaptchaResponse").value = token;
           });
         });
-      </script> -->
-      <style>
-        @media screen and (max-width: 768px) { /* Pour les écrans de taille inférieure ou égale à 768px (tablettes et téléphones) */
-            .photo {
-                width: 50%; /* Deux images côte à côte */
-            }
-        }
-    
-        @media screen and (min-width: 769px) { /* Pour les écrans de taille supérieure à 768px (PC portable et bureau) */
-            .photo {
-                width: 100%; /* Une seule image par ligne */
-            }
-        }
-    </style>
+      </script> -->  
+      <script src="assets/scripts/script.js"></script>
       <script>
         document.body.onload = function() {
             var nbr = 4;
+            var nbImgM= 2;
+            var nbImgD= 1;
             var p = 0;
+            var q = 0;
             var container = document.getElementById("container");
             var r = document.getElementById("r");
             var l = document.getElementById("l");
     
+            // Vérification de la largeur de l'écran pour déterminer le nombre d'images à afficher
+            var screenWidth = window.innerWidth;
+                var nbImg;
+
+                if (screenWidth < 1024) { // Si la largeur de l'écran est inférieure à 768px (mode mobile)
+                    nbImg = nbImgM;
+                } else { // Sinon (mode PC)
+                    nbImg = nbImgD;
+                }
+
             // Calcul de la largeur de chaque diapositive en pourcentage
-            var slideWidth = 100 / nbr;
+            var slideWidth = 100 / nbImg;
+            console.log(nbImg);
     
             container.style.width = (slideWidth * nbr) + "%";
-    
+        
             for (var i = 1; i <= nbr; i++) {
-                var div = document.createElement("div");
-                div.className = "photo";
-                div.style.width = slideWidth + "%"; // Définition de la largeur en pourcentage
-                div.style.backgroundImage = "url('assets/img/affiches/affiche-" + i + ".png')";
-                container.appendChild(div);
+                var img = document.createElement("img"); // Utilisation de balises <img> au lieu de <div>
+             img.className = "photo";
+            img.style.width = slideWidth + "%"; // Définition de la largeur en pourcentage
+            img.src = "assets/img/affiches/affiche-" + i + ".png"; // Chemin vers l'image
+            container.appendChild(img);
             }
             afficherMasquer();
-        };
-    
-        l.onclick = function() {
+
+            l.onclick = function() {
             if (p < 0)
                 p++;
-            container.style.transform = "translate(" + (p * -100) + "%)"; // Utilisation de pourcentage pour le déplacement
+                q=(q+25);
+            container.style.transform = "translateX(" +q+ "%)"; // Utilisation de pourcentage pour le déplacement
             container.style.transition = "all 0.5s ease";
             afficherMasquer();
+            console.log(p);
         };
     
         r.onclick = function() {
-            if (p > -nbr + 1)
+            if (p > -nbr + 2)
                 p--;
-            container.style.transform = "translate(" + (p * -100) + "%)"; // Utilisation de pourcentage pour le déplacement
+                q=(q-25);
+            container.style.transform = "translateX(" + q + "%)"; // Utilisation de pourcentage pour le déplacement
             container.style.transition = "all 0.5s ease";
             afficherMasquer();
+            console.log(p);
         };
     
         function afficherMasquer() {
-            if (p == -nbr + 1)
-                r.style.visibility = "hidden";
+            if (p == -nbr + 2)
+                r.style.display = "none";
             else
-                r.style.visibility = "visible";
+                r.style.display = "block";
             if (p == 0)
-                l.style.visibility = "hidden";
+                l.style.display = "none";
             else
-                l.style.visibility = "visible";
+                l.style.display = "block";
         }
+        };
+    
+    
     </script>
 </body>
 </html>

@@ -204,6 +204,20 @@ header {
   }
 
 /**********************************RESPONSIVE****************************/
+@media (max-width: 375px) {
+  footer{
+    background-size: 80%;
+  }
+  #footer-logo{
+    height: 70px;
+  }
+  .footer-info{
+    gap: 1rem;
+  }
+  #copyright{
+    font-size: 0.6rem;
+  }
+}
 /************AFFICHAGE Tablette****************/
 @media (min-width: 767px) {
   /**HEADER**/
@@ -380,7 +394,7 @@ header {
     background-position: top -10% right -5rem;
   }
   .footer-info{
-    width: 60%;
+    width: 65%;
     gap: 4rem;
     padding: 3rem;
   }
