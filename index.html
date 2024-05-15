@@ -193,9 +193,10 @@
                 var nbImg;
 
                 if (screenWidth < 1024) { // Si la largeur de l'écran est inférieure à 768px (mode mobile)
-                    nbImg = nbImgM;
-                } else { // Sinon (mode PC)
                     nbImg = nbImgD;
+                } else { // Sinon (mode PC)
+                    nbImg = nbImgM;
+                    console.log("passage largeur pc slider")
                 }
 
             // Calcul de la largeur de chaque diapositive en pourcentage

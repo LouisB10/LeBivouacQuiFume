@@ -59,7 +59,7 @@ header {
   #language-select {
     order: 3;
     padding: 5px;
-    width: 50px;
+    width: 55px;
     height: 40px;
     border: 2px solid var(--yellow);
     background-color: var(--blue);
@@ -106,8 +106,12 @@ header {
   .hamburger-btn.open span:nth-child(2) {
     opacity: 0;
   }
-  .desktop-links {
+  .desktop-links { 
+    transition: all 300ms ease-in-out;
     display: none;
+  }
+  .desktop-links li a:hover{
+    color: var(--black);
   }
   /*******************FOOTER*/
   footer{
