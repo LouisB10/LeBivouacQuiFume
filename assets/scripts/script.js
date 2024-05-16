@@ -39,6 +39,7 @@ const modalPopup = document.querySelector('.image-modal-popup');
 // Sélection dynamique de tous les éléments à l'intérieur de la popup modale
 const modalElement = element => document.querySelector(`.image-modal-popup ${element}`);
 
+
 // Sélection du body
 const body = document.querySelector('body');
 

@@ -7,7 +7,7 @@
         <meta name="description" content="LeBivouacQuiFume est un restaurant en plein air accueillant aussi des evenements." />
         <meta name="keywords" content="LeBivouacQuiFume, extérieur, evenements, " />
         <meta name="author" content="LeBivouacQuiFume" />
-        <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-Content-Type-Options" content="nosniff" />
@@ -69,15 +69,12 @@
                     <p>À venir</p>
                     <div class="slider-container">
                         <div id="container" class="flex">
-                            <!-- <img src="assets/img/affiches/affiche.png" alt="">
-                            <img src="assets/img/affiches/affiche.png" alt=""> -->
                         </div>
                         <img class="btn-slider r-btn" id="r" src="assets/img/slider/right-button.png" alt="">
                         <img  class="btn-slider l-btn" id="l" src="assets/img/slider/left-button.png" alt="">
                     </div>
                 </div>
             </div>
-            
         </div>
         <div class="follow-section flex-col">
             <h2>SUIVEZ-NOUS</h2>
@@ -176,7 +173,7 @@
           });
         });
       </script> -->  
-      <script src="assets/scripts/script.js"></script>
+      <script src="assets/scripts/script.js" async></script>
       <script>
         document.body.onload = function() {
             var nbr = 4;
@@ -193,9 +190,9 @@
                 var nbImg;
 
                 if (screenWidth < 1024) { // Si la largeur de l'écran est inférieure à 768px (mode mobile)
-                    nbImg = nbImgD;
-                } else { // Sinon (mode PC)
                     nbImg = nbImgM;
+                } else { // Sinon (mode PC)
+                    nbImg = nbImgD;
                     console.log("passage largeur pc slider")
                 }
 
@@ -206,11 +203,17 @@
             container.style.width = (slideWidth * nbr) + "%";
         
             for (var i = 1; i <= nbr; i++) {
+                var containerModal = document.createElement("div");
+                var modal = document.createElement("div");
+                containerModal.className ="modal-content-wrapper events-container";
+                modal.className="image-modal-content";
                 var img = document.createElement("img"); // Utilisation de balises <img> au lieu de <div>
-             img.className = "photo";
-            img.style.width = slideWidth + "%"; // Définition de la largeur en pourcentage
-            img.src = "assets/img/affiches/affiche-" + i + ".png"; // Chemin vers l'image
-            container.appendChild(img);
+                img.className = "photo";
+                // img.style.width = slideWidth + "%"; // Définition de la largeur en pourcentage
+                img.src = "assets/img/affiches/affiche-" + i + ".png"; // Chemin vers l'image
+                container.appendChild(containerModal);
+                containerModal.appendChild(modal);
+                modal.appendChild(img);
             }
             afficherMasquer();
 

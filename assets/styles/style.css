@@ -1,4 +1,7 @@
 /***************************REGLES GENERALES*************************/
+html {
+	scroll-behavior: smooth;
+}
 :root {
   --white: #fffef9;
   --black: rgb(51, 50, 50);
@@ -232,9 +235,11 @@ section {
 }
 .l-btn {
   right: 90%;
+  z-index: 3;
 }
 .r-btn {
   left: 90%;
+  z-index: 3;
 }
 
 /*******************FOLLOW-US-SECTION*/
@@ -413,7 +418,7 @@ section {
   bottom: 0;
   background: rgba(51, 50, 50, 1);
   animation: 500ms fadeIn;
-  z-index: 10;
+  z-index: 15;
 }
 @keyframes fadeIn {
   from {
@@ -436,6 +441,7 @@ section {
 .image-modal-popup img {
   width: 100%;
   cursor: pointer;
+  border-radius: 10px;
 }
 .image-modal-popup span {
   align-self: flex-end;
@@ -478,8 +484,8 @@ section {
     margin-top: 60%;
   }
   .musique-playlist a{
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
   }
 }
 /************AFFICHAGE Tablette****************/
@@ -492,7 +498,7 @@ section {
   .menu-section,
   .musique-section {
     width: 85vw;
-    padding: 15% 7.5%;
+    padding: 10% 7.5%;
   }
   /*EVENTS-SECTION*/
   .events-section p {
@@ -509,12 +515,12 @@ section {
     width: 3.5rem;
   }
   /*MENU-SECTION*/
-  #menu-deco,.menu-desc{
-    width: 350px;
-    height: 350px;
+  .menu-deco,.menu-desc{
+    width: 400px;
+    height: 400px;
   }
-  #menu-deco {
-    left: 60%;
+  .menu-deco {
+    left: 55%;
   }
 
   .menu-desc h3 {
