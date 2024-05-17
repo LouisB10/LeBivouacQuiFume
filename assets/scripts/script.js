@@ -47,6 +47,7 @@ const body = document.querySelector('body');
 function openModal(imgSrc) {
     body.style.overflow = 'hidden'; // Empêche le défilement de la page
     modalPopup.style.display = 'block'; // Affiche la modale
+    modalPopup.style.overflow ='auto';
     modalElement('img').src = imgSrc; // Affiche l'image cliquée dans la modale
 }
 

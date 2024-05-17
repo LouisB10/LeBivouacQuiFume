@@ -511,9 +511,13 @@ section {
   .follow-section h2 {
     font-size: 4rem;
   }
+  .follow-media div{
+    gap: 2rem;
+  }
   .follow-media div img {
     width: 3.5rem;
   }
+  
   /*MENU-SECTION*/
   .menu-deco,.menu-desc{
     width: 400px;
