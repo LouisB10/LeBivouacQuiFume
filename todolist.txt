@@ -1,7 +1,6 @@
-navbar comme frenchkiss V
-
-menu qui s'affiche en grand quand on clique 
 
 evenements, slider pour ceux a venir + qui s'affiche en grand quand on click
 
 carte a integrer avec api pour footer
+
+a venir events vide, stand by menu et playlist

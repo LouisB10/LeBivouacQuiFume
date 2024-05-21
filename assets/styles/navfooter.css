@@ -56,17 +56,22 @@ header {
     color: var(--yellow);
   }
   /**SELECT LANGUAGE***/
-  #language-select {
+  .language {
     order: 3;
-    padding: 5px;
-    width: 55px;
     height: 40px;
-    border: 2px solid var(--yellow);
-    background-color: var(--blue);
-    font-size: 18px;
-    color: var(--yellow);
-    border-radius: 10px;
+    display: flex;
+    align-items: center;
   }
+  /**flag size**/
+  .language img {
+    height: 85%;
+    transition: 0.3s ease-in-out;
+  }
+  .language img:active,
+  .language img:hover {
+    transform: scale(1.1);
+  }
+  
   /******.HAMBURGER-BTN*******/
   .hamburger-btn {
     order: 1;
@@ -358,13 +363,6 @@ header {
   .desktop-links li a {
     font-size: 2rem;
   }
-  #language-select{
-    width: 60px;
-    height: 50px;
-  }
-
-
-
   footer{
     background-size: 35%;
     background-position: top -15% right -5rem;
@@ -373,7 +371,7 @@ header {
     font-size: 1.4rem;
   }
   .footer-jaune{
-
+    height: 560px;
     width: 35%;
   
   }
@@ -385,7 +383,7 @@ header {
   }
   .footer-desktop-container{
     width: 80%;
-    gap: 5rem;
+    gap: 8rem;
   }
 }
 
@@ -403,17 +401,15 @@ header {
     padding: 3rem;
   }
   .footer-jaune{
-    height: 600px;
-    width: 28%;
+    height: 650px;
+    width: 25%;
     border-top-right-radius: 300px;
         border-top-left-radius: 300px;
   }
   footer a,footer h3{
     font-size: 1.75rem;
   }
-  .footer-desktop-container{
-    gap: 5rem;
-  }
+
 }
 
 

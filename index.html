@@ -29,36 +29,38 @@
 <body class="flex-col">
     <header>
         <nav class="nav">
-            <select id="language-select">
-                <option value="fr">FR</option>
-                <option value="en">EN</option>
-              </select>
+            <div class="language">
+                <img onclick="changeLanguage('fr')" id="flag-fr" src="assets/img/nav/flag-fr.webp" alt="drapeau de la france" data-lang="fr" style="display: none;" />
+                <img onclick="changeLanguage('en')" id="flag-en" src="assets/img/nav/flag-en.webp" alt="drapeau du royaume uni" data-lang="en" />
+              </div>
             <button type="button" class="hamburger-btn" onclick="displayMenu()" aria-expanded="false" aria-haspopup="true" aria-controls=".nav-mobile" aria-label="Ouvrir le menu">
                 <span></span><span></span><span></span>
             </button>
             <ul class="desktop-links">
-                <li><a href="#events">ÉVÉNEMENTS</a></li>
-                <li><a href="#menu">MENU</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#events" data-lang-key="NAV_l1">ÉVÉNEMENTS</a></li>
+                <li><a href="#menu" data-lang-key="NAV_l2">MENU</a></li>
+                <li><a href="#contact" data-lang-key="NAV_l3">CONTACT</a></li>
             </ul>
               <img src="assets/img/logo/logo-1.png" alt="Logo LeBivouacQuiFume">
         </nav>
         <nav class="mobile-nav">
             <ul class="flex-col">
-                <li><a href="#events" onclick="displayMenu()" class="flex"><img src="assets/img/nav/show.png" alt="icone events"><span>ÉVÉNEMENTS</span></a></li>
-                <li><a href="#menu" onclick="displayMenu()" class="flex"><img src="assets/img/nav/menu.png" alt="icone menu"><span>NOTRE MENU</span></a></li>
-                <li><a href="#contact" onclick="displayMenu()" class="flex"><img src="assets/img/nav/contact-us.png" alt="icone contact"><span>CONTACTEZ-NOUS</span></a></li>
+                <li><a href="#events" onclick="displayMenu()" class="flex"><img src="assets/img/nav/show.png" alt="icone events"><span data-lang-key="NAV_l1">ÉVÉNEMENTS</span></a></li>
+                <li><a href="#menu" onclick="displayMenu()" class="flex"><img src="assets/img/nav/menu.png" alt="icone menu"><span data-lang-key="NAV_l2">NOTRE MENU</span></a></li>
+                <li><a href="#contact" onclick="displayMenu()" class="flex"><img src="assets/img/nav/contact-us.png" alt="icone contact"><span data-lang-key="NAV_l3">CONTACTEZ-NOUS</span></a></li>
             </ul>
         </nav>
     </header>
     <section class="flex-col">
-        <div class="landing-section flex">
+        <div class="landing-section flex-col">
+            <h1>Le Bivouac qui fume plante le décor dans un cadre pittoresque, au coeur des vignes.</h1>
+            <h3>Assiettes à partager ou plats mijotés, espaces détente et jeux, animations et événements seront au programme de cet été !</h3>
         </div>
         <div class="events-section flex-col" id="events">
-            <h2>NOS ÉVÉNEMENTS</h2>
+            <h2 data-lang-key="EVENTS_h2">NOS ÉVÉNEMENTS</h2>
             <div class="events-container">
                 <div class="events-actual flex-col">
-                    <p>Le prochain</p>
+                    <p data-lang-key="EVENTS_actual">Le prochain</p>
                     <div class="modal-content-wrapper events-container">
                         <div class="image-modal-content">
                             <img id="modal-events" src="assets/img/affiches/affiche.png" alt="affiche evenements">
@@ -66,7 +68,7 @@
                     </div>
                 </div>
                 <div class="events-slider flex-col">
-                    <p>À venir</p>
+                    <p data-lang-key="EVENTS_next">À venir</p>
                     <div class="slider-container">
                         <div id="container" class="flex">
                         </div>
@@ -77,7 +79,7 @@
             </div>
         </div>
         <div class="follow-section flex-col">
-            <h2>SUIVEZ-NOUS</h2>
+            <h2 data-lang-key="FOLLOW_h2">SUIVEZ-NOUS</h2>
             <div class="follow-media">
                 <img id="arrow" src="assets/img/follow-us.png" alt="fleche suivez-nous">
                 <div class="flex">
@@ -89,14 +91,14 @@
         <div class="menu-section flex-col" id="menu">
             <div class="menu-deco"></div>
             <div class="menu-desktop">
-                <h2>NOTRE CARTE</h2>
+                <h2 data-lang-key="MENU_h2">NOTRE CARTE</h2>
                 <div class="menu-desc">
-                    <h3>Découvrez le menu du Bivouac qui comporte un assortiment de tartinades, tapas, plats et desserts fait maison. </h3>
+                    <h3 data-lang-key="MENU_desc">Découvrez le menu du Bivouac qui comporte un assortiment de tartinades, tapas, plats et desserts fait maison. </h3>
                 </div>
             </div>
-            <h2 class="menu-mobile">NOTRE CARTE</h2>
+            <h2 data-lang-key="MENU_h2" class="menu-mobile">NOTRE CARTE</h2>
             <div class="menu-desc menu-mobile">
-                <h3>Découvrez le menu du Bivouac qui comporte un assortiment de tartinades, tapas, plats et desserts fait maison. </h3>
+                <h3 data-lang-key="MENU_desc">Découvrez le menu du Bivouac qui comporte un assortiment de tartinades, tapas, plats et desserts fait maison. </h3>
             </div>
             <div class="modal-content-wrapper menu-content">
                 <div class="image-modal-content">
@@ -107,8 +109,8 @@
         <div class="musique-section flex-col">
             <div class="musique-title flex-col">
                 <div class="musique-deco"></div>
-                <h2>POINT<br>MUSIQUE</h2>
-                <h3>Cliquez sur les vinyles pour accéder aux playlists du Bivouac.</h3>
+                <h2 data-lang-key="MUSIQUE_h2">POINT<br>MUSIQUE</h2>
+                <h3 data-lang-key="MUSIQUE_desc">Cliquez sur les vinyles pour accéder aux playlists du Bivouac.</h3>
                 <div class="musique-playlist">
                     <a href="https://deezer.page.link/ZeXebqQ9s6Vujvnu9" target="_blank"></a>
                     <a href="https://deezer.page.link/ZeXebqQ9s6Vujvnu9" target="_blank"></a>
@@ -124,16 +126,16 @@
             <img id="footer-logo" src="assets/img/logo/logo-1.png" alt="logo du bivouac">
             <div class="footer-info flex">
                 <div class="flex-col">
-                    <h3>NOUS CONTACTER</h3>
+                    <h3 data-lang-key="FOOTER_contact">NOUS CONTACTER</h3>
                    <a href="tel:+33764464434">07 644 644 34</a>
                    <a href="https://maps.app.goo.gl/NW747xAmQ2omTCGVA">646 ROUTE DE CAUX, PEZENAS</a>
                    <a href="mailto:info@lebivouacquifume.fr">INFO@LEBIVOUACQUIFUME.FR</a>
                 </div>
                 <div class="footer-sitemap-desktop flex-col">
                     <h3>SITEMAP</h3>
-                    <a href="#events">ÉVÉNEMENTS</a>
-                    <a href="#menu">MENU</a>
-                    <a href="#contact">CONTACT</a>
+                    <a href="#events" data-lang-key="NAV_l1">ÉVÉNEMENTS</a>
+                    <a href="#menu" data-lang-key="NAV_l2">MENU</a>
+                    <a href="#contact" data-lang-key="NAV_l3">CONTACT</a>
                 </div>
                 <div class="flex-col">
                     <a href="https://www.facebook.com/lebivouacquifume/" target="_blank"><img src="assets/img/social-media/fb.png" alt="logo facebook"></a>
@@ -149,11 +151,11 @@
         <div class="footer-bottom">
             <div class="footer-sitemap flex-col">
                 <h3>SITEMAP</h3>
-                <a href="#events">ÉVÉNEMENTS</a>
-                <a href="#menu">MENU</a>
-                <a href="#contact">CONTACT</a>
+                <a href="#events" data-lang-key="NAV_l1">ÉVÉNEMENTS</a>
+                <a href="#menu" data-lang-key="NAV_l2">MENU</a>
+                <a href="#contact" data-lang-key="NAV_l3">CONTACT</a>
             </div>
-            <a href="" id="copyright">Tous droits réservés par <span>LEBIVOUACQUIFUME</span></a>
+            <a href="" id="copyright" data-lang-key="FOOTER_copyright">Tous droits réservés par <span>LEBIVOUACQUIFUME</span></a>
         </div>
     </footer>
      <!-- modal popup (displayed none by default) -->
@@ -174,6 +176,7 @@
         });
       </script> -->  
       <script src="assets/scripts/script.js" async></script>
+      <script src="assets/scripts/ChangeLanguage.js" async></script>
       <script>
         document.body.onload = function() {
             var nbr = 4;
@@ -193,7 +196,7 @@
                     nbImg = nbImgM;
                 } else { // Sinon (mode PC)
                     nbImg = nbImgD;
-                    console.log("passage largeur pc slider")
+                    // console.log("passage largeur pc slider")
                 }
 
             // Calcul de la largeur de chaque diapositive en pourcentage

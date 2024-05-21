@@ -1,3 +1,7 @@
+.menu-section, .musique-section,.slider-container, .events-slider p{
+  display: none !important;
+}
+
 /***************************REGLES GENERALES*************************/
 html {
 	scroll-behavior: smooth;
@@ -5,7 +9,7 @@ html {
 :root {
   --white: #fffef9;
   --black: rgb(51, 50, 50);
-  --blue: #4580b2;
+  --blue: rgb(69, 128, 178);
   --rose: #ffa4bb;
   --yellow: #fde82e;
   --orange: #fe6622;
@@ -170,7 +174,11 @@ section {
   width: 85%;
   height: 90vh;
   padding: 7.5%;
-  background: url("../img/bg.jpg");
+  background: linear-gradient(
+  0deg,
+    rgba(0, 65, 11, 0.2) 66.95%,
+    rgba(69, 128, 178, 0.5) 97.57%
+  ),url("../img/bg2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -205,10 +213,17 @@ section {
   border: solid 2px var(--black);
   border-radius: 10px;
 }
+
+.photo{
+  width: 95%;
+}
 .events-container{
   width: 100% !important;
 }
-
+.events-container .image-modal-content img{
+  border: solid 2px var(--black);
+  border-radius: 10px;
+}
 
 .events-slider {
   position: relative;
@@ -218,9 +233,6 @@ section {
 .slider-container {
   width: 100%;
   overflow: hidden;
-}
-#container{
-  gap: 1rem;
 }
 .btn-slider {
   position: absolute;
@@ -433,7 +445,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1200px;
   padding: 5% 2.5%;
   padding-top: 0;
 }
@@ -574,16 +585,21 @@ section {
     justify-content: space-between;
   }
   .events-actual {
-    width: 50%;
+    width: 55%;
+    justify-content: space-between;
+    align-self: flex-end;
+    margin-bottom: 0;
   }
 
   .events-slider {
-    width: 45%;
+    width: 40%;
+    align-self: flex-end;
   }
   .photo {
-    width: 450px;
-    height: 350px;
+    height: 480px;
     background-size: 100%;
+    width: auto;
+    margin-left: 5px;
   }
   /*MENU-SECTION*/
   .menu-section {
@@ -591,6 +607,7 @@ section {
     align-items: center;
     justify-content: space-between;
     height: auto;
+    gap: 5rem;
   }
   .menu-desc {
     align-self: flex-end;
@@ -599,9 +616,10 @@ section {
   }
   #menu-img {
     margin-top: 0;
-    width: 50%;
+    width: 100%;
   }
   .menu-desktop {
+    width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -612,9 +630,15 @@ section {
   .menu-mobile {
     display: none;
   }
-  #menu-deco {
+  .menu-deco {
     margin-top: -30%;
-    left: 37%;
+    left: 30%;
+    width: 360px;
+    height: 360px;
+  }
+  .menu-content{
+    width: 50%;
+    align-self: flex-end;
   }
   /*FOLLOW-SECTION*/
 
@@ -642,7 +666,7 @@ section {
     height: 275px;
     width: 275px;
     left: 33%;
-    margin-bottom: 15%;
+    margin-bottom: 20%;
   }
   .musique-playlist {
     margin-top: 20%;
@@ -667,16 +691,19 @@ section {
   h2 {
     font-size: 6.5rem;
   }
+  .photo{
+    height: 565px;
+  }
   /*MENU-SECTION*/
   .menu-desc {
     align-self: flex-end;
     width: 400px;
     height: 400px;
   }
-  #menu-img {
-    margin-top: 0;
-    width: 45%;
+  .menu-desktop{
+    width: 55%;
   }
+
 
   /*FOLLOW-SECTION*/
   .follow-section h2 {
@@ -694,6 +721,9 @@ section {
   /*MUSIQUE-SECTION*/
   .musique-playlist {
     margin-top: 25%;
+  }
+  .musique-deco{
+    margin-bottom: 15%;
   }
   #vinyl {
     width: 40%;
