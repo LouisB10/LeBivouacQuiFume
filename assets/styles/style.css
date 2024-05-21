@@ -44,9 +44,9 @@ body {
 /*h1 landing*/
 h1 {
   color: var(--white);
-  font-size: 2.6rem;
-  font-weight: 500;
-  line-height: 1.2em;
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.4em;
   text-align: center;
 }
 /*h2 title part*/
@@ -171,21 +171,28 @@ section {
 
 /**************************************LANDING-SECTION*/
 .landing-section {
-  width: 85%;
   height: 90vh;
-  padding: 7.5%;
   background: linear-gradient(
   0deg,
-    rgba(0, 65, 11, 0.2) 66.95%,
+    rgba(51, 50, 50, 0.5) 66.95%,
     rgba(69, 128, 178, 0.5) 97.57%
   ),url("../img/bg2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   z-index: 6;
+  gap: 2rem;
 }
-.landing-section h1 {
-  padding: 0 15%;
+.landing-section h1{
+  width: 85%;
+  color:#fffef9;
+}
+.landing-section h3{
+  width: 90%;
+  text-align: center;
+  color: #fffef9;
+  line-height: 1.5em;
+
 }
 /*******************EVENTS-SECTION*/
 .events-section {

@@ -1,6 +1,4 @@
 
-evenements, slider pour ceux a venir + qui s'affiche en grand quand on click
+slider qui s'affiche en grand quand on click
 
 carte a integrer avec api pour footer
-
-a venir events vide, stand by menu et playlist

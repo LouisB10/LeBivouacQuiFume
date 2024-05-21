@@ -50,6 +50,8 @@ class Translator {
       NAV_l1: "EVENTS",
       NAV_l2: "OUR MENU",
       NAV_l3: "CONTACT US",
+      LANDING_h1: "Le Bivouac qui fume sets the scene in a picturesque setting, in the heart of the vineyards.",
+      LANDING_h3: "Sharing plates or simmered dishes, relaxation and play areas, activities, and events will be on the agenda this summer!",
       EVENTS_h2: "OUR EVENTS",
       EVENTS_actual:"The next one",
       EVENTS_next: "Upcoming",
@@ -60,11 +62,15 @@ class Translator {
       MUSIQUE_desc:"Click on the vinyls to access the Bivouac playlists.",
       FOOTER_contact:"CONTACT US",
       FOOTER_copyright:"All rights reserved by <span>LEBIVOUACQUIFUME</span>",
+      FOOTER_l2:"OUR MENU",
+      FOOTER_l3:"CONTACT US"
     },
     fr: {
       NAV_l1: "ÉVÉNEMENTS",
       NAV_l2: "NOTRE MENU",
       NAV_l3: "CONTACTEZ-NOUS",
+      LANDING_h1:"Le Bivouac qui fume plante le décor dans un cadre pittoresque, au coeur des vignes.",
+      LANDING_h3:"Assiettes à partager ou plats mijotés, espaces détente et jeux, animations et événements seront au programme de cet été !",
       EVENTS_h2: "NOS ÉVÉNEMENTS",
       EVENTS_actual:"Le prochain",
       EVENTS_next: "À venir",
@@ -75,6 +81,8 @@ class Translator {
       MUSIQUE_desc:"Cliquez sur les vinyles pour accéder aux playlists du Bivouac.",
       FOOTER_contact:"NOUS CONTACTER",
       FOOTER_copyright:"Tous droits réservés par <span>LEBIVOUACQUIFUME</span>",
+      FOOTER_l2:"MENU",
+      FOOTER_l3:"CONTACT",
      
     },
   };
