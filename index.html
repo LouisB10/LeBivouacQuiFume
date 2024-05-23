@@ -30,12 +30,18 @@
     <header>
         <nav class="nav">
             <div class="language">
-                <img onclick="changeLanguage('fr')" id="flag-fr" src="assets/img/nav/flag-fr.webp" alt="drapeau de la france" data-lang="fr" style="display: none;" />
-                <img onclick="changeLanguage('en')" id="flag-en" src="assets/img/nav/flag-en.webp" alt="drapeau du royaume uni" data-lang="en" />
+                <img onclick="changeLanguage('fr')" id="flag-fr" src="assets/img/nav/flag-fr.png" alt="drapeau de la france" data-lang="fr" style="display: none;" />
+                <img onclick="changeLanguage('en')" id="flag-en" src="assets/img/nav/flag-en.png" alt="drapeau du royaume uni" data-lang="en" />
               </div>
-            <button type="button" class="hamburger-btn" onclick="displayMenu()" aria-expanded="false" aria-haspopup="true" aria-controls=".nav-mobile" aria-label="Ouvrir le menu">
+              <div class="hamburger">
+                <div class="hamburger__container">
+                  <div class="hamburger__inner"></div>
+                  <div class="hamburger__hidden"></div>
+                </div>
+              </div>
+            <!-- <button type="button" class="hamburger-btn" onclick="displayMenu()" aria-expanded="false" aria-haspopup="true" aria-controls=".nav-mobile" aria-label="Ouvrir le menu">
                 <span></span><span></span><span></span>
-            </button>
+            </button> -->
             <ul class="desktop-links">
                 <li><a href="#events" data-lang-key="NAV_l1">ÉVÉNEMENTS</a></li>
                 <li><a href="#menu" data-lang-key="NAV_l2">MENU</a></li>
@@ -45,9 +51,9 @@
         </nav>
         <nav class="mobile-nav">
             <ul class="flex-col">
-                <li><a href="#events" onclick="displayMenu()" class="flex"><img src="assets/img/nav/show.png" alt="icone events"><span data-lang-key="NAV_l1">ÉVÉNEMENTS</span></a></li>
-                <li><a href="#menu" onclick="displayMenu()" class="flex"><img src="assets/img/nav/menu.png" alt="icone menu"><span data-lang-key="NAV_l2">NOTRE MENU</span></a></li>
-                <li><a href="#contact" onclick="displayMenu()" class="flex"><img src="assets/img/nav/contact-us.png" alt="icone contact"><span data-lang-key="NAV_l3">CONTACTEZ-NOUS</span></a></li>
+                <li><a href="#events"  class="flex"><img src="assets/img/nav/show.png" alt="icone events"><span data-lang-key="NAV_l1">ÉVÉNEMENTS</span></a></li>
+                <li><a href="#menu"  class="flex"><img src="assets/img/nav/menu.png" alt="icone menu"><span data-lang-key="NAV_l2">NOTRE MENU</span></a></li>
+                <li><a href="#contact"  class="flex"><img src="assets/img/nav/contact-us.png" alt="icone contact"><span data-lang-key="NAV_l3">CONTACTEZ-NOUS</span></a></li>
             </ul>
         </nav>
     </header>
@@ -63,7 +69,7 @@
                     <p data-lang-key="EVENTS_actual">Le prochain</p>
                     <div class="modal-content-wrapper events-container">
                         <div class="image-modal-content">
-                            <img id="modal-events" src="assets/img/affiches/affiche.png" alt="affiche evenements">
+                            <img  class="photo" id="modal-events" src="assets/img/affiches/affiche.png" alt="affiche evenements">
                         </div>
                     </div>
                 </div>
@@ -102,7 +108,7 @@
             </div>
             <div class="modal-content-wrapper menu-content">
                 <div class="image-modal-content">
-                    <img id="menu-img" src="assets/img/affiches/menu.png" alt="img menu">
+                    <img class="photo" id="menu-img" src="assets/img/affiches/menu.png" alt="img menu">
                 </div>
             </div>
         </div>
@@ -175,8 +181,6 @@
           });
         });
       </script> -->  
-      <script src="assets/scripts/script.js" async></script>
-      <script src="assets/scripts/ChangeLanguage.js" async></script>
       <script>
         document.body.onload = function() {
             var nbr = 4;
@@ -206,18 +210,51 @@
             container.style.width = (slideWidth * nbr) + "%";
         
             for (var i = 1; i <= nbr; i++) {
+
                 var containerModal = document.createElement("div");
                 var modal = document.createElement("div");
+                var img = document.createElement("img");
+
                 containerModal.className ="modal-content-wrapper events-container";
                 modal.className="image-modal-content";
-                var img = document.createElement("img"); // Utilisation de balises <img> au lieu de <div>
                 img.className = "photo";
-                // img.style.width = slideWidth + "%"; // Définition de la largeur en pourcentage
+
                 img.src = "assets/img/affiches/affiche-" + i + ".png"; // Chemin vers l'image
+
                 container.appendChild(containerModal);
                 containerModal.appendChild(modal);
                 modal.appendChild(img);
             }
+
+            // After adding images to the DOM, select all images with class 'photo'
+            const lightboxImages = document.querySelectorAll('.photo');
+                const modalPopup = document.querySelector('.image-modal-popup');
+                const modalElement = element => document.querySelector(`.image-modal-popup ${element}`);
+                const body = document.querySelector('body');
+
+                // Function to open the modal
+                function openModal(imgSrc) {
+                    body.style.overflow = 'hidden'; // Prevent page scrolling
+                    modalPopup.style.display = 'block'; // Show modal
+                    modalPopup.style.overflow ='auto';
+                    modalElement('img').src = imgSrc; // Show clicked image in modal
+                }
+
+                // Close modal on click outside the image
+                document.addEventListener('click', () => {
+                    body.style.overflowX = 'hidden'; // Restore horizontal scrolling
+                    body.style.overflowY = 'auto'; // Restore vertical scrolling
+                    modalPopup.style.display = 'none'; // Hide modal
+                });
+
+                // Add click event to each image to open the modal
+                lightboxImages.forEach(img => {
+                    img.addEventListener('click', e => {
+                        e.stopPropagation(); // Prevent click propagation to the document
+                        openModal(img.src); // Open modal with clicked image
+                    });
+                });
+
             afficherMasquer();
 
             l.onclick = function() {
@@ -228,6 +265,7 @@
             container.style.transition = "all 0.5s ease";
             afficherMasquer();
             console.log(p);
+
         };
     
         r.onclick = function() {
@@ -241,18 +279,14 @@
         };
     
         function afficherMasquer() {
-            if (p == -nbr + 2)
-                r.style.display = "none";
-            else
-                r.style.display = "block";
-            if (p == 0)
-                l.style.display = "none";
-            else
-                l.style.display = "block";
-        }
+        r.style.display = p == -nbr + nbImg ? "none" : "block";
+        l.style.display = p == 0 ? "none" : "block";
+    }
         };
     
     
     </script>
+       <script src="assets/scripts/script.js" async></script>
+       <script src="assets/scripts/ChangeLanguage.js" async></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
-.menu-section, .musique-section,.slider-container, .events-slider p{
+/* .menu-section, .musique-section,.slider-container, .events-slider p{
   display: none !important;
-}
+} */
 
 /***************************REGLES GENERALES*************************/
 html {
@@ -576,8 +576,20 @@ section {
 }
 /*********AFFICHAGE Tablette/ PC Portable*******/
 @media (min-width: 1024px) {
+  h1{
+    font-size: 2.5rem;
+  }
   .landing-section {
-    height: 75vh;
+    width: 100vw;
+    height: 95vh;  
+  }
+  .landing-section h1{
+    width: 60%;
+
+  }
+  .landing-section h3{
+    width: 70%;
+    font-size: 1.4rem;
   }
   .events-section,
   .follow-section,
