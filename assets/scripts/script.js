@@ -19,24 +19,29 @@ document.addEventListener("DOMContentLoaded", function() {
         behavior: "smooth"
     });
   }
-  // FONCTION DISPLAY MENU MOBILE 
-
-// function displayMenu() {
-//     const body = document.querySelector("body");
-//     const hamburger = document.querySelector(".hamburger");
-//     const menu = document.querySelector(".mobile-nav");
   
-//     hamburger.classList.toggle("open");
-//     menu.classList.toggle("open");
-//     body.classList.toggle("overflow-hidden");
-//     }
+  document.querySelector('.hamburger').addEventListener('click', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const body = document.querySelector('body');
 
-    document.querySelector('.hamburger').addEventListener('click', (e) => {
-        const menu = document.querySelector(".mobile-nav");
-        const body = document.querySelector("body");
-	    e.currentTarget.classList.toggle('is-active');
-        menu.classList.toggle("open");
-        body.classList.toggle("overflow-hidden");
-    })
+    hamburger.classList.toggle('is-active');
+    mobileNav.classList.toggle('open');
+    body.classList.toggle('overflow-hidden');
+});
+
+document.querySelectorAll('.mobile-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const body = document.querySelector('body');
+
+        hamburger.classList.remove('is-active');
+        mobileNav.classList.remove('open');
+        body.classList.remove('overflow-hidden');
+    });
+});
+
+
 
 

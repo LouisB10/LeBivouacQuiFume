@@ -68,7 +68,7 @@ class Translator {
     fr: {
       NAV_l1: "ÉVÉNEMENTS",
       NAV_l2: "NOTRE MENU",
-      NAV_l3: "CONTACTEZ-NOUS",
+      NAV_l3: "CONTACT",
       LANDING_h1:"Le Bivouac qui fume plante le décor dans un cadre pittoresque, au coeur des vignes.",
       LANDING_h3:"Assiettes à partager ou plats mijotés, espaces détente et jeux, animations et événements seront au programme de cet été !",
       EVENTS_h2: "NOS ÉVÉNEMENTS",

@@ -1,177 +1,202 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Meta tags for character set and compatibility -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-language" content="fr">
+
+        <!-- Meta tags for responsive design -->
+        <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    
+        <!-- Meta tags for SEO -->
+        <meta name="description" content="LeBivouacQuiFume est un restaurant en plein air accueillant aussi des événements.">
+        <meta name="keywords" content="LeBivouacQuiFume, extérieur, événements, restaurant, local">
+        <meta name="author" content="LeBivouacQuiFume">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://www.lebivouacquifume.fr">
+    
+        <!-- Security-related meta tags -->
+        <meta name="referrer" content="no-referrer">
+        <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+        <!-- Google site verification -->
+        <meta name="google-site-verification" content="MF-mXyQbFAgZElZnRwm5j2A6ksPaRGgT9mL-_-DdVqw">
+    
+        <!-- PWA manifest -->
+        <link rel="manifest" href="assets/manifest.json">
+        <meta name="theme-color" content="#ffffff">
+    
+        <!-- Title -->
         <title>LeBivouacQuiFume - Restauration en plein air</title>
-        <meta name="description" content="LeBivouacQuiFume est un restaurant en plein air accueillant aussi des evenements." />
-        <meta name="keywords" content="LeBivouacQuiFume, extérieur, evenements, " />
-        <meta name="author" content="LeBivouacQuiFume" />
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="referrer" content="no-referrer" />
-        <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-        <meta name="google-site-verification" content="PZ6qakJNnCn-xACKzy6C2hEfAXekz7D3zX_CuJuLuEQ" />
-        <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
-        <link rel="stylesheet" href="assets/styles/style.css" />
-        <link rel="stylesheet" href="assets/styles/navfooter.css" />
+    
+        <!-- Favicon and icons -->
+        <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="assets/img/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" href="assets/img/favicon-16x16.png" sizes="16x16">
+        <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="assets/styles/style.css">
+        <link rel="stylesheet" href="assets/styles/navfooter.css">
+    
+        <!-- Preloading fonts --> 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet">
-        <!-- Balises Open Graph pour LinkedIn -->
+        <link  href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet">
+    
+        <!-- Open Graph meta tags for social media -->
         <meta property="og:title" content="LeBivouacQuiFume - Restauration en plein air" />
         <meta property="og:description" content="LeBivouacQuiFume est un restaurant en plein air accueillant aussi des evenements." />
         <meta property="og:image" content="assets/img/readme.webp" />
-        <meta property="og:type" content="LeBivouacQuiFume" />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.lebivouacquifume.fr" />
+    
+        <!-- Google reCAPTCHA -->
         <script src="https://www.google.com/recaptcha/api.js?render=<?php echo htmlspecialchars(RECAPTCHA_SITE_KEY); ?>"></script>
     </head>
-<body class="flex-col">
-    <header>
-        <nav class="nav">
-            <div class="language">
-                <img onclick="changeLanguage('fr')" id="flag-fr" src="assets/img/nav/flag-fr.png" alt="drapeau de la france" data-lang="fr" style="display: none;" />
-                <img onclick="changeLanguage('en')" id="flag-en" src="assets/img/nav/flag-en.png" alt="drapeau du royaume uni" data-lang="en" />
-              </div>
-              <div class="hamburger">
-                <div class="hamburger__container">
-                  <div class="hamburger__inner"></div>
-                  <div class="hamburger__hidden"></div>
+    <body class="flex-col">
+        <header>
+            <nav class="nav">
+                <div class="language">
+                    <img onclick="changeLanguage('fr')" id="flag-fr" src="assets/img/nav/flag-fr.webp" alt="drapeau de la france" data-lang="fr" style="display: none;" />
+                    <img onclick="changeLanguage('en')" id="flag-en" src="assets/img/nav/flag-en.webp" alt="drapeau du royaume uni" data-lang="en" />
                 </div>
-              </div>
-            <!-- <button type="button" class="hamburger-btn" onclick="displayMenu()" aria-expanded="false" aria-haspopup="true" aria-controls=".nav-mobile" aria-label="Ouvrir le menu">
-                <span></span><span></span><span></span>
-            </button> -->
-            <ul class="desktop-links">
-                <li><a href="#events" data-lang-key="NAV_l1">ÉVÉNEMENTS</a></li>
-                <li><a href="#menu" data-lang-key="NAV_l2">MENU</a></li>
-                <li><a href="#contact" data-lang-key="NAV_l3">CONTACT</a></li>
-            </ul>
-              <img src="assets/img/logo/logo-1.png" alt="Logo LeBivouacQuiFume">
-        </nav>
-        <nav class="mobile-nav">
-            <ul class="flex-col">
-                <li><a href="#events"  class="flex"><img src="assets/img/nav/show.png" alt="icone events"><span data-lang-key="NAV_l1">ÉVÉNEMENTS</span></a></li>
-                <li><a href="#menu"  class="flex"><img src="assets/img/nav/menu.png" alt="icone menu"><span data-lang-key="NAV_l2">NOTRE MENU</span></a></li>
-                <li><a href="#contact"  class="flex"><img src="assets/img/nav/contact-us.png" alt="icone contact"><span data-lang-key="NAV_l3">CONTACTEZ-NOUS</span></a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="flex-col">
-        <div class="landing-section flex-col">
-            <h1 data-lang-key="LANDING_h1">Le Bivouac qui fume plante le décor dans un cadre pittoresque, au coeur des vignes.</h1>
-            <h3 data-lang-key="LANDING_h3">Assiettes à partager ou plats mijotés, espaces détente et jeux, animations et événements seront au programme de cet été !</h3>
-        </div>
-        <div class="events-section flex-col" id="events">
-            <h2 data-lang-key="EVENTS_h2">NOS ÉVÉNEMENTS</h2>
-            <div class="events-container">
-                <div class="events-actual flex-col">
-                    <p data-lang-key="EVENTS_actual">Le prochain</p>
-                    <div class="modal-content-wrapper events-container">
-                        <div class="image-modal-content">
-                            <img  class="photo" id="modal-events" src="assets/img/affiches/affiche.png" alt="affiche evenements">
+                <div class="hamburger">
+                    <div class="hamburger__container">
+                    <div class="hamburger__inner"></div>
+                    <div class="hamburger__hidden"></div>
+                    </div>
+                </div>
+                <ul class="desktop-links">
+                    <li><a href="#events" data-lang-key="NAV_l1">ÉVÉNEMENTS</a></li>
+                    <li><a href="#menu" data-lang-key="NAV_l2">MENU</a></li>
+                    <li><a href="#contact" data-lang-key="NAV_l3">CONTACT</a></li>
+                </ul>
+                <img src="assets/img/logo/logo-1.webp" alt="Logo LeBivouacQuiFume">
+            </nav>
+            <nav class="mobile-nav">
+                <ul class="flex-col">
+                    <li><a href="#events"  class="flex"><img src="assets/img/nav/show.webp" alt="icone events"><span data-lang-key="NAV_l1">ÉVÉNEMENTS</span></a></li>
+                    <li><a href="#menu"  class="flex"><img src="assets/img/nav/menu.webp" alt="icone menu"><span data-lang-key="NAV_l2">NOTRE MENU</span></a></li>
+                    <li><a href="#contact"  class="flex"><img src="assets/img/nav/contact-us.webp" alt="icone contact"><span data-lang-key="NAV_l3">CONTACTEZ-NOUS</span></a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="flex-col">
+            <div class="landing-section flex-col">
+                <h1 data-lang-key="LANDING_h1">Le Bivouac qui fume plante le décor dans un cadre pittoresque, au coeur des vignes.</h1>
+                <h3 data-lang-key="LANDING_h3">Assiettes à partager ou plats mijotés, espaces détente et jeux, animations et événements seront au programme de cet été !</h3>
+            </div>
+            <div class="events-section flex-col" id="events">
+                <h2 data-lang-key="EVENTS_h2">NOS ÉVÉNEMENTS</h2>
+                <div class="events-container">
+                    <div class="events-actual flex-col">
+                        <p data-lang-key="EVENTS_actual">Le prochain</p>
+                        <div class="modal-content-wrapper events-container">
+                            <div class="image-modal-content">
+                                <img  class="photo" id="modal-events" src="assets/img/affiches/affiche.webp" alt="affiche evenements">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="events-slider flex-col">
+                        <p data-lang-key="EVENTS_next">À venir</p>
+                        <div class="slider-container">
+                            <div id="container" class="flex">
+                            </div>
+                            <img class="btn-slider r-btn" id="r" src="assets/img/slider/right-button.webp" alt="">
+                            <img  class="btn-slider l-btn" id="l" src="assets/img/slider/left-button.webp" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="events-slider flex-col">
-                    <p data-lang-key="EVENTS_next">À venir</p>
-                    <div class="slider-container">
-                        <div id="container" class="flex">
-                        </div>
-                        <img class="btn-slider r-btn" id="r" src="assets/img/slider/right-button.png" alt="">
-                        <img  class="btn-slider l-btn" id="l" src="assets/img/slider/left-button.png" alt="">
-                    </div>
+            </div>
+            <div class="follow-section flex-col">
+                <h2 data-lang-key="FOLLOW_h2">SUIVEZ-NOUS</h2>
+                <div class="follow-media">
+                    <img id="arrow" src="assets/img/follow-us.webp" alt="fleche suivez-nous">
+                    <div class="flex">
+                        <a href="https://www.facebook.com/lebivouacquifume/" target="_blank"><img src="assets/img/social-media/fb.webp" alt="facebook logo"></a>
+                        <a href="https://www.instagram.com/lebivouacquifume/" target="_blank"><img src="assets/img/social-media/insta.webp" alt="instagram logo"></a>
+                </div>
                 </div>
             </div>
-        </div>
-        <div class="follow-section flex-col">
-            <h2 data-lang-key="FOLLOW_h2">SUIVEZ-NOUS</h2>
-            <div class="follow-media">
-                <img id="arrow" src="assets/img/follow-us.png" alt="fleche suivez-nous">
-                <div class="flex">
-                    <a href="https://www.facebook.com/lebivouacquifume/" target="_blank"><img src="assets/img/social-media/fb.png" alt="facebook logo"></a>
-                    <a href="https://www.instagram.com/lebivouacquifume/" target="_blank"><img src="assets/img/social-media/insta.png" alt="instagram logo"></a>
-              </div>
-            </div>
-        </div>
-        <div class="menu-section flex-col" id="menu">
-            <div class="menu-deco"></div>
-            <div class="menu-desktop">
-                <h2 data-lang-key="MENU_h2">NOTRE CARTE</h2>
-                <div class="menu-desc">
+            <div class="menu-section flex-col" id="menu">
+                <div class="menu-deco"></div>
+                <div class="menu-desktop">
+                    <h2 data-lang-key="MENU_h2">NOTRE CARTE</h2>
+                    <div class="menu-desc">
+                        <h3 data-lang-key="MENU_desc">Découvrez le menu du Bivouac qui comporte un assortiment de tartinades, tapas, plats et desserts fait maison. </h3>
+                    </div>
+                </div>
+                <h2 data-lang-key="MENU_h2" class="menu-mobile">NOTRE CARTE</h2>
+                <div class="menu-desc menu-mobile">
                     <h3 data-lang-key="MENU_desc">Découvrez le menu du Bivouac qui comporte un assortiment de tartinades, tapas, plats et desserts fait maison. </h3>
                 </div>
-            </div>
-            <h2 data-lang-key="MENU_h2" class="menu-mobile">NOTRE CARTE</h2>
-            <div class="menu-desc menu-mobile">
-                <h3 data-lang-key="MENU_desc">Découvrez le menu du Bivouac qui comporte un assortiment de tartinades, tapas, plats et desserts fait maison. </h3>
-            </div>
-            <div class="modal-content-wrapper menu-content">
-                <div class="image-modal-content">
-                    <img class="photo" id="menu-img" src="assets/img/affiches/menu.png" alt="img menu">
+                <div class="modal-content-wrapper menu-content">
+                    <div class="image-modal-content">
+                        <img class="photo" id="menu-img" src="assets/img/affiches/menu.webp" alt="img menu">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="musique-section flex-col">
-            <div class="musique-title flex-col">
-                <div class="musique-deco"></div>
-                <h2 data-lang-key="MUSIQUE_h2">POINT<br>MUSIQUE</h2>
-                <h3 data-lang-key="MUSIQUE_desc">Cliquez sur les vinyles pour accéder aux playlists du Bivouac.</h3>
-                <div class="musique-playlist">
-                    <a href="https://deezer.page.link/ZeXebqQ9s6Vujvnu9" target="_blank"></a>
-                    <a href="https://deezer.page.link/ZeXebqQ9s6Vujvnu9" target="_blank"></a>
-                    <a href="https://deezer.page.link/ZeXebqQ9s6Vujvnu9" target="_blank"></a>
+            <div class="musique-section flex-col">
+                <div class="musique-title flex-col">
+                    <div class="musique-deco"></div>
+                    <h2 data-lang-key="MUSIQUE_h2">POINT<br>MUSIQUE</h2>
+                    <h3 data-lang-key="MUSIQUE_desc">Cliquez sur les vinyles pour accéder aux playlists du Bivouac.</h3>
+                    <div class="musique-playlist">
+                        <a href="https://deezer.page.link/ZeXebqQ9s6Vujvnu9" target="_blank"></a>
+                        <a href="https://deezer.page.link/ZeXebqQ9s6Vujvnu9" target="_blank"></a>
+                        <a href="https://deezer.page.link/ZeXebqQ9s6Vujvnu9" target="_blank"></a>
+                    </div>
+                    <img src="assets/img/icones/icon-music2.webp" alt="note de musique decoration">
                 </div>
-                <img src="assets/img/icones/icon-music2.png" alt="note de musique decoration">
+                <img id="vinyl" src="assets/img/icones/icon-vinyl.webp" alt="vinyl decoration">
+            </div>  
+        </section>
+        <footer id="contact" class="flex-col">
+            <div class="footer-desktop-container">
+                <img id="footer-logo" src="assets/img/logo/logo-1.webp" alt="logo du bivouac">
+                <div class="footer-info flex">
+                    <div class="flex-col">
+                        <h3 data-lang-key="FOOTER_contact">NOUS CONTACTER</h3>
+                        <a href="tel:+33764464434">07 644 644 34</a>
+                        <a href="https://maps.app.goo.gl/NW747xAmQ2omTCGVA">646 ROUTE DE CAUX, PEZENAS</a>
+                        <a href="mailto:info@lebivouacquifume.fr">INFO@LEBIVOUACQUIFUME.FR</a>
+                    </div>
+                    <div class="footer-sitemap-desktop flex-col">
+                        <h3>SITEMAP</h3>
+                        <a href="#events" data-lang-key="NAV_l1">ÉVÉNEMENTS</a>
+                        <a href="#menu" data-lang-key="FOOTER_l2">MENU</a>
+                        <a href="#contact" data-lang-key="FOOTER_l3">CONTACT</a>
+                    </div>
+                    <div class="flex-col">
+                        <a href="https://www.facebook.com/lebivouacquifume/" target="_blank"><img src="assets/img/social-media/fb.webp" alt="logo facebook"></a>
+                        <a href="https://www.instagram.com/lebivouacquifume/" target="_blank"><img src="assets/img/social-media/insta.webp" alt="logo instagram" ></a> 
+                    </div>
+                </div>
+                <a href="" id="copyright-desktop" data-lang-key="FOOTER_copyright">Tous droits réservés par <span>LEBIVOUACQUIFUME</span></a>
             </div>
-            <img id="vinyl" src="assets/img/icones/icon-vinyl.png" alt="vinyl decoration">
-        </div>  
-    </section>
-    <footer id="contact" class="flex-col">
-        <div class="footer-desktop-container">
-            <img id="footer-logo" src="assets/img/logo/logo-1.png" alt="logo du bivouac">
-            <div class="footer-info flex">
-                <div class="flex-col">
-                    <h3 data-lang-key="FOOTER_contact">NOUS CONTACTER</h3>
-                   <a href="tel:+33764464434">07 644 644 34</a>
-                   <a href="https://maps.app.goo.gl/NW747xAmQ2omTCGVA">646 ROUTE DE CAUX, PEZENAS</a>
-                   <a href="mailto:info@lebivouacquifume.fr">INFO@LEBIVOUACQUIFUME.FR</a>
-                </div>
-                <div class="footer-sitemap-desktop flex-col">
+            <div class="footer-jaune flex">
+                <img src="assets/img/footer/icon-location.webp" alt="icone location">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1169.887111363188!2d3.407595021957297!3d43.46926179357552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b16a88f841b377%3A0x4d61f721ab2f2e47!2s646%20Rte%20de%20Caux%2C%2034120%20P%C3%A9zenas!5e1!3m2!1sfr!2sfr!4v1713362331516!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-sitemap flex-col">
                     <h3>SITEMAP</h3>
                     <a href="#events" data-lang-key="NAV_l1">ÉVÉNEMENTS</a>
                     <a href="#menu" data-lang-key="FOOTER_l2">MENU</a>
                     <a href="#contact" data-lang-key="FOOTER_l3">CONTACT</a>
                 </div>
-                <div class="flex-col">
-                    <a href="https://www.facebook.com/lebivouacquifume/" target="_blank"><img src="assets/img/social-media/fb.png" alt="logo facebook"></a>
-                    <a href="https://www.instagram.com/lebivouacquifume/" target="_blank"><img src="assets/img/social-media/insta.png" alt="logo instagram" ></a> 
-                </div>
+                <a href="" id="copyright" data-lang-key="FOOTER_copyright">Tous droits réservés par <span>LEBIVOUACQUIFUME</span></a>
             </div>
-            <a href="" id="copyright-desktop" data-lang-key="FOOTER_copyright">Tous droits réservés par <span>LEBIVOUACQUIFUME</span></a>
-        </div>
-        <div class="footer-jaune flex">
-            <img src="assets/img/footer/icon-location.png" alt="">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1169.887111363188!2d3.407595021957297!3d43.46926179357552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b16a88f841b377%3A0x4d61f721ab2f2e47!2s646%20Rte%20de%20Caux%2C%2034120%20P%C3%A9zenas!5e1!3m2!1sfr!2sfr!4v1713362331516!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div class="footer-bottom">
-            <div class="footer-sitemap flex-col">
-                <h3>SITEMAP</h3>
-                <a href="#events" data-lang-key="NAV_l1">ÉVÉNEMENTS</a>
-                <a href="#menu" data-lang-key="FOOTER_l2">MENU</a>
-                <a href="#contact" data-lang-key="FOOTER_l3">CONTACT</a>
+        </footer>
+        <div class="image-modal-popup">
+            <div class="wrapper">
+            <span>&times;</span>
+            <img src="" alt="modale image">
             </div>
-            <a href="" id="copyright" data-lang-key="FOOTER_copyright">Tous droits réservés par <span>LEBIVOUACQUIFUME</span></a>
         </div>
-    </footer>
-     <!-- modal popup (displayed none by default) -->
-     <div class="image-modal-popup">
-        <div class="wrapper">
-        <span>&times;</span>
-        <img src="" alt="">
-        </div>
-    </div>
-    <button id="backToTopBtn" onclick="scrollToTop()" aria-label="button back to top"><img src="assets/img/arrow-backtotop.webp" alt=""></button>
+        <button id="backToTopBtn" onclick="scrollToTop()" aria-label="button back to top"><img src="assets/img/arrow-backtotop.webp" alt=""></button>
     <!-- <script>
         grecaptcha.ready(function() {
           grecaptcha.execute('<?php echo RECAPTCHA_SITE_KEY ?>', {

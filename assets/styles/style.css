@@ -1,6 +1,6 @@
-.menu-section, .musique-section,.slider-container, .events-slider p{
-  display: none !important;
-}
+  .menu-section, .musique-section,.slider-container, .events-slider p{
+    display: none !important;
+  }
 
 /***************************REGLES GENERALES*************************/
 html {
@@ -171,12 +171,12 @@ section {
 
 /**************************************LANDING-SECTION*/
 .landing-section {
-  height: 90vh;
+  height: 95vh;
   background: linear-gradient(
   0deg,
     rgba(51, 50, 50, 0.5) 66.95%,
     rgba(69, 128, 178, 0.5) 97.57%
-  ),url("../img/bg2.jpg");
+  ),url("../img/landing-background.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -185,7 +185,6 @@ section {
 }
 .landing-section h1{
   width: 85%;
-  color:#fffef9;
 }
 .landing-section h3{
   width: 90%;
@@ -376,10 +375,10 @@ section {
   z-index: 1;
   border-radius: 50%;
   background: var(--rose);
-  background-image: url(/assets/img/icones/icon-vinyl2.png);
+  background-image: url(/assets/img/icones/icon-vinyl2.webp);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 45%;
+  background-size: 55%;
   animation: rotate-animation 10s infinite linear;
 }
 .musique-playlist {
@@ -403,7 +402,7 @@ section {
   height: 50px;
   border-radius: 50%;
   background-color: var(--black);
-  background-image: url(/assets/img/icones/icon-vinyl3.png);
+  background-image: url(/assets/img/icones/icon-vinyl3.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80%;
@@ -522,6 +521,9 @@ section {
   .events-section p {
     font-size: 2rem;
   }
+  #modal-events{
+    width: 75%;
+  }
   /*FOLLOW-SECTION*/
   .follow-section {
     padding: 10% 7.5%;
@@ -581,11 +583,10 @@ section {
   }
   .landing-section {
     width: 100vw;
-    height: 95vh;  
+    height: 100vh;  
   }
   .landing-section h1{
     width: 60%;
-
   }
   .landing-section h3{
     width: 70%;
@@ -609,7 +610,9 @@ section {
     align-self: flex-end;
     margin-bottom: 0;
   }
-
+  #modal-events{
+    width: 100%;
+  }
   .events-slider {
     width: 40%;
     align-self: flex-end;
@@ -619,7 +622,7 @@ section {
     background-size: 100%;
     width: auto;
     margin-left: 5px;
-  }
+  } 
   /*MENU-SECTION*/
   .menu-section {
     flex-direction: row;
@@ -632,6 +635,9 @@ section {
     align-self: flex-end;
     width: 360px;
     height: 360px;
+  }
+  .menu-desc h3{
+    padding-bottom: 0;
   }
   #menu-img {
     margin-top: 0;
@@ -710,6 +716,10 @@ section {
   h2 {
     font-size: 6.5rem;
   }
+  .landing-section h3{
+    width: 70%;
+    font-size: 1.4rem;
+  }
   .photo{
     height: 565px;
   }
@@ -739,10 +749,12 @@ section {
   }
   /*MUSIQUE-SECTION*/
   .musique-playlist {
-    margin-top: 25%;
+    margin-top: 20%;
+    left: 20%;
   }
   .musique-deco{
-    margin-bottom: 15%;
+    margin-bottom: 10%;
+    left: 30%;
   }
   #vinyl {
     width: 40%;
@@ -753,9 +765,6 @@ section {
   h2 {
     font-size: 8rem;
   }
-
-
-
 
   /*MENU-SECTION*/
   .menu-section {
