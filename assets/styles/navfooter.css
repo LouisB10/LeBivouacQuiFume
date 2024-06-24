@@ -387,8 +387,10 @@ header {
   .hamburger__container{
     display: none;
   }
-  .nav img{
+  #logo-img{
     order: 1;
+  }
+  .nav img{
     height: 100%;
   }
   .desktop-links{
@@ -396,7 +398,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 50%;
+    width: 30%;
   }
   .desktop-links li a{
     font-size: 1.8rem;

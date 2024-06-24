@@ -1,4 +1,4 @@
- .musique-section{
+ .musique-section,.events-section, .slider-container, .slider-container p{
   display: none !important;
 }
 
@@ -586,6 +586,10 @@ section {
   .musique-title {
     gap: 2rem;
   }
+
+  .image-modal-popup img{
+    width: 80%;
+  }
 }
 /*********AFFICHAGE Tablette/ PC Portable*******/
 @media (min-width: 1024px) {
@@ -594,7 +598,7 @@ section {
   }
   .landing-section {
     width: 100vw;
-    height: 95vh;  
+    height: 100vh;  
   }
   .landing-section h1{
     width: 60%;
@@ -730,12 +734,17 @@ section {
   #backToTopBtn {
     display: none !important;
   }
+
+  .image-modal-popup img{
+    width: 70%;
+  }
 }
 /************AFFICHAGE PC Portable/PC petit***********/
 @media (min-width: 1200px) {
   h2 {
     font-size: 6.5rem;
   }
+
   .photo{
     height: 565px;
   }
@@ -773,13 +782,16 @@ section {
   #vinyl {
     width: 40%;
   }
+  .image-modal-popup img{
+    width: 45%;
+  }
 }
 
 @media (min-width: 1600px) {
   h2 {
     font-size: 8rem;
   }
-
+ 
 
 
 
@@ -837,4 +849,5 @@ section {
   #vinyl {
     width: 40%;
   }
+  
 }
