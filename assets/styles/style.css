@@ -1,0 +1,840 @@
+ .musique-section{
+  display: none !important;
+}
+
+/***************************REGLES GENERALES*************************/
+html {
+	scroll-behavior: smooth;
+}
+:root {
+  --white: #fffef9;
+  --black: rgb(51, 50, 50);
+  --blue: rgb(69, 128, 178);
+  --rose: #ffa4bb;
+  --yellow: #fde82e;
+  --orange: #fe6622;
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Antonio", sans-serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  justify-content: space-between !important;
+  overflow-x: hidden;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.flex-col {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*h1 landing*/
+h1 {
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.4em;
+  text-align: center;
+}
+/*h2 title part*/
+h2 {
+  color: var(--black);
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: left;
+  line-height: 1.3em;
+}
+button {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+/************backToTopBtn**/
+#backToTopBtn {
+  height: 45px;
+  width: 45px;
+  display: none;
+  position: fixed;
+  align-self: flex-end;
+  bottom: 45px;
+  background-color: var(--black);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0px 0px 4px 0px var(--black);
+  transition: all 0.1s ease-in-out;
+  margin-right: 15px;
+  z-index: 9;
+}
+#backToTopBtn:hover {
+  background-color: var(--yellow);
+  box-shadow: 0px 0px 4px 0px var(--yellow);
+}
+#backToTopBtn:active {
+  transform: scale(1.1);
+}
+#backToTopBtn img {
+  height: 35px;
+  transition: all 0.4s ease-in-out;
+}
+#backToTopBtn:hover img {
+  transform: scale(0.9);
+}
+/*****************ANIMATION**********/
+@keyframes rotate-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+@keyframes float-media {
+  0% {
+    transform: translatey(0px);
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: translatey(-2.5px);
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: translatey(-5px);
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: translatey(0);
+    transform: rotate(0deg);
+  }
+}
+
+/*****************OPACITY**********/
+::-webkit-input-placeholder {
+  /* Pour les navigateurs basés sur WebKit (Chrome, Safari, etc.) */
+  opacity: 1;
+}
+:-moz-placeholder {
+  /* Pour les anciennes versions de Firefox */
+  opacity: 1;
+}
+::-moz-placeholder {
+  /* Pour les nouvelles versions de Firefox */
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  /* Pour Internet Explorer */
+  opacity: 1;
+}
+/***************************MAIN*************************/
+section {
+  width: 100vw;
+}
+.events-section,
+.follow-section,
+.menu-section,
+.musique-section {
+  width: 90vw;
+  padding: 10% 5%;
+  z-index: 1;
+}
+
+
+/**************************************LANDING-SECTION*/
+.landing-section {
+  height: 90vh;
+  background: linear-gradient(
+  0deg,
+    rgba(51, 50, 50, 0.5) 66.95%,
+    rgba(69, 128, 178, 0.5) 97.57%
+  ),url("../img/bg3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 6;
+  gap: 2rem;
+}
+.landing-section h1{
+  width: 85%;
+  color:#fffef9;
+}
+.landing-section h3{
+  width: 90%;
+  text-align: center;
+  color: #fffef9;
+  line-height: 1.5em;
+
+}
+/*******************EVENTS-SECTION*/
+.events-section {
+  background-color: var(--rose);
+  gap: 4rem;
+}
+.events-section h2 {
+  width: 100%;
+  text-align: start;
+}
+.events-section p {
+  width: 100%;
+  text-align: start;
+  font-size: 1.5rem;
+  color: var(--black);
+}
+.events-actual {
+  align-items: flex-start;
+  width: 100%;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+#modal-events {
+  width: 100%;
+  border: solid 2px var(--black);
+  border-radius: 10px;
+}
+
+.photo{
+  width: 95%;
+}
+.events-container{
+  width: 100% !important;
+}
+.events-container .image-modal-content img{
+  border: solid 2px var(--black);
+  border-radius: 10px;
+}
+
+.events-slider {
+  position: relative;
+  width: 100%;
+  gap: 1rem;
+}
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+.btn-slider {
+  position: absolute;
+  width: 50px;
+  cursor: pointer;
+  top: 50%;
+  opacity: 0.95;
+  transition: all 0.3s ease;
+}
+.btn-slider:hover {
+  opacity: 1;
+}
+.l-btn {
+  right: 90%;
+  z-index: 3;
+}
+.r-btn {
+  left: 90%;
+  z-index: 3;
+}
+
+/*******************FOLLOW-US-SECTION*/
+.follow-section {
+  background-color: var(--yellow);
+  z-index: 2;
+}
+.follow-section h2 {
+  font-size: 3rem;
+  width: 100%;
+  text-align: start;
+}
+.follow-media {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -10%;
+}
+#arrow {
+  width: 65%;
+  z-index: -1;
+}
+.follow-media div {
+  gap: 1rem;
+}
+.follow-media div img {
+  width: 2rem;
+}
+.follow-media div img:hover {
+  animation: float-media 0.8s ease-in-out infinite;
+}
+/*******************MENU-SECTION*/
+.menu-section {
+  background-color: var(--orange);
+}
+.menu-section h2 {
+  width: 100%;
+  color: var(--white);
+  z-index: 3;
+  padding-bottom: 2rem;
+}
+.menu-title h3 {
+  color: var(--white);
+  width: 70%;
+}
+.menu-deco {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: 50%;
+  margin-top: -150%;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--rose);
+  z-index: 0;
+}
+.menu-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--black);
+  z-index: 2;
+}
+.menu-desc h3 {
+  width: 90%;
+  color: var(--white);
+  z-index: 2;
+  text-align: center;
+  padding-bottom: 3rem;
+  line-height: 1.75rem;
+}
+#menu-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+#boisson-img{
+  width: 100%;
+  border-radius: 10px;
+}
+.menu-desktop {
+  display: none;
+}
+.menu-content{
+  margin-top: -20%;
+}
+/*******************MUSIQUE-SECTION*/
+.musique-section {
+  background-color: var(--yellow);
+  gap: 5rem;
+}
+.musique-title {
+  align-items: flex-start;
+  width: 100%;
+  gap: 1rem;
+}
+.musique-title h2, .musique-title h3 {
+  z-index: 2;
+}
+.musique-title h3 {
+  color: var(--black);
+  width: 90%;
+}
+.musique-title img {
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+  width: 75px;
+}
+/**2 CIRCLES**/
+.musique-deco {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 50%;
+  margin-bottom: 50%;
+  flex-shrink: 0;
+  z-index: 1;
+  border-radius: 50%;
+  background: var(--rose);
+  background-image: url(/assets/img/icones/icon-vinyl2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 45%;
+  animation: rotate-animation 10s infinite linear;
+}
+.musique-playlist {
+  position: absolute;
+  width: 225px;
+  height: 225px;
+  left: 30%;
+  margin-top: 50%;
+  flex-shrink: 0;
+  z-index: 0;
+  border-radius: 50%;
+  background: var(--orange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.musique-playlist a {
+  margin-top: 1rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--black);
+  background-image: url(/assets/img/icones/icon-vinyl3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+}
+.musique-playlist a:hover {
+  animation: rotate-animation 10s infinite linear;
+  transform: scale(1.1);
+}
+.musique-playlist a:nth-child(2) {
+  margin-top: 2rem;
+}
+#vinyl {
+  width: 85%;
+}
+
+/*******************************MODAL IMAGES*/
+.modal-content-wrapper {
+  width: 90%;
+  z-index: 3; 
+}
+.modal-content-wrapper .image-modal-content {
+  cursor: pointer;
+  transition: 300ms ease-out;
+}
+/* modal popup styles */
+.image-modal-popup {
+  width: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background: rgba(51, 50, 50, 1);
+  animation: 500ms fadeIn;
+  z-index: 15;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.image-modal-popup .wrapper {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5% 2.5%;
+  padding-top: 0;
+}
+
+.image-modal-popup img {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.image-modal-popup span {
+  align-self: flex-end;
+  font-size: 6rem;
+  color: var(--yellow);
+  cursor: pointer;
+}
+
+/**********************************RESPONSIVE****************************/
+@media (max-width: 375px) {
+  h2{
+    font-size: 3.5rem;
+  }
+
+  .menu-desc,.menu-deco{
+    width: 250px;
+    height: 250px;
+  }
+  .menu-desc h3{
+    width: 80%;
+    font-size: 1rem;
+  }
+
+
+  /*MUSIQUE-SECTION*/
+  .musique-section{
+    gap: 3rem;
+  }
+  .musique-title img{
+    width: 50px;
+  }
+  .musique-deco{
+    width: 170px;
+    height: 170px;
+    margin-bottom: 45%;
+  }
+  .musique-playlist{
+    width: 195px;
+    height: 195px;
+    margin-top: 60%;
+  }
+  .musique-playlist a{
+    width: 40px;
+    height: 40px;
+  }
+}
+/************AFFICHAGE Tablette****************/
+@media (min-width: 767px) {
+  h2 {
+    font-size: 5rem;
+  }
+  .events-section,
+  .follow-section,
+  .menu-section,
+  .musique-section {
+    width: 85vw;
+    padding: 10% 7.5%;
+  }
+  /*EVENTS-SECTION*/
+  .events-section p {
+    font-size: 2rem;
+  }
+  /*FOLLOW-SECTION*/
+  .follow-section {
+    padding: 10% 7.5%;
+  }
+  .follow-section h2 {
+    font-size: 4rem;
+  }
+  .follow-media div{
+    gap: 2rem;
+  }
+  .follow-media div img {
+    width: 3.5rem;
+  }
+  
+  /*MENU-SECTION*/
+  .menu-deco,.menu-desc{
+    width: 400px;
+    height: 400px;
+  }
+  .menu-deco {
+    left: 55%;
+  }
+  #menu-img{
+    margin-bottom: 4rem;
+  }
+
+  #menu-img,#boisson-img{
+    border-radius: 20px;
+  }
+  .menu-desc h3 {
+    font-size: 1.5rem;
+  }
+  .menu-content{
+    margin-top: -15%;
+  }
+  /*MUSIQUE-SECTION*/
+  .musique-deco {
+    width: 250px;
+    height: 250px;
+    left: 45%;
+    margin-bottom: 25%;
+  }
+  .musique-playlist {
+    width: 275px;
+    height: 275px;
+    margin-top: 30%;
+  }
+  .musique-playlist a {
+    width: 60px;
+    height: 60px;
+  }
+  #vinyl {
+    width: 80%;
+  }
+  .musique-title {
+    gap: 2rem;
+  }
+}
+/*********AFFICHAGE Tablette/ PC Portable*******/
+@media (min-width: 1024px) {
+  h1{
+    font-size: 2.5rem;
+  }
+  .landing-section {
+    width: 100vw;
+    height: 95vh;  
+  }
+  .landing-section h1{
+    width: 60%;
+
+  }
+  .landing-section h3{
+    width: 70%;
+    font-size: 1.4rem;
+  }
+  .events-section,
+  .follow-section,
+  .menu-section,
+  .musique-section {
+    padding: 7.5%;
+  }
+  /*EVENTS-SECTION*/
+  .events-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .events-actual {
+    width: 55%;
+    justify-content: space-between;
+    align-self: flex-end;
+    margin-bottom: 0;
+  }
+
+  .events-slider {
+    width: 40%;
+    align-self: flex-end;
+  }
+  .photo {
+    height: 480px;
+    background-size: 100%;
+    width: auto;
+    margin-left: 5px;
+  }
+  /*MENU-SECTION*/
+  .menu-section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    width: 90vw;
+    padding: 5%;
+  }
+  .menu-desc {
+    align-self: flex-end;
+    width: 300px;
+    height: 300px;
+  }
+  #menu-img {
+    margin-top: 0;
+  }
+  #menu-img, #boisson-img{
+    height: 50%;
+    width: 50%;
+    border-radius: 10px;
+  }
+  .menu-desktop {
+    width: 44%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  
+  }
+  .menu-mobile {
+    display: none;
+  }
+  .menu-deco {
+    margin-top: -30%;
+    left: 30%;
+    width: 360px;
+    height: 360px;
+  }
+  .menu-content{
+    width: 55%;
+    align-self: flex-end;
+  }
+  #menu-div{
+    display: flex;
+    gap: 1rem;
+  }
+  .menu-desc h3 {
+    font-size: 1.3rem;
+    padding-bottom: 0;
+  }
+  /*FOLLOW-SECTION*/
+
+  .follow-media {
+    align-self: flex-start;
+    width: 85%;
+  }
+  .follow-media div {
+    gap: 4rem;
+  }
+  .follow-section h2 {
+    font-size: 5rem;
+  }
+  #arrow {
+    width: 55%;
+  }
+  .follow-media div img {
+    width: 4rem;
+  }
+  /*MUSIQUE-SECTION*/
+  .musique-section {
+    flex-direction: row;
+  }
+  .musique-deco {
+    height: 275px;
+    width: 275px;
+    left: 33%;
+    margin-bottom: 20%;
+  }
+  .musique-playlist {
+    margin-top: 20%;
+    left: 26%;
+  }
+  .musique-playlist a {
+    margin-top: 3rem;
+  }
+  .musique-playlist a:nth-child(2) {
+    margin-top: 5rem;
+  }
+  #vinyl {
+    width: 35%;
+    align-self: flex-end;
+  }
+  #backToTopBtn {
+    display: none !important;
+  }
+}
+/************AFFICHAGE PC Portable/PC petit***********/
+@media (min-width: 1200px) {
+  h2 {
+    font-size: 6.5rem;
+  }
+  .photo{
+    height: 565px;
+  }
+  /*MENU-SECTION*/
+  .menu-desc {
+    align-self: center;
+    width: 350px;
+    height: 350px;
+  }
+  .menu-desktop{
+    width: 55%;
+  }
+
+
+  /*FOLLOW-SECTION*/
+  .follow-section h2 {
+    font-size: 6rem;
+  }
+  #arrow {
+    width: 50%;
+  }
+  .follow-media {
+    gap: 7rem;
+  }
+  .follow-media div img {
+    width: 5rem;
+  }
+  /*MUSIQUE-SECTION*/
+  .musique-playlist {
+    margin-top: 25%;
+  }
+  .musique-deco{
+    margin-bottom: 15%;
+  }
+  #vinyl {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1600px) {
+  h2 {
+    font-size: 8rem;
+  }
+
+
+
+
+  /*MENU-SECTION*/
+  .menu-section {
+    justify-content: flex-start;
+    gap: 5rem;
+  }
+  .menu-desc{
+    height: 400px;
+    width: 400PX;
+    align-self: flex-end;
+    }
+  .menu-deco {
+    width: 400px;
+    height: 400px;
+    margin-top: -20%;
+    left: 30%;
+  }
+  #menu-img, #boisson-img{
+    height: 45%;
+    width: 45%;
+    border-radius: 10px;
+  }
+  .menu-desc h3 {
+    font-size: 1.5rem;
+    padding-bottom: 0;
+  }
+  /*FOLLOW-SECTION*/
+  .follow-section h2 {
+    font-size: 7rem;
+  }
+  #arrow {
+    width: 40%;
+  }
+  .follow-media div img {
+    width: 5rem;
+  }
+  /*MUSIQUE-SECTION*/
+  .musique-deco {
+    height: 300px;
+    width: 300px;
+    left: 30%;
+    margin-bottom: 5%;
+  }
+  .musique-playlist {
+    margin-top: 20%;
+    width: 315px;
+    height: 315px;
+  }
+  .musique-playlist a {
+    width: 75px;
+    height: 75px;
+  }
+  #vinyl {
+    width: 40%;
+  }
+}
