@@ -1,4 +1,4 @@
- .musique-section,.events-section, .slider-container, .slider-container p{
+ .menu-deco, .musique-section, .slider-container, .slider-container p, .events-slider p{
   display: none !important;
 }
 
@@ -171,7 +171,7 @@ section {
 
 /**************************************LANDING-SECTION*/
 .landing-section {
-  height: 90vh;
+  height: 95vh;
   background: linear-gradient(
   0deg,
     rgba(51, 50, 50, 0.5) 66.95%,
@@ -232,6 +232,23 @@ section {
   border-radius: 10px;
 }
 
+
+/***event reservation**/
+.events-reservation{
+  margin-top: 3rem;
+  padding: 0.8rem 1rem;
+  background-color: var(--orange);
+  border: 3px solid #000000;
+  border-radius: 10px;
+ align-self: center;
+ font-size:2rem;
+ color: var(--black);
+}
+.events-reservation:hover{
+  background-color: var(--yellow);
+}
+
+/**********events slider******/
 .events-slider {
   position: relative;
   width: 100%;
@@ -627,6 +644,12 @@ section {
     margin-bottom: 0;
   }
 
+  .events-reservation{
+    align-self: flex-start;
+    width: 66%;
+    text-align: center;
+  }
+  /**********events slider******/
   .events-slider {
     width: 40%;
     align-self: flex-end;
@@ -744,7 +767,9 @@ section {
   h2 {
     font-size: 6.5rem;
   }
-
+  .events-reservation{
+    width: 50%;
+  }
   .photo{
     height: 565px;
   }
