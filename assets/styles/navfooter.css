@@ -46,6 +46,7 @@ header {
     gap: 2rem;
   }
   .mobile-nav a{
+  
     gap: 1rem;
     transition: all 0.3s ease-in-out;
   }
@@ -53,7 +54,7 @@ header {
     width: 2.5rem;
   }
   .mobile-nav a span{
-    color: var(--black);
+    color: var(--black-light);
     font-size: 2.5rem;
     font-weight: 600;
   }
@@ -222,8 +223,8 @@ header {
     transition: all 300ms ease-in-out;
     display: none;
   }
-  .desktop-links li a:hover{
-    color: var(--black);
+  .desktop-links li a:hover {
+    color: var(--black-light);
   }
 
   /*******************FOOTER*/
@@ -398,7 +399,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 30%;
+    width: 50%;
   }
   .desktop-links li a{
     font-size: 1.8rem;

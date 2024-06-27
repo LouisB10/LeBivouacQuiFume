@@ -8,11 +8,12 @@ html {
 }
 :root {
   --white: #fffef9;
-  --black: rgb(51, 50, 50);
-  --blue: rgb(69, 128, 178);
+  --black: #000000;
+  --black-light: #333232;
+  --blue: #4580b2;
   --rose: #ffa4bb;
   --yellow: #fde82e;
-  --orange: #fe6622;
+  --orange: rgb(254, 99, 16);
 }
 * {
   margin: 0;
@@ -238,11 +239,11 @@ section {
   margin-top: 3rem;
   padding: 0.8rem 1rem;
   background-color: var(--orange);
-  border: 3px solid #000000;
+  border: 2px solid var(--black);
   border-radius: 10px;
- align-self: center;
- font-size:2rem;
- color: var(--black);
+  align-self: center;
+  font-size:2rem;
+  color: var(--black);
 }
 .events-reservation:hover{
   background-color: var(--yellow);
@@ -341,7 +342,7 @@ section {
   height: 300px;
   flex-shrink: 0;
   border-radius: 50%;
-  background: var(--black);
+  background: var(--black-light);
   z-index: 2;
 }
 .menu-desc h3 {

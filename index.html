@@ -24,7 +24,6 @@
         <meta property="og:image" content="assets/img/readme.webp" />
         <meta property="og:type" content="LeBivouacQuiFume" />
         <meta property="og:url" content="https://www.lebivouacquifume.fr" />
-        <script src="https://www.google.com/recaptcha/api.js?render=<?php echo htmlspecialchars(RECAPTCHA_SITE_KEY); ?>"></script>
     </head>
 <body class="flex-col">
     <header id="accueil">
@@ -40,7 +39,7 @@
                 </div>
               </div>
             <ul class="desktop-links">
-                <!-- <li><a href="#events" data-lang-key="NAV_l1">ÉVÉNEMENTS</a></li> -->
+                <li><a href="#events" data-lang-key="NAV_l1">ÉVÉNEMENTS</a></li>
                 <li><a href="#menu" data-lang-key="NAV_l2">MENU</a></li>
                 <li><a href="#contact" data-lang-key="NAV_l3">CONTACT</a></li>
             </ul>
@@ -48,7 +47,7 @@
         </nav>
         <nav class="mobile-nav">
             <ul class="flex-col">
-                <!-- <li><a href="#events"  class="flex"><img src="assets/img/nav/show.png" alt="icone events"><span data-lang-key="NAV_l1">ÉVÉNEMENTS</span></a></li> -->
+                <li><a href="#events"  class="flex"><img src="assets/img/nav/show.png" alt="icone events"><span data-lang-key="NAV_l1">ÉVÉNEMENTS</span></a></li>
                 <li><a href="#menu"  class="flex"><img src="assets/img/nav/menu.png" alt="icone menu"><span data-lang-key="NAV_l2">NOTRE MENU</span></a></li>
                 <li><a href="#contact"  class="flex"><img src="assets/img/nav/contact-us.png" alt="icone contact"><span data-lang-key="NAV_l3">CONTACTEZ-NOUS</span></a></li>
             </ul>
@@ -58,6 +57,7 @@
         <div class="landing-section flex-col">
             <h1 data-lang-key="LANDING_h1">Le Bivouac qui fume plante le décor dans un cadre pittoresque, au coeur des vignes.</h1>
             <h3 data-lang-key="LANDING_h3">Tapas ou plats mijotés, espaces détente et jeux, animations et événements seront au programme de cet été !</h3>
+            <p id="events"></p>
         </div>
         <div class="events-section flex-col" id="events">
             <h2 data-lang-key="EVENTS_h2">NOS ÉVÉNEMENTS</h2>
@@ -171,16 +171,7 @@
         <img src="" alt="">
         </div>
     </div>
-    <button id="backToTopBtn" onclick="scrollToTop()" aria-label="button back to top"><img src="assets/img/arrow-backtotop.webp" alt=""></button>
-    <!-- <script>
-        grecaptcha.ready(function() {
-          grecaptcha.execute('<?php echo RECAPTCHA_SITE_KEY ?>', {
-            action: 'homepage'
-          }).then(function(token) {
-            document.getElementById("recaptchaResponse").value = token;
-          });
-        });
-      </script> -->  
+    <button id="backToTopBtn" onclick="scrollToTop()" aria-label="button back to top"><img src="assets/img/arrow-backtotop.webp" alt=""></button> 
       <script>
         document.body.onload = function() {
             var nbr = 4;
