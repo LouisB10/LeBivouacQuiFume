@@ -1,7 +1,15 @@
-carte a integrer avec api pour footer
-
-animation css au scroll ?
+Back office : 
 
 Créer le compte admin, une table dans la BDD ainsi que un url pour le login 
 
 Puis créer le fait de pouvoir ajouter / modifier/ supprimer une image du slider events
+
+Front office :
+
+enlever tout le code de la partie musique
+
+horaires : du mardi au samedi , de 18h30 a 23h
+
+Partie gallerie a faire
+
+carte a integrer avec api pour footer
