@@ -23,8 +23,6 @@
         <meta property="og:image" content="assets/img/readme.webp" />
         <meta property="og:type" content="LeBivouacQuiFume" />
         <meta property="og:url" content="https://www.lebivouacquifume.fr" />
-        <script src="assets/scripts/script.js" defer></script>
-        <script src="assets/scripts/ChangeLanguage.js" defer></script>
     </head>
 <body class="flex-col">
     <header id="accueil">
@@ -66,7 +64,7 @@
                     <p data-lang-key="EVENTS_prog" >Programme</p>
                     <div class="modal-content-wrapper events-container">
                         <div class="image-modal-content" >
-                            <img  class="photo" id="modal-events" src="assets/img/affiches/programme.png" alt="affiche programmation">
+                            <img  class="photo" id="modal-events" src="assets/img/affiches/programme.webp" alt="affiche programmation">
                         </div>
                     </div>
                 </div>
@@ -79,7 +77,7 @@
                     </div>
                     <a href="https://forms.gle/erQp2Re2fVUgFrVZ6" target="_blank" data-lang-key="EVENTS_RESERVATION" class="events-reservation flex">Réservation</a>
                 </div>
-                <div class="events-slider flex-col">
+                <div class="events-slider flex-col" style="display: none;">
                     <p data-lang-key="EVENTS_next">À venir</p>
                     <div class="slider-container">
                         <div id="container" class="flex"></div>
@@ -98,18 +96,19 @@
                     <a href="https://www.instagram.com/lebivouacquifume/" target="_blank" ><img src="assets/img/social-media/instagram.webp" alt="instagram logo"></a>
               </div>
             </div>
+            
         </div>
-        <div class="menu-section flex-col">
-          
-            <div class="menu-desktop">
-                <h2 data-lang-key="MENU_h2">NOTRE CARTE</h2>
+        <div class="menu-section flex-col" id="menu" >
+            <div class="menu-desktop" >
+                <h2 data-lang-key="MENU_h2" >NOTRE CARTE</h2>
                 <div class="menu-desc">
-                    <h3 data-lang-key="MENU_desc">Découvrez le menu du Bivouac  Assortiment de tartinades, tapas, plats et desserts faits maison.</h3>
+                    <h3 data-lang-key="MENU_desc" >Découvrez le menu du Bivouac  Assortiment de tartinades, tapas, plats et desserts faits maison.</h3>
                 </div>
             </div>
+            <p id="menu" ></p>
             <h2 data-lang-key="MENU_h2" class="menu-mobile">NOTRE CARTE</h2>
             <div class="menu-desc menu-mobile">
-                <h3 data-lang-key="MENU_desc" id="menu">Découvrez le menu du Bivouac  Assortiment de tartinades, tapas, plats et desserts faits maison.</h3>
+                <h3 data-lang-key="MENU_desc" >Découvrez le menu du Bivouac  Assortiment de tartinades, tapas, plats et desserts faits maison.</h3>
             </div>
             <div class="modal-content-wrapper menu-content" >
                 <div class="image-modal-content" id="menu-div">
@@ -117,30 +116,16 @@
                     <img class="photo" id="boisson-img" src="assets/img/affiches/boisson.webp" alt="img boisson">
                 </div>
             </div>
-        </div>
-        <div class="musique-section flex-col">
-            <div class="musique-title flex-col">
-                <div class="musique-deco"></div>
-                <h2 data-lang-key="MUSIQUE_h2">POINT<br>MUSIQUE</h2>
-                <h3 data-lang-key="MUSIQUE_desc">Cliquez sur les vinyles pour accéder aux playlists du Bivouac.</h3>
-                <div class="musique-playlist">
-                    <a href="https://deezer.page.link/ZeXebqQ9s6Vujvnu9" target="_blank"></a>
-                    <a href="https://deezer.page.link/ZeXebqQ9s6Vujvnu9" target="_blank"></a>
-                    <a href="https://deezer.page.link/ZeXebqQ9s6Vujvnu9" target="_blank"></a>
-                </div>
-                <img src="assets/img/music/icon-music2.png" alt="note de musique decoration">
-            </div>
-            <img id="vinyl" src="assets/img/music/icon-vinyl.png" alt="vinyl decoration">
-        </div>  
+        </div> 
     </section>
     <footer id="contact" class="flex-col">
         <div class="footer-desktop-container">
             <div class="footer-info flex">
                 <div class="flex-col">
                     <h3 data-lang-key="FOOTER_contact">NOUS CONTACTER</h3>
-                   <a href="tel:+33764464434">07 644 644 34</a>
-                   <a href="https://maps.app.goo.gl/NW747xAmQ2omTCGVA" target="_blank">646 ROUTE DE CAUX, PEZENAS</a>
-                   <a href="mailto:info@lebivouacquifume.fr">INFO@LEBIVOUACQUIFUME.FR</a>
+                    <a href="tel:+33764464434">07 644 644 34</a>
+                    <a href="https://maps.app.goo.gl/NW747xAmQ2omTCGVA" target="_blank">646 ROUTE DE CAUX, PEZENAS</a>
+                    <a href="mailto:info@lebivouacquifume.fr">INFO@LEBIVOUACQUIFUME.FR</a>
                 </div>
                 <div class="footer-sitemap-desktop flex-col">
                     <h3>SITEMAP</h3>
@@ -153,11 +138,15 @@
                     <a href="https://www.instagram.com/lebivouacquifume/" target="_blank"><img src="assets/img/social-media/instagram.webp" alt="logo instagram" ></a> 
                 </div>
             </div>
+            <div class="footer-horaire-desktop flex-col">
+                <h3>HORAIRES</h3>
+                <p>DU MARDI AU SAMEDI <br>DE 18H30 À 23H</p>
+            </div>
             <a href="" id="copyright-desktop" data-lang-key="FOOTER_copyright">Tous droits réservés par <span>LEBIVOUACQUIFUME</span></a>
         </div>
-        <div class="footer-horaire">
+        <div class="footer-horaire flex-col">
             <h3>HORAIRES</h3>
-            
+            <p>DU MARDI AU SAMEDI <br>DE 18H30 À 23H</p>
         </div>
         <div class="footer-jaune flex">
             <img src="assets/img/footer/icon-location.webp" alt="icone location footer">
@@ -181,7 +170,7 @@
         </div>
     </div>
     <button id="backToTopBtn" onclick="scrollToTop()" aria-label="button back to top"><img src="assets/img/arrow-backtotop.webp" alt=""></button> 
-      <script>
+    <script defer>
         document.body.onload = function() {
             var nbr = 4;
             var nbImgM= 2;
@@ -286,6 +275,7 @@
     
     
     </script>
-      
+            <script src="assets/scripts/script.js" defer></script>
+            <script src="assets/scripts/ChangeLanguage.js" defer></script>
 </body>
 </html>
