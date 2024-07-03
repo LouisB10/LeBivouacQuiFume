@@ -44,22 +44,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-/*h1 landing*/
-h1 {
-  color: var(--white);
-  font-size: 1.8rem;
-  font-weight: 800;
-  line-height: 1.4em;
-  text-align: center;
-}
-/*h2 title part*/
-h2 {
-  color: var(--black);
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: left;
-  line-height: 1.3em;
-}
+
 button {
   cursor: pointer;
   border: 0;
@@ -162,10 +147,23 @@ section {
 }
 .events-section,
 .follow-section,
-.menu-section {
+.menu-section,
+.gallery-section {
   width: 90vw;
   padding: 10% 5%;
   z-index: 1;
+}
+h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+h2 {
+  color: var(--black);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.3em;
+  width: 100%;
+  text-align: start;
 }
 /**************************************LANDING-SECTION*/
 .landing-section {
@@ -179,13 +177,11 @@ section {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-
-  z-index: 6;
   gap: 2rem;
 }
 .landing-section h1,
 .landing-section p {
-  color: #fffef9;
+  color: var(--white);
   width: 80%;
   text-align: center;
   line-height: 1.5em;
@@ -195,18 +191,15 @@ section {
   background-color: var(--rose);
   gap: 2rem;
 }
-.events-section h2,
-.events-section p {
-  width: 100%;
-  text-align: start;
-}
 .events-section p {
   font-size: 1.5rem;
+  width: 100%;
+  text-align: start;
 }
 .events-container {
   width: 100% !important;
   gap: 2rem;
-} 
+}
 .events-actual {
   align-items: flex-start;
   gap: 1rem;
@@ -224,6 +217,8 @@ section {
 
 .photo {
   width: 95%;
+  border-radius: 5px;
+  border: solid 2px var(--black);
 }
 
 /***event reservation**/
@@ -275,11 +270,6 @@ section {
   background-color: var(--yellow);
   z-index: 2;
 }
-.follow-section h2 {
-  font-size: 3rem;
-  width: 100%;
-  text-align: start;
-}
 .follow-media {
   width: 100%;
   display: flex;
@@ -305,9 +295,6 @@ section {
   background-color: var(--orange);
 }
 .menu-section h2 {
-  width: 100%;
-  color: var(--black);
-  z-index: 3;
   padding-bottom: 2rem;
 }
 .menu-title h3 {
@@ -333,7 +320,6 @@ section {
   padding-bottom: 3rem;
   line-height: 1.75rem;
 }
-
 #menu-img,
 #boisson-img {
   width: 100%;
@@ -343,13 +329,27 @@ section {
 #menu-img {
   margin-bottom: 2rem;
 }
-
 .menu-desktop {
   display: none;
 }
 .menu-content {
   margin-top: -20%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*******************************MODAL IMAGES*/
 .modal-content-wrapper {
@@ -395,7 +395,7 @@ section {
 }
 .image-modal-popup span {
   align-self: flex-end;
-  font-size: 6rem;
+  font-size: 3rem;
   color: var(--yellow);
   cursor: pointer;
 }
@@ -428,7 +428,6 @@ header {
   height: 100%;
   width: auto;
 }
-
 .mobile-nav {
   display: none;
 }
@@ -469,7 +468,6 @@ header {
   display: flex;
   align-items: center;
 }
-/**flag size**/
 .language img {
   height: 85%;
   transition: 0.3s ease-in-out;
@@ -488,28 +486,23 @@ header {
   overflow: hidden;
   z-index: 15;
 }
-
 .hamburger__container {
   width: 36px;
   height: 24px;
   position: relative;
 }
-
 .hamburger:hover .hamburger__inner {
   transform: translate(-51px, 50%);
   opacity: 0;
 }
-
 .hamburger:hover .hamburger__inner::before,
 .hamburger:hover .hamburger__inner::after {
   transform: translate(102px, 0);
   opacity: 0;
 }
-
 .hamburger.is-active .hamburger__inner {
   display: none;
 }
-
 .hamburger__inner {
   width: 100%;
   height: 2.5px;
@@ -523,7 +516,6 @@ header {
   transform: translate(5px, -50%);
   opacity: 1;
 }
-
 .hamburger__inner::after {
   background-color: var(--orange);
 }
@@ -543,42 +535,34 @@ header {
   opacity: 1;
   transform: translate(-5px, 0);
 }
-
 .hamburger__inner::before {
   top: -13px;
 }
-
 .hamburger__inner::after {
   top: 13px;
 }
-
 .hamburger:hover .hamburger__hidden {
   opacity: 1;
   transform: translate(0, -50%);
 }
-
 .hamburger:hover .hamburger__hidden::before,
 .hamburger:hover .hamburger__hidden::after {
   opacity: 1;
   transform: translate(0, 0);
 }
-
 .hamburger.is-active .hamburger__hidden {
   opacity: 1;
   transform: rotate(45deg);
 }
-
 .hamburger.is-active .hamburger__hidden::before {
   transform: translate(0, 13px) rotate(90deg);
   transform-origin: center;
 }
-
 .hamburger.is-active .hamburger__hidden::after {
   transform-origin: center;
   transform: translate(0, -13px) rotate(0);
   display: none;
 }
-
 .hamburger__hidden {
   opacity: 0;
   width: 100%;
@@ -598,7 +582,6 @@ header {
 .hamburger__hidden::after {
   background-color: var(--rose);
 }
-
 .hamburger__hidden::before,
 .hamburger__hidden::after {
   width: 100%;
@@ -611,14 +594,13 @@ header {
   content: "";
   transform: translate(102px, 0);
 }
-
 .hamburger__hidden::before {
   top: -13px;
 }
-
 .hamburger__hidden::after {
   top: 13px;
 }
+
 .desktop-links {
   transition: all 300ms ease-in-out;
   display: none;
@@ -649,7 +631,6 @@ footer p {
 footer h3 {
   font-weight: 500;
 }
-
 /**footer info***/
 .footer-info {
   width: 80%;
@@ -666,24 +647,27 @@ footer h3 {
   width: 1.5rem;
 }
 /**footer horaires**/
-.footer-horaire, .footer-horaire-desktop {
+.footer-horaire,
+.footer-horaire-desktop {
   align-self: flex-start;
   background-color: var(--white);
-  width: 200px;
-  height: 200px;
+  width: 215px;
+  height: 215px;
   border-radius: 50%;
   gap: 1rem;
   margin-left: 2rem;
 }
 .footer-horaire h3,
-.footer-horaire p,.footer-horaire-desktop h3, .footer-horaire-desktop p {
+.footer-horaire p,
+.footer-horaire-desktop h3,
+.footer-horaire-desktop p {
   text-align: center;
 }
-.footer-horaire p, .footer-horaire-desktop p {
+.footer-horaire p,
+.footer-horaire-desktop p {
   line-height: 2rem;
 }
-
-.footer-horaire-desktop{
+.footer-horaire-desktop {
   display: none;
 }
 /**footer carte**/
@@ -710,7 +694,7 @@ footer h3 {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  height: 175px;
+  height: 210px;
   gap: 1rem;
 }
 .footer-sitemap {
@@ -844,7 +828,8 @@ footer h3 {
   }
   /***texte***/
   footer a,
-  footer h3,footer p {
+  footer h3,
+  footer p {
     font-size: 1.5rem;
   }
   /**footer info***/
@@ -856,11 +841,11 @@ footer h3 {
     width: 2rem;
   }
   /**footer horaires**/
-  .footer-horaire{
+  .footer-horaire {
     width: 250px;
     height: 250px;
   }
-  .footer-horaire p{
+  .footer-horaire p {
     line-height: 2.5rem;
   }
   /**footer carte**/
@@ -905,7 +890,7 @@ footer h3 {
       ),
       url("../img/bg-desktop.webp");
   }
-  
+
   .landing-section h3 {
     width: 70%;
     font-size: 1.4rem;
@@ -922,7 +907,7 @@ footer h3 {
     margin-bottom: 0;
     gap: 1rem;
   }
-  .events-prog{
+  .events-prog {
     align-self: flex-start;
   }
 
@@ -1006,14 +991,15 @@ footer h3 {
   .image-modal-popup img {
     width: 70%;
   }
-  
+
   /*************************HEADER AND FOOTER********************/
   /*******************HEADER******************/
   .nav {
     height: 100px;
     padding: 0.75rem 7.5%;
   }
-  .hamburger__container,.hamburger {
+  .hamburger__container,
+  .hamburger {
     display: none;
   }
   #logo-img {
@@ -1070,21 +1056,14 @@ footer h3 {
     align-self: flex-start;
     padding-left: 1rem;
   }
-  .footer-horaire-desktop{
+  .footer-horaire-desktop {
     display: flex;
     width: 250px;
     height: 250px;
   }
-  .footer-horaire{
+  .footer-horaire {
     display: none;
   }
-
-
-
-
-
-
-
 
   .footer-jaune {
     margin-top: 5em;
@@ -1121,7 +1100,7 @@ footer h3 {
   .menu-desktop {
     width: 45%;
   }
-  #menu-img{
+  #menu-img {
     margin-bottom: 0rem;
   }
 
@@ -1169,7 +1148,7 @@ footer h3 {
     width: 80%;
     gap: 8rem;
   }
-  .footer-horaire-desktop{
+  .footer-horaire-desktop {
     margin-left: 4rem;
   }
 }
@@ -1179,12 +1158,10 @@ footer h3 {
     font-size: 5.5rem;
   }
 
-  .events-container{
+  .events-container {
     justify-content: flex-start;
     gap: 6rem;
   }
-
-
 
   /*MENU-SECTION*/
   .menu-section {

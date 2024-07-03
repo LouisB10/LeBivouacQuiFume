@@ -2,17 +2,29 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>LeBivouacQuiFume - Restauration en plein air</title>
         <meta name="description" content="LeBivouacQuiFume est un restaurant en plein air accueillant aussi des evenements." />
         <meta name="keywords" content="LeBivouacQuiFume, extérieur, evenements, pezenas, bivouac " />
         <meta name="author" content="LeBivouacQuiFume" />
         <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
+
+        <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-Content-Type-Options" content="nosniff" />
         <meta name="google-site-verification" content="PZ6qakJNnCn-xACKzy6C2hEfAXekz7D3zX_CuJuLuEQ" />
+        <!-- Favicon par défaut -->
         <link rel="icon" href="assets/img/favicon/favicon.ico" type="image/x-icon" />
+        <!-- Favicon pour Apple Touch -->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+        <!-- Favicon pour Android -->
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon/android-chrome-512x512.png">
+        <!-- Favicons pour autres tailles -->
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+
         <link rel="stylesheet" href="assets/styles/style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,15 +52,17 @@
             <ul class="desktop-links">
                 <li><a href="#events" data-lang-key="NAV_l1">ÉVÉNEMENTS</a></li>
                 <li><a href="#menu" data-lang-key="NAV_l2">MENU</a></li>
-                <li><a href="#contact" data-lang-key="NAV_l3">CONTACT</a></li>
+                <li><a href="#gallery" data-lang-key="NAV_l3">GALERIE</a></li>
+                <li><a href="#contact" data-lang-key="NAV_l4">CONTACT</a></li>
             </ul>
             <a href="" id="logo-img"><img src="assets/img/logo/logo.webp" alt="Logo LeBivouacQuiFume"></a>
         </nav>
         <nav class="mobile-nav">
             <ul class="flex-col">
-                <li><a href="#events"  class="flex"><img src="assets/img/nav/events.webp" alt="icone events"><span data-lang-key="NAV_l1">ÉVÉNEMENTS</span></a></li>
-                <li><a href="#menu"  class="flex"><img src="assets/img/nav/menu.webp" alt="icone menu"><span data-lang-key="NAV_l2">NOTRE MENU</span></a></li>
-                <li><a href="#contact"  class="flex"><img src="assets/img/nav/contact.webp" alt="icone contact"><span data-lang-key="NAV_l3">CONTACTEZ-NOUS</span></a></li>
+                <li><a href="#events"  class="flex"><img src="assets/img/nav/l1.webp" alt="icone events"><span data-lang-key="NAV_l1">ÉVÉNEMENTS</span></a></li>
+                <li><a href="#menu"  class="flex"><img src="assets/img/nav/l2.webp" alt="icone menu"><span data-lang-key="NAV_l2">MENU</span></a></li>
+                <li><a href="#gallery"  class="flex"><img src="assets/img/nav/l3.webp" alt="icone gallery"><span data-lang-key="NAV_l3">GALERIE</span></a></li>
+                <li><a href="#contact"  class="flex"><img src="assets/img/nav/l4.webp" alt="icone contact"><span data-lang-key="NAV_l4">CONTACT</span></a></li>
             </ul>
         </nav>
     </header>
@@ -116,7 +130,13 @@
                     <img class="photo" id="boisson-img" src="assets/img/affiches/boisson.webp" alt="img boisson">
                 </div>
             </div>
-        </div> 
+        </div>
+        <div class="gallery-section flex-col" id="gallery">
+            <h2 data-lang-key="NAV_l3">GALERIE</h2>
+            <div class="gallery-container">
+                
+            </div>
+        </div>
     </section>
     <footer id="contact" class="flex-col">
         <div class="footer-desktop-container">
@@ -130,8 +150,9 @@
                 <div class="footer-sitemap-desktop flex-col">
                     <h3>SITEMAP</h3>
                     <a href="#events" data-lang-key="NAV_l1">ÉVÉNEMENTS</a>
-                    <a href="#menu" data-lang-key="FOOTER_l2">MENU</a>
-                    <a href="#contact" data-lang-key="FOOTER_l3">CONTACT</a>
+                    <a href="#menu" data-lang-key="NAV_l2">MENU</a>
+                    <a href="#gallery" data-lang-key="NAV_l3">GALERIE</a>
+                    <a href="#contact" data-lang-key="NAV_l4">CONTACT</a>
                 </div>
                 <div class="flex-col">
                     <a href="https://www.facebook.com/lebivouacquifume/" target="_blank"><img src="assets/img/social-media/facebook.webp" alt="logo facebook"></a>
@@ -139,14 +160,14 @@
                 </div>
             </div>
             <div class="footer-horaire-desktop flex-col">
-                <h3>HORAIRES</h3>
-                <p>DU MARDI AU SAMEDI <br>DE 18H30 À 23H</p>
+                <h3 data-lang-key="HORAIRE_h3">HORAIRES</h3>
+                <p data-lang-key="HORAIRE_p">DU MARDI AU SAMEDI <br>DE 18H30 À 23H</p>
             </div>
             <a href="" id="copyright-desktop" data-lang-key="FOOTER_copyright">Tous droits réservés par <span>LEBIVOUACQUIFUME</span></a>
         </div>
         <div class="footer-horaire flex-col">
-            <h3>HORAIRES</h3>
-            <p>DU MARDI AU SAMEDI <br>DE 18H30 À 23H</p>
+            <h3 data-lang-key="HORAIRE_h3">HORAIRES</h3>
+            <p data-lang-key="HORAIRE_p">DU MARDI AU SAMEDI <br>DE 18H30 À 23H</p>
         </div>
         <div class="footer-jaune flex">
             <img src="assets/img/footer/icon-location.webp" alt="icone location footer">
@@ -156,8 +177,9 @@
             <div class="footer-sitemap flex-col">
                 <h3>SITEMAP</h3>
                 <a href="#events" data-lang-key="NAV_l1">ÉVÉNEMENTS</a>
-                <a href="#menu" data-lang-key="FOOTER_l2">MENU</a>
-                <a href="#contact" data-lang-key="FOOTER_l3">CONTACT</a>
+                <a href="#menu" data-lang-key="NAV_l2">MENU</a>
+                <a href="#gallery" data-lang-key="NAV_l3">GALERIE</a>
+                <a href="#contact" data-lang-key="NAV_l4">CONTACT</a>
             </div>
             <a href="" id="copyright" data-lang-key="FOOTER_copyright">Tous droits réservés par <span>LEBIVOUACQUIFUME</span></a>
         </div>
@@ -170,112 +192,11 @@
         </div>
     </div>
     <button id="backToTopBtn" onclick="scrollToTop()" aria-label="button back to top"><img src="assets/img/arrow-backtotop.webp" alt=""></button> 
-    <script defer>
-        document.body.onload = function() {
-            var nbr = 4;
-            var nbImgM= 2;
-            var nbImgD= 1;
-            var p = 0;
-            var q = 0;
-            var container = document.getElementById("container");
-            var r = document.getElementById("r");
-            var l = document.getElementById("l");
-    
-            // Vérification de la largeur de l'écran pour déterminer le nombre d'images à afficher
-            var screenWidth = window.innerWidth;
-                var nbImg;
-
-                if (screenWidth < 1024) { // Si la largeur de l'écran est inférieure à 768px (mode mobile)
-                    nbImg = nbImgM;
-                } else { // Sinon (mode PC)
-                    nbImg = nbImgD;
-                    // console.log("passage largeur pc slider")
-                }
-
-            // Calcul de la largeur de chaque diapositive en pourcentage
-            var slideWidth = 100 / nbImg;
-            console.log(nbImg);
-    
-            container.style.width = (slideWidth * nbr) + "%";
-        
-            for (var i = 1; i <= nbr; i++) {
-
-                var containerModal = document.createElement("div");
-                var modal = document.createElement("div");
-                var img = document.createElement("img");
-
-                containerModal.className ="modal-content-wrapper events-container";
-                modal.className="image-modal-content";
-                img.className = "photo";
-
-                img.src = "assets/img/affiches/affiche-" + i + ".webp"; // Chemin vers l'image
-
-                container.appendChild(containerModal);
-                containerModal.appendChild(modal);
-                modal.appendChild(img);
-            }
-
-            // After adding images to the DOM, select all images with class 'photo'
-            const lightboxImages = document.querySelectorAll('.photo');
-                const modalPopup = document.querySelector('.image-modal-popup');
-                const modalElement = element => document.querySelector(`.image-modal-popup ${element}`);
-                const body = document.querySelector('body');
-
-                // Function to open the modal
-                function openModal(imgSrc) {
-                    body.style.overflow = 'hidden'; // Prevent page scrolling
-                    modalPopup.style.display = 'block'; // Show modal
-                    modalPopup.style.overflow ='auto';
-                    modalElement('img').src = imgSrc; // Show clicked image in modal
-                }
-
-                // Close modal on click outside the image
-                document.addEventListener('click', () => {
-                    body.style.overflowX = 'hidden'; // Restore horizontal scrolling
-                    body.style.overflowY = 'auto'; // Restore vertical scrolling
-                    modalPopup.style.display = 'none'; // Hide modal
-                });
-
-                // Add click event to each image to open the modal
-                lightboxImages.forEach(img => {
-                    img.addEventListener('click', e => {
-                        e.stopPropagation(); // Prevent click propagation to the document
-                        openModal(img.src); // Open modal with clicked image
-                    });
-                });
-
-            afficherMasquer();
-
-            l.onclick = function() {
-            if (p < 0)
-                p++;
-                q=(q+25);
-            container.style.transform = "translateX(" +q+ "%)"; // Utilisation de pourcentage pour le déplacement
-            container.style.transition = "all 0.5s ease";
-            afficherMasquer();
-            console.log(p);
-
-        };
-    
-        r.onclick = function() {
-            if (p > -nbr + 2)
-                p--;
-                q=(q-25);
-            container.style.transform = "translateX(" + q + "%)"; // Utilisation de pourcentage pour le déplacement
-            container.style.transition = "all 0.5s ease";
-            afficherMasquer();
-            console.log(p);
-        };
-    
-        function afficherMasquer() {
-        r.style.display = p == -nbr + nbImg ? "none" : "block";
-        l.style.display = p == 0 ? "none" : "block";
-    }
-        };
-    
-    
-    </script>
-            <script src="assets/scripts/script.js" defer></script>
+            <script src="assets/scripts/SmoothScroll.js" defer></script>
             <script src="assets/scripts/ChangeLanguage.js" defer></script>
+            <script src="assets/scripts/ToggleMenu.js" defer></script>
+            <script src="assets/scripts/main.js" defer></script>
+            <script src="assets/scripts/InitializeImages.js" defer></script>
+            <script src="assets/scripts/ConfigureModal.js" defer></script>
 </body>
 </html>
