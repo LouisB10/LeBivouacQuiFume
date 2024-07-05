@@ -165,7 +165,7 @@ h2 {
   width: 100%;
   text-align: start;
 }
-/**************************************LANDING-SECTION*/
+/**********************************************LANDING-SECTION***********/
 .landing-section {
   height: 95vh;
   background: linear-gradient(
@@ -186,7 +186,7 @@ h2 {
   text-align: center;
   line-height: 1.5em;
 }
-/*******************EVENTS-SECTION*/
+/**********************************************EVENTS-SECTION***********/
 .events-section {
   background-color: var(--rose);
   gap: 2rem;
@@ -265,7 +265,7 @@ h2 {
   z-index: 3;
 }
 
-/*******************FOLLOW-US-SECTION*/
+/************************************FOLLOW-US-SECTION***************/
 .follow-section {
   background-color: var(--yellow);
   z-index: 2;
@@ -290,7 +290,7 @@ h2 {
 .follow-media div img:hover {
   animation: float-media 0.8s ease-in-out infinite;
 }
-/*******************MENU-SECTION*/
+/**********************************MENU-SECTION************/
 .menu-section {
   background-color: var(--orange);
 }
@@ -335,9 +335,10 @@ h2 {
 .menu-content {
   margin-top: -20%;
 }
-
-
-
+/*****************************GALLERY-SECTION***********/
+.gallery-section{
+  background-color: var(--yellow);
+}
 
 
 
