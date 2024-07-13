@@ -1,6 +1,6 @@
 .slider-container,
 .slider-container p,
-.events-slider p {
+.events-slider p, .gallery-section {
   display: none !important;
 }
 
@@ -339,13 +339,36 @@ h2 {
 .gallery-section{
   background-color: var(--yellow);
 }
+.gallery-section h2{
+  padding-bottom: 2rem;
+}
+.gallery{
+  width: 100%;
+  border-radius: 5px;
+}
+#gallery1{
+  
+}
+.gallery-container{
+  gap: 0.5rem;
+}
+.gallery-container
+.gallery-img{
+  width: 100%;
+}
 
+.gallery-container-middle{
+  gap: 0.5rem;
+}
+.gallery-middle{
+  height: 100%;
+  width: 55%;
+  justify-content: space-between;
+}
 
-
-
-
-
-
+.gallery-container-bottom{
+  gap: 0.5rem;
+}
 
 
 
