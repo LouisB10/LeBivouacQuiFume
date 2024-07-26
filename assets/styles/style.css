@@ -44,9 +44,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-img{
-  cursor: pointer;
-}
 button {
   cursor: pointer;
   border: 0;
@@ -202,14 +199,19 @@ h2 {
   width: 100% !important;
   gap: 2rem;
 }
-.events-actual, .events-prog {
+.events-actual {
+  align-items: flex-start;
   gap: 1rem;
 }
-#modal-events {
-  width: 100%;
-  border: solid 2px var(--black);
-  border-radius: 10px;
+
+.events-prog {
+  gap: 1rem;
 }
+
+#modal-events {
+  border: solid 2px var(--black);
+}
+
 .photo {
   width: 100%;
   border-radius: 10px;
@@ -287,25 +289,30 @@ h2 {
 /**********************************MENU-SECTION************/
 .menu-section {
   background-color: var(--orange);
-  gap: 1rem;
+}
+.menu-section h2 {
+  padding-bottom: 2rem;
 }
 .menu-title h3 {
+  color: var(--white);
   width: 70%;
 }
 .menu-desc {
   width: 300px;
   height: 300px;
+  flex-shrink: 0;
   border-radius: 50%;
   background: var(--black-light);
+  z-index: -1;
 }
 .menu-desc h3 {
   width: 90%;
   color: var(--white);
+  z-index: 2;
   text-align: center;
   padding-bottom: 3rem;
   line-height: 1.75rem;
 }
-
 #menu-div img{
   border: 2px solid black;
   margin-bottom: 1rem;
@@ -325,11 +332,9 @@ h2 {
 }
 .gallery{
   width: 100%;
-  border-radius: 5px;
+  border: none;
 }
-#gallery1{
-  
-}
+
 .gallery-container{
   gap: 0.5rem;
 }
@@ -358,10 +363,11 @@ h2 {
 
 /*******************************MODAL IMAGES*/
 .modal-content-wrapper {
-  width: 90%;
+  width: 100%;
   z-index: 3;
 }
 .modal-content-wrapper .image-modal-content {
+  cursor: pointer;
   transition: 300ms ease-out;
 }
 /* modal popup styles */
@@ -384,24 +390,25 @@ h2 {
   }
 }
 .image-modal-popup .wrapper {
+  height: 100vh;
   width: 95%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 5% 2.5%;
-  padding-top: 0;
-  height: 100%;
-  justify-content: center;
+ padding-right: 2.5%;
+  padding-left: 2.5%;
 }
 
 .image-modal-popup img {
   width: 100%;
+  cursor: pointer;
   border-radius: 10px;
+}
+.image-modal-popup-large img{
+  width: 100% !important;
 }
 .image-modal-popup span {
   align-self: flex-end;
   font-size: 3rem;
   color: var(--yellow);
+  cursor: pointer;
 }
 /*************************HEADER AND FOOTER********************/
 /*******************HEADER******************/
@@ -673,6 +680,7 @@ footer h3 {
 /**footer carte**/
 .footer-jaune {
   align-self: flex-end;
+  height: 150px;
   width: 85%;
   border-radius: 150px 0% 0% 150px;
   background-color: var(--yellow);
@@ -682,10 +690,13 @@ footer h3 {
 .footer-jaune img {
   height: 40px;
 }
-.footer-jaune iframe {
+.footer-jaune a {
   border-radius: 10px;
   height: 100%;
   width: 80%;
+  background-image: url(/assets/img/footer/map.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 /**footer sitemap**/
 .footer-bottom {
@@ -777,8 +788,14 @@ footer h3 {
   .menu-desc {
     width: 400px;
     height: 400px;
+  } 
+  /*MODAL IMAGE*/
+  .photo{
+    border-radius: 20px;
   }
- 
+  .image-modal-popup img {
+    width: 75%;
+  }
   /*************************HEADER AND FOOTER********************/
   /*******************HEADER******************/
   .nav {
@@ -795,7 +812,7 @@ footer h3 {
   footer {
     background-size: 70%;
   }
-  /***texte***/
+  /*TEXT*/
   footer a,
   footer h3,
   footer p, 
@@ -812,8 +829,8 @@ footer h3 {
   }
   /**footer horaires**/
   .footer-horaire {
-    width: 250px;
-    height: 250px;
+    width: 270px;
+    height: 270px;
   } 
   /**footer carte**/
   .footer-jaune {
@@ -875,7 +892,11 @@ footer h3 {
     width: 40%;
     align-self: flex-end;
   }
-
+  .photo {
+    height: 480px;
+    background-size: 100%;
+    width: auto;
+  }
   /*MENU-SECTION*/
   .menu-section {
     flex-direction: row;
@@ -888,15 +909,7 @@ footer h3 {
     width: 300px;
     height: 300px;
   }
-  #menu-img {
-    margin-top: 0;
-  }
-  #menu-img,
-  #boisson-img {
-    height: 50%;
-    width: 50%;
-    border-radius: 10px;
-  }
+  
   .menu-desktop {
     width: 44%;
     height: 100%;
@@ -946,7 +959,10 @@ footer h3 {
   .image-modal-popup img {
     width: 70%;
   }
-
+  .gallery-section,#galerie{
+    display: none;
+  }
+  
   /*************************HEADER AND FOOTER********************/
   /*******************HEADER******************/
   .nav {
@@ -978,7 +994,7 @@ footer h3 {
   footer {
     flex-direction: row !important;
     align-items: flex-start !important;
-    background-size: 45%;
+    background-size: 50%;
     background-position: top -5% right -6rem;
   }
   footer a,
@@ -1022,6 +1038,7 @@ footer h3 {
   }
 
   .footer-jaune {
+    margin-top: 5em;
     margin-right: 15%;
     width: 40%;
     flex-direction: column;
@@ -1030,8 +1047,8 @@ footer h3 {
     border-top-left-radius: 200px;
     border-bottom-left-radius: 0;
   }
-  .footer-jaune iframe {
-    height: 100%;
+  .footer-jaune a {
+    height: 75%;
     width: 100%;
   }
 }
@@ -1055,10 +1072,8 @@ footer h3 {
   .menu-desktop {
     width: 45%;
   }
-  #menu-img {
-    margin-bottom: 0rem;
-  }
-  #menu-div{
+ 
+  #menu-div {
     gap: 2rem;
   }
   /*FOLLOW-SECTION*/
@@ -1098,10 +1113,6 @@ footer h3 {
     height: 560px;
     width: 35%;
   }
-  .footer-jaune iframe{
-    width: 95%;
-    height: 80%;
-  }
   .footer-info {
     width: 75%;
   }
@@ -1111,8 +1122,6 @@ footer h3 {
   }
   .footer-horaire-desktop {
     margin-left: 4rem;
-    width: 275px;
-    height: 275px;
   }
 }
 /************AFFICHAGE PC Portable / PC grand**/
@@ -1136,11 +1145,8 @@ footer h3 {
     width: 400px;
     align-self: flex-end;
   }
-  #menu-img,
-  #boisson-img {
-    height: 45%;
-    width: 45%;
-    border-radius: 10px;
+  #menu-div {
+    gap: 6rem;
   }
   .menu-desc h3 {
     font-size: 1.5rem;

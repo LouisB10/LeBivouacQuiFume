@@ -15,11 +15,17 @@ function configureModal() {
     const body = document.querySelector('body');
 
     // Fonction pour ouvrir le modal avec l'image cliquée
-    function openModal(imgSrc) {
+    function openModal(imgSrc, isLarge) {
         body.style.overflow = 'hidden'; // Empêcher le défilement de la page
         modalPopup.style.display = 'block'; // Afficher le modal
         modalPopup.style.overflow = 'auto'; // Autoriser le défilement à l'intérieur du modal
         modalElement('img').src = imgSrc; // Afficher l'image cliquée dans le modal
+          // Ajouter ou supprimer la classe image-modal-popup-large selon l'image cliquée
+    if (isLarge) {
+        modalPopup.classList.add('image-modal-popup-large');
+    } else {
+        modalPopup.classList.remove('image-modal-popup-large');
+    }
     }
 
     // Écouter les clics sur le document pour fermer le modal

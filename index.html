@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
+<head>
         <meta charset="UTF-8">
         <title>LeBivouacQuiFume - Restauration en plein air</title>
         <meta name="description" content="LeBivouacQuiFume est un restaurant en plein air accueillant aussi des evenements.">
@@ -33,7 +33,7 @@
         <meta property="og:image" content="assets/img/readme.webp">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://www.lebivouacquifume.fr">
-    </head>
+</head>
 <body class="flex-col">
     <header id="accueil">
         <nav class="nav">
@@ -50,7 +50,7 @@
             <ul class="desktop-links">
                 <li><a href="#events" data-lang-key="NAV_l1">ÉVÉNEMENTS</a></li>
                 <li><a href="#menu" data-lang-key="NAV_l2">MENU</a></li>
-                <li><a href="#gallery" data-lang-key="NAV_l3">GALERIE</a></li>
+                <li><a href="#gallery" id="galerie" data-lang-key="NAV_l3">GALERIE</a></li>
                 <li><a href="#contact" data-lang-key="NAV_l4">CONTACT</a></li>
             </ul>
             <a href="" id="logo-img"><img src="assets/img/logo/logo.webp" alt="Logo LeBivouacQuiFume"></a>
@@ -59,7 +59,7 @@
             <ul class="flex-col">
                 <li><a href="#events"  class="flex"><img src="assets/img/nav/l1.webp" alt="icone events"><span data-lang-key="NAV_l1">ÉVÉNEMENTS</span></a></li>
                 <li><a href="#menu"  class="flex"><img src="assets/img/nav/l2.webp" alt="icone menu"><span data-lang-key="NAV_l2">MENU</span></a></li>
-                <li><a href="#gallery"  class="flex"><img src="assets/img/nav/l3.webp" alt="icone gallery"><span data-lang-key="NAV_l3">GALERIE</span></a></li>
+                <li><a href="#gallery"  id="galerie" class="flex"><img src="assets/img/nav/l3.webp" alt="icone gallery"><span data-lang-key="NAV_l3">GALERIE</span></a></li>
                 <li><a href="#contact"  class="flex"><img src="assets/img/nav/l4.webp" alt="icone contact"><span data-lang-key="NAV_l4">CONTACT</span></a></li>
             </ul>
         </nav>
@@ -87,7 +87,7 @@
                             <img  class="photo" id="modal-events" src="assets/img/affiches/affiche.webp" alt="affiche evenements">
                         </div>
                     </div>
-                    <a href="https://forms.gle/eiMvnpgbhWtnpHGS6" target="_blank" data-lang-key="EVENTS_RESERVATION" class="events-reservation flex">Réservation</a>
+                    <a href="https://forms.gle/TSFQfmiwzwjysVcT6" target="_blank" data-lang-key="EVENTS_RESERVATION" class="events-reservation flex">Réservation</a>
                 </div>
                 <div class="events-slider flex-col" style="display: none;">
                     <p data-lang-key="EVENTS_next">À venir</p>
@@ -117,15 +117,16 @@
                     <h3 data-lang-key="MENU_desc" >Découvrez le menu du Bivouac Assortiment de tartinades, tapas, plats et desserts faits maison.</h3>
                 </div>
             </div>
-            <p id="menu" ></p>
+           
             <h2 data-lang-key="MENU_h2" class="menu-mobile">NOTRE CARTE</h2>
             <div class="menu-desc menu-mobile flex">
                 <h3 data-lang-key="MENU_desc" >Découvrez le menu du Bivouac Assortiment de tartinades, tapas, plats et desserts faits maison.</h3>
             </div>
+            <p id="menu" ></p>
             <div class="modal-content-wrapper menu-content" >
                 <div class="image-modal-content" id="menu-div">
-                    <img class="photo" src="assets/img/affiches/menu.webp" alt="menu">
-                    <img class="photo" src="assets/img/affiches/boisson.webp" alt="boisson">
+                    <img class="photo" src="assets/img/affiches/menu.webp" alt="img menu">
+                    <img class="photo"  src="assets/img/affiches/boisson.webp" alt="img boisson">
                 </div>
             </div>
         </div>
@@ -134,26 +135,26 @@
             <div class="gallery-container flex-col">
                 <div class="modal-content-wrapper gallery-img">
                     <div class="image-modal-content">
-                        <img  class="photo" id="gallery1" src="assets/img/gallery/bivouac-11.webp" alt="gallerie">
+                        <img  class="photo" id="large-img-1" src="assets/img/gallery/bivouac-11.webp" alt="gallerie">
                     </div>
                 </div>
                 <!-- DIV-3IMG -->
                 <div class="gallery-container-middle flex">
                     <div class="modal-content-wrapper gallery-img">
                         <div class="image-modal-content">
-                            <img  class="photo" id="" src="assets/img/gallery/bivouac-7.webp" alt="gallerie">
+                            <img  class="photo" src="assets/img/gallery/bivouac-7.webp" alt="gallerie">
                         </div>
                     </div>
                     <!-- 2IMG -->
                     <div class="gallery-middle flex-col">
                         <div class="modal-content-wrapper gallery-img">
                             <div class="image-modal-content">
-                                <img  class="photo" id="" src="assets/img/gallery/bivouac-9.webp" alt="gallerie">
+                                <img  class="photo" src="assets/img/gallery/bivouac-9.webp" alt="gallerie">
                             </div>
                         </div>
                         <div class="modal-content-wrapper gallery-img">
                             <div class="image-modal-content">
-                                <img  class="photo" id="" src="assets/img/gallery/bivouac-9.webp" alt="gallerie">
+                                <img  class="photo" src="assets/img/gallery/bivouac-12.webp" alt="gallerie">
                             </div>
                         </div>
                     </div>
@@ -161,19 +162,19 @@
                 <!-- 1IMG -->
                 <div class="modal-content-wrapper gallery-img">
                     <div class="image-modal-content">
-                        <img  class="photo" id="" src="assets/img/gallery/bivouac-2.webp" alt="gallerie">
+                        <img  class="photo" id="large-img-2" src="assets/img/gallery/bivouac-2.webp" alt="gallerie">
                     </div>
                 </div>
                 <!-- DIV-2IMG -->
                 <div class="gallery-container-bottom flex">
                     <div class="modal-content-wrapper gallery-img">
                         <div class="image-modal-content">
-                            <img  class="photo" id="" src="assets/img/gallery/bivouac-4.webp" alt="gallerie">
+                            <img  class="photo" src="assets/img/gallery/bivouac-4.webp" alt="gallerie">
                         </div>
                     </div>
                     <div class="modal-content-wrapper gallery-img">
                         <div class="image-modal-content">
-                            <img  class="photo" id="" src="assets/img/gallery/bivouac-6.webp" alt="gallerie">
+                            <img  class="photo" src="assets/img/gallery/bivouac-6.webp" alt="gallerie">
                         </div>
                     </div>
                 </div>
@@ -193,7 +194,7 @@
                     <h3>SITEMAP</h3>
                     <a href="#events" data-lang-key="NAV_l1">ÉVÉNEMENTS</a>
                     <a href="#menu" data-lang-key="NAV_l2">MENU</a>
-                    <a href="#gallery" data-lang-key="NAV_l3">GALERIE</a>
+                    <a href="#gallery" id="galerie" data-lang-key="NAV_l3">GALERIE</a>
                     <a href="#contact" data-lang-key="NAV_l4">CONTACT</a>
                 </div>
                 <div class="flex-col">
@@ -213,14 +214,14 @@
         </div>
         <div class="footer-jaune flex">
             <img src="assets/img/footer/icon-location.webp" alt="icone location footer">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1169.887111363188!2d3.407595021957297!3d43.46926179357552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b16a88f841b377%3A0x4d61f721ab2f2e47!2s646%20Rte%20de%20Caux%2C%2034120%20P%C3%A9zenas!5e1!3m2!1sfr!2sfr!4v1713362331516!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="https://www.google.fr/maps/place/646+Rte+de+Caux,+34120+P%C3%A9zenas/@43.4696023,3.4083102,825m/data=!3m2!1e3!4b1!4m6!3m5!1s0x12b16a88670f9a01:0xa09ab92a477d97f5!8m2!3d43.4696023!4d3.4083102!16s%2Fg%2F11crw9fft9?entry=ttu" target="_blank"></a>
         </div>
         <div class="footer-bottom">
             <div class="footer-sitemap flex-col">
                 <h3>SITEMAP</h3>
                 <a href="#events" data-lang-key="NAV_l1">ÉVÉNEMENTS</a>
                 <a href="#menu" data-lang-key="NAV_l2">MENU</a>
-                <a href="#gallery" data-lang-key="NAV_l3">GALERIE</a>
+                <a href="#gallery" id="galerie" data-lang-key="NAV_l3">GALERIE</a>
                 <a href="#contact" data-lang-key="NAV_l4">CONTACT</a>
             </div>
             <a href="" id="copyright" data-lang-key="FOOTER_copyright">Tous droits réservés par<span> LEBIVOUACQUIFUME</span></a>
@@ -228,7 +229,7 @@
     </footer>
      <!-- modal popup (displayed none by default) -->
      <div class="image-modal-popup">
-        <div class="wrapper">
+        <div class="wrapper flex-col">
         <span>&times;</span>
         <img src="" alt="">
         </div>
