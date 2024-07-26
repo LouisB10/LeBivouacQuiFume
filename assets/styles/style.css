@@ -303,7 +303,6 @@ h2 {
   flex-shrink: 0;
   border-radius: 50%;
   background: var(--black-light);
-  z-index: -1;
 }
 .menu-desc h3 {
   width: 90%;
@@ -915,8 +914,6 @@ footer h3 {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
   }
   .menu-mobile {
     display: none;
@@ -927,8 +924,13 @@ footer h3 {
     align-self: flex-end;
   }
   #menu-div {
+
     display: flex;
     gap: 1rem;
+  }
+  #menu-div img{
+    margin-bottom: 0;
+    height: 370px;
   }
   .menu-desc h3 {
     font-size: 1.3rem;
@@ -1076,6 +1078,9 @@ footer h3 {
   #menu-div {
     gap: 2rem;
   }
+  #menu-div img{
+    height: 420px;
+  }
   /*FOLLOW-SECTION*/
   .follow-section h2 {
     font-size: 5rem;
@@ -1146,7 +1151,10 @@ footer h3 {
     align-self: flex-end;
   }
   #menu-div {
-    gap: 6rem;
+    gap: 1rem;
+  }
+  #menu-div img{
+    height: 580px;
   }
   .menu-desc h3 {
     font-size: 1.5rem;
