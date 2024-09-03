@@ -1,9 +1,0 @@
-Back office : 
-
-Créer le compte admin, une table dans la BDD ainsi que un url pour le login 
-
-Puis créer le fait de pouvoir ajouter / modifier/ supprimer une image du slider events
-
-Front office :
-
-Partie gallerie a faire

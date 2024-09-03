@@ -325,35 +325,19 @@ h2 {
 /*****************************GALLERY-SECTION***********/
 .gallery-section{
   background-color: var(--yellow);
+  gap: 2rem;
 }
-.gallery-section h2{
-  padding-bottom: 2rem;
-}
-.gallery{
-  width: 100%;
-  border: none;
-}
-
-.gallery-container{
+.gallery-container,.gallery-middle{
   gap: 0.5rem;
 }
 .gallery-container
 .gallery-img{
   width: 100%;
 }
-
-.gallery-container-middle{
-  gap: 0.5rem;
-}
 .gallery-middle{
-  height: 100%;
-  width: 55%;
-  justify-content: space-between;
+  width: 60%;
 }
 
-.gallery-container-bottom{
-  gap: 0.5rem;
-}
 
 
 
@@ -945,6 +929,14 @@ footer h3 {
   .follow-media div img {
     width: 4rem;
   }
+  /*GALERIE-SECTION*/
+  .gallery-section .image-modal-content img{
+    width: 100%;
+    height: auto;
+  }
+  .gallery-container,.gallery-middle{
+    gap: 1rem;
+  }
   /*OTHERS*/
   #backToTopBtn {
     display: none !important;
@@ -952,15 +944,12 @@ footer h3 {
   .image-modal-popup img {
     width: 70%;
   }
-  .gallery-section,#galerie{
-    display: none;
-  }
   
   /*************************HEADER AND FOOTER********************/
   /*******************HEADER******************/
   .nav {
     height: 100px;
-    padding: 0.75rem 7.5%;
+    padding: 0.75rem 5%;
   }
   .hamburger__container,
   .hamburger {
@@ -1172,8 +1161,8 @@ footer h3 {
   .footer-jaune {
     height: 650px;
     width: 25%;
-    border-top-right-radius: 300px;
-    border-top-left-radius: 300px;
+    border-top-right-radius: 400px;
+    border-top-left-radius: 400px;
   }
   footer a,
   footer h3 {
