@@ -693,7 +693,7 @@ footer h3 {
   border-radius: 10px;
   height: 100%;
   width: 80%;
-  background-image: url(/assets/img/footer/map.png);
+  background-image: url(/assets/img/footer/map.jfif);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -863,7 +863,7 @@ footer h3 {
         rgba(51, 50, 50, 0.5) 66.95%,
         rgba(69, 128, 178, 0.5) 97.57%
       ),
-      url("../img/bg-desktop.webp");
+      url("../img/bg-desktop-test.webp");
   }
 
   .landing-section h3 {
@@ -877,15 +877,6 @@ footer h3 {
     align-items: center;
     justify-content: space-between;
   }
-  .events-actual {
-    justify-content: space-between;
-    margin-bottom: 0;
-    gap: 1rem;
-  }
-  .events-prog {
-    align-self: flex-start;
-  }
-
   /**********events slider******/
   .events-slider {
     width: 40%;
