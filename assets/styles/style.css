@@ -1,8 +1,8 @@
-.slider-container,
+/* .slider-container,
 .slider-container p,
 .events-slider p {
   display: none !important;
-}
+} */
 
 /***************************REGLES GENERALES*************************/
 html {
@@ -29,9 +29,6 @@ body {
   height: 100vh;
   justify-content: space-between !important;
   overflow-x: hidden;
-}
-.overflow-hidden {
-  overflow: hidden;
 }
 .flex-col {
   flex-direction: column;
@@ -196,29 +193,20 @@ h2 {
   text-align: start;
 }
 .events-container {
-  width: 100% !important;
-  gap: 2rem;
+  width: 100% ;
 }
 .events-actual {
   align-items: flex-start;
   gap: 1rem;
 }
-
 .events-prog {
   gap: 1rem;
 }
-
 #modal-events {
   border: solid 2px var(--black);
 }
-
-.photo {
-  width: 100%;
-  border-radius: 10px;
-}
-
 /***event reservation**/
-.events-reservation {
+/* .events-reservation {
   padding: 0.8rem 1rem;
   background-color: var(--orange);
   border: 2px solid var(--black);
@@ -229,13 +217,20 @@ h2 {
 }
 .events-reservation:hover {
   background-color: var(--yellow);
-}
+} */
 
 /**********events slider******/
 .events-slider {
   position: relative;
   width: 100%;
   gap: 1rem;
+}
+#container{
+  gap: 1rem;
+}
+#container img{
+  
+border: 2px solid var(--black);
 }
 .slider-container {
   width: 100%;
@@ -260,7 +255,10 @@ h2 {
   left: 90%;
   z-index: 3;
 }
-
+.photo {
+  width: 100%;
+  border-radius: 10px;
+}
 /************************************FOLLOW-US-SECTION***************/
 .follow-section {
   background-color: var(--yellow);
@@ -337,13 +335,6 @@ h2 {
 .gallery-middle{
   width: 60%;
 }
-
-
-
-
-
-
-
 /*******************************MODAL IMAGES*/
 .modal-content-wrapper {
   width: 100%;
@@ -777,7 +768,13 @@ footer h3 {
     border-radius: 20px;
   }
   .image-modal-popup img {
-    width: 75%;
+    width: 70%;
+  }
+  .r-btn{
+    left: 100%;
+  }
+  .l-btn{
+      right: 100%;
   }
   /*************************HEADER AND FOOTER********************/
   /*******************HEADER******************/
@@ -942,9 +939,14 @@ footer h3 {
     display: none !important;
   }
   .image-modal-popup img {
-    width: 70%;
+    width: 60%;
   }
-  
+  .r-btn{
+    left: 100%;
+  }
+  .l-btn{
+    right: 100%;
+  }
   /*************************HEADER AND FOOTER********************/
   /*******************HEADER******************/
   .nav {
@@ -966,7 +968,7 @@ footer h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 50%;
+    width: 55%;
   }
   .desktop-links li a {
     font-size: 1.8rem;
@@ -1147,7 +1149,10 @@ footer h3 {
   .follow-media div img {
     width: 5rem;
   }
-
+  /*IMG-SECTION*/
+  .r-btn{
+    left: 67%;
+  }
   /*FOOTER*/
   footer {
     background-size: 35%;

@@ -183,7 +183,7 @@
       <div class="events-section flex-col">
         <h2 data-lang-key="EVENTS_h2" id="events">NOS ÉVÉNEMENTS</h2>
         <div class="events-container flex-col">
-          <div class="events-prog flex-col">
+          <!-- <div class="events-prog flex-col">
             <p data-lang-key="EVENTS_prog">Programme</p>
             <div class="modal-content-wrapper events-container">
               <div class="image-modal-content">
@@ -192,11 +192,12 @@
                   id="modal-events"
                   src="assets/img/affiches/programme.webp"
                   alt="affiche programmation"
+                  loading="lazy"
                 />
               </div>
             </div>
-          </div>
-          <div class="events-actual flex-col">
+          </div> -->
+          <!-- <div class="events-actual flex-col">
             <p data-lang-key="EVENTS_actual">Le prochain</p>
             <div class="modal-content-wrapper events-container">
               <div class="image-modal-content">
@@ -205,13 +206,13 @@
                   id="modal-events"
                   src="assets/img/affiches/affiche.webp"
                   alt="affiche evenements"
+                  loading="lazy"
                 />
               </div>
             </div>
-            <!-- <a href="https://forms.gle/TSFQfmiwzwjysVcT6" target="_blank" data-lang-key="EVENTS_RESERVATION" class="events-reservation flex">Réservation</a> -->
-          </div>
-          <div class="events-slider flex-col" style="display: none">
-            <p data-lang-key="EVENTS_next">À venir</p>
+          </div> -->
+          <div class="events-slider flex-col">
+            <p data-lang-key="EVENTS_next">Les soirées passées</p>
             <div class="slider-container">
               <div id="container" class="flex"></div>
               <img
@@ -237,20 +238,23 @@
             id="arrow"
             src="assets/img/follow-us.webp"
             alt="fleche suivez-nous"
+            loading="lazy"
           />
           <div class="flex">
-            <a href="https://www.facebook.com/lebivouacquifume/" target="_blank"
-              ><img
+            <a href="https://www.facebook.com/lebivouacquifume/" target="_blank">
+              <img
                 src="assets/img/social-media/facebook.webp"
                 alt="facebook logo"
-            /></a>
-            <a
-              href="https://www.instagram.com/lebivouacquifume/"
-              target="_blank"
-              ><img
+                loading="lazy"
+              />
+            </a>
+            <a href="https://www.instagram.com/lebivouacquifume/" target="_blank">
+              <img
                 src="assets/img/social-media/instagram.webp"
                 alt="instagram logo"
-            /></a>
+                loading="lazy"
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -278,11 +282,13 @@
               class="photo"
               src="assets/img/affiches/menu.webp"
               alt="img menu"
+              loading="lazy"
             />
             <img
               class="photo"
               src="assets/img/affiches/boisson.webp"
               alt="img boisson"
+              loading="lazy"
             />
           </div>
         </div>
@@ -297,10 +303,10 @@
                 id="large-img-1"
                 src="assets/img/gallery/bivouac-11.webp"
                 alt="gallerie"
+                loading="lazy"
               />
             </div>
           </div>
-          <!-- DIV-3IMG -->
           <div class="gallery-container flex">
             <div class="modal-content-wrapper gallery-img">
               <div class="image-modal-content">
@@ -308,10 +314,10 @@
                   class="photo"
                   src="assets/img/gallery/bivouac-7.webp"
                   alt="gallerie"
+                  loading="lazy"
                 />
               </div>
             </div>
-            <!-- 2IMG -->
             <div class="gallery-middle flex-col">
               <div class="modal-content-wrapper gallery-img">
                 <div class="image-modal-content">
@@ -319,6 +325,7 @@
                     class="photo"
                     src="assets/img/gallery/bivouac-9.webp"
                     alt="gallerie"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -328,12 +335,12 @@
                     class="photo"
                     src="assets/img/gallery/bivouac-12.webp"
                     alt="gallerie"
+                    loading="lazy"
                   />
                 </div>
               </div>
             </div>
           </div>
-          <!-- 1IMG -->
           <div class="modal-content-wrapper gallery-img">
             <div class="image-modal-content">
               <img
@@ -341,10 +348,10 @@
                 id="large-img-2"
                 src="assets/img/gallery/bivouac-2.webp"
                 alt="gallerie"
+                loading="lazy"
               />
             </div>
           </div>
-          <!-- DIV-2IMG -->
           <div class="gallery-container flex">
             <div class="modal-content-wrapper gallery-img">
               <div class="image-modal-content">
@@ -352,6 +359,7 @@
                   class="photo"
                   src="assets/img/gallery/bivouac-4.webp"
                   alt="gallerie"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -361,13 +369,14 @@
                   class="photo"
                   src="assets/img/gallery/bivouac-6.webp"
                   alt="gallerie"
+                  loading="lazy"
                 />
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </section>   
     <footer id="contact" class="flex-col">
       <div class="footer-desktop-container">
         <div class="footer-info flex">
@@ -438,7 +447,6 @@
         >
       </div>
     </footer>
-    <!-- modal popup (displayed none by default) -->
     <div class="image-modal-popup">
       <div class="wrapper flex-col">
         <span>&times;</span>
