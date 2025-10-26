@@ -28,15 +28,5 @@ Site web responsive pour un restaurant en plein air proposant :
 - Intégration des réseaux sociaux
 - Support multilingue
 
-## 📍 Localisation
-646 Route de Caux, 34120 Pézenas, France
-
-## 📞 Contact
-- Téléphone : 07 644 644 34
-- Email : info@lebivouacquifume.fr
-
-## ⏰ Horaires
-Du mardi au samedi de 19h à 23h
-
 ## 📄 Licence
 Ce projet est sous licence [MIT](LICENSE) - voir le fichier LICENSE pour plus de détails.
